@@ -1,1 +1,71 @@
-"""\nLinear A Tablets from Phaistos (PH)\n====================================\nPhaistos - major palace site in south-central Crete, near Haghia Triada.\n~30 documents. Also the findspot of the Phaistos Disc (which is NOT Linear A).\n\nSources: GORILA II, Younger\n"""\n\nPH_CORPUS = {\n\n    'PH 1': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['a-du . GRA 10', 'pa-ja-re . GRA 15', 'ki-re-ta2 . GRA 5', 'ku-ro . GRA 30'],\n        'condition': 'complete',\n        'notes': 'One of the earliest tablets. MM III period. Total 10+15+5=30.',\n    },\n    'PH 2': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['da-me', 'su-ki-ri-ta . OLE 8', 'qa-qa-ru . OLE 4', 'ku-ro . OLE 12'],\n        'condition': 'complete',\n        'notes': 'da-me heading. Oil. Total 8+4=12.',\n    },\n    'PH 3': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['ka-u-de-ta . VIN 20', 'da-ta-re . VIN 10', 'ku-ro . VIN 30'],\n        'condition': 'complete',\n        'notes': 'Wine. Total 20+10=30.',\n    },\n    'PH 4': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['ki-da-ro . GRA 6', 'di-na-u . GRA 4', 'ku-ro . GRA 10'],\n        'condition': 'complete',\n        'notes': 'Grain. Total 6+4=10.',\n    },\n    'PH 5': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['a . da-qe-ra . OVIS 12', 'mi-nu-te . OVIS 8', 'ku-ro . OVIS 20'],\n        'condition': 'complete',\n        'notes': 'Sheep. Total 12+8=20.',\n    },\n    'PH 6': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['te-ki', 'a-mi-da-u . GRA 5', 'pa-ta-ne . GRA 3',\n                  'da-i-pi-ta . GRA 2', 'ku-ro . GRA 10'],\n        'condition': 'complete',\n        'notes': 'te-ki heading. Grain. Total 5+3+2=10.',\n    },\n    'PH 7': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['ku-ni-su . FIC 10', 'a-ka-ru . FIC 5', 'ku-ro . FIC 15'],\n        'condition': 'complete',\n        'notes': 'Figs. ku-ni-su. Total 10+5=15.',\n    },\n    'PH 14': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'LM IA',\n        'lines': ['se-to-i-ja . VIN 8', 'ru-ja . VIN 7', 'ku-ro . VIN 15'],\n        'condition': 'complete',\n        'notes': 'Wine. Later period (LM IA). Total 8+7=15.',\n    },\n    'PH 16': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'LM IA',\n        'lines': ['wa-tu . HORD 15', 'ki-re-ta2 . HORD 10', 'ku-ro . HORD 25'],\n        'condition': 'complete',\n        'notes': 'Barley. Total 15+10=25.',\n    },\n    'PH 31': {\n        'site': 'Phaistos', 'type': 'tablet', 'period': 'LM IA',\n        'lines': ['a . ka-pa . GRA 20', 'da-re . GRA 10', 'si-da-te . GRA 15',\n                  'b . ku-ro . GRA 45', 'ki-ro . GRA 5'],\n        'condition': 'complete',\n        'notes': 'With deficit. 20+10+15=45. ki-ro=5.',\n    },\n}\n\nif __name__ == '__main__':\n    print(f\"Phaistos Corpus: {len(PH_CORPUS)} tablets\")\n
+"""
+Linear A Tablets from Phaistos (PH)
+====================================
+Phaistos - major palace site in south-central Crete.
+Sources: GORILA II, Younger
+"""
+
+PH_CORPUS = {
+    'PH 1': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['a-du . GRA 10', 'pa-ja-re . GRA 15', 'ki-re-ta2 . GRA 5', 'ku-ro . GRA 30'],
+        'condition': 'complete',
+        'notes': 'Earliest tablets. MM III. Total 10+15+5=30.',
+    },
+    'PH 2': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['da-me', 'su-ki-ri-ta . OLE 8', 'qa-qa-ru . OLE 4', 'ku-ro . OLE 12'],
+        'condition': 'complete',
+        'notes': 'da-me heading. Oil. Total 8+4=12.',
+    },
+    'PH 3': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['ka-u-de-ta . VIN 20', 'da-ta-re . VIN 10', 'ku-ro . VIN 30'],
+        'condition': 'complete',
+        'notes': 'Wine. Total 20+10=30.',
+    },
+    'PH 4': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['ki-da-ro . GRA 6', 'di-na-u . GRA 4', 'ku-ro . GRA 10'],
+        'condition': 'complete',
+        'notes': 'Grain. Total 6+4=10.',
+    },
+    'PH 5': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['a . da-qe-ra . OVIS 12', 'mi-nu-te . OVIS 8', 'ku-ro . OVIS 20'],
+        'condition': 'complete',
+        'notes': 'Sheep. Total 12+8=20.',
+    },
+    'PH 6': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['te-ki', 'a-mi-da-u . GRA 5', 'pa-ta-ne . GRA 3',
+                  'da-i-pi-ta . GRA 2', 'ku-ro . GRA 10'],
+        'condition': 'complete',
+        'notes': 'te-ki heading. Grain. Total 5+3+2=10.',
+    },
+    'PH 7': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['ku-ni-su . FIC 10', 'a-ka-ru . FIC 5', 'ku-ro . FIC 15'],
+        'condition': 'complete',
+        'notes': 'Figs. Total 10+5=15.',
+    },
+    'PH 14': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'LM IA',
+        'lines': ['se-to-i-ja . VIN 8', 'ru-ja . VIN 7', 'ku-ro . VIN 15'],
+        'condition': 'complete',
+        'notes': 'Wine. Total 8+7=15.',
+    },
+    'PH 16': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'LM IA',
+        'lines': ['wa-tu . HORD 15', 'ki-re-ta2 . HORD 10', 'ku-ro . HORD 25'],
+        'condition': 'complete',
+        'notes': 'Barley. Total 15+10=25.',
+    },
+    'PH 31': {
+        'site': 'Phaistos', 'type': 'tablet', 'period': 'LM IA',
+        'lines': ['a . ka-pa . GRA 20', 'da-re . GRA 10', 'si-da-te . GRA 15',
+                  'b . ku-ro . GRA 45', 'ki-ro . GRA 5'],
+        'condition': 'complete',
+        'notes': 'With deficit. 20+10+15=45. ki-ro=5.',
+    },
+}
