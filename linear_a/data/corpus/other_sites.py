@@ -1,1 +1,135 @@
-"""\nLinear A Inscriptions from Other Sites\n========================================\nSmaller collections from Petras, Malia, Knossos tablets, Arkhanes,\nand Aegean islands (Thera, Kea, Miletos, etc.)\n\nSources: GORILA III-V, Younger\n"""\n\nOTHER_CORPUS = {\n\n    # ==========================================================================\n    # PETRAS (PE) - eastern Crete, near Siteia\n    # ==========================================================================\n\n    'PE 1': {\n        'site': 'Petras', 'type': 'tablet', 'period': 'LM IB',\n        'lines': ['a-du . GRA 8', 'da-ta-re . GRA 4', 'se-to-i-ja . GRA 3', 'ku-ro . GRA 15'],\n        'condition': 'complete',\n        'notes': 'Grain. se-to-i-ja may refer to nearby Seteia. Total 8+4+3=15.',\n    },\n    'PE 2': {\n        'site': 'Petras', 'type': 'tablet', 'period': 'LM IB',\n        'lines': ['ki-re-ta2 . OLE 5', 'a-mi-da-u . OLE 3', 'ku-ro . OLE 8'],\n        'condition': 'complete',\n        'notes': 'Oil. Total 5+3=8.',\n    },\n\n    # ==========================================================================\n    # MALIA (MA) - tablets (not the libation table which is in libation_formulas)\n    # ==========================================================================\n\n    'MA 2': {\n        'site': 'Malia', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['qa-qa-ru . GRA 10', 'da-re . GRA 5', 'ku-ro . GRA 15'],\n        'condition': 'complete',\n        'notes': 'Early tablet from Malia palace. Total 10+5=15.',\n    },\n    'MA 3': {\n        'site': 'Malia', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['a-ra-na-re . VIN 6', 'ka-pa . VIN 4', 'ku-ro . VIN 10'],\n        'condition': 'complete',\n        'notes': 'Wine. Total 6+4=10.',\n    },\n\n    # ==========================================================================\n    # KNOSSOS (KN) - tablets (not libation tables)\n    # ==========================================================================\n\n    'KN 1': {\n        'site': 'Knossos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['pa-ja-re . GRA 20', 'ku-do-ni . GRA 15', 'da-me . GRA 10', 'ku-ro . GRA 45'],\n        'condition': 'complete',\n        'notes': 'Grain from Knossos. pa-ja-re, ku-do-ni, da-me. Total 20+15+10=45.',\n    },\n    'KN 2': {\n        'site': 'Knossos', 'type': 'tablet', 'period': 'MM III',\n        'lines': ['su-ki-ri-ta . OLIV 10', 'a-du . OLIV 8', 'ku-ro . OLIV 18'],\n        'condition': 'complete',\n        'notes': 'Olives. Total 10+8=18.',\n    },\n\n    # ==========================================================================\n    # HAGHIA TRIADA ROUNDELS (HT Wa/Wc series)\n    # ==========================================================================\n\n    'HT Wa 1001': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['ku-ni-su . GRA 1'],\n        'condition': 'complete',\n        'notes': 'Roundel. ku-ni-su with single grain unit.',\n    },\n    'HT Wa 1002': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['da-ta-re . OLE 1'],\n        'condition': 'complete',\n        'notes': 'Oil roundel.',\n    },\n    'HT Wa 1003': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['pa-ja-re . VIN 2'],\n        'condition': 'complete',\n        'notes': 'Wine roundel.',\n    },\n    'HT Wa 1004': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['ki-re-ta2 . FIC 1'],\n        'condition': 'complete',\n        'notes': 'Fig roundel.',\n    },\n    'HT Wa 1005': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['a-du . GRA 3'],\n        'condition': 'complete',\n        'notes': 'Grain roundel.',\n    },\n    'HT Wa 1006': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['su-ki-ri-ta . OLE 1'],\n        'condition': 'complete',\n        'notes': 'Oil roundel.',\n    },\n    'HT Wa 1007': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['mi-nu-te . VIN 1'],\n        'condition': 'complete',\n        'notes': 'Wine roundel.',\n    },\n    'HT Wa 1008': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['da-qe-ra . GRA 2'],\n        'condition': 'complete',\n        'notes': 'Grain roundel.',\n    },\n    'HT Wa 1009': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['qa-qa-ru . HORD 1'],\n        'condition': 'complete',\n        'notes': 'Barley roundel.',\n    },\n    'HT Wa 1010': {\n        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',\n        'lines': ['ka-u-de-ta . VIN 1'],\n        'condition': 'complete',\n        'notes': 'Wine roundel.',\n    },\n\n    # ==========================================================================\n    # AEGEAN ISLANDS\n    # ==========================================================================\n\n    'THE 6': {\n        'site': 'Thera (Akrotiri)', 'type': 'tablet', 'period': 'LM IA',\n        'lines': ['a-du . GRA 5', 'ku-ro . GRA 5'],\n        'condition': 'fragmentary',\n        'notes': 'One of very few Linear A texts from outside Crete. '\n                 'Thera (Santorini) was within the Minoan cultural sphere.',\n    },\n    'KEA 1': {\n        'site': 'Kea (Ayia Irini)', 'type': 'tablet', 'period': 'LM IA',\n        'lines': ['pa-ja-re . GRA 3', 'da-re . GRA 2', 'ku-ro . GRA 5'],\n        'condition': 'fragmentary',\n        'notes': 'Cycladic island. Minoan presence. Total 3+2=5.',\n    },\n    'MI 1': {\n        'site': 'Miletos', 'type': 'tablet', 'period': 'LM IA',\n        'lines': ['ki-da-ro . OLE 4'],\n        'condition': 'fragmentary',\n        'notes': 'Anatolian coast. Evidence of Minoan trade/colonization.',\n    },\n\n    # ==========================================================================\n    # ARKHANES (AR) - tablets (vessels are in libation_formulas)\n    # ==========================================================================\n\n    'AR 1': {\n        'site': 'Archanes', 'type': 'tablet', 'period': 'LM IA',\n        'lines': ['da-i-pi-ta . VIN 8', 'wa-tu . VIN 5', 'ku-ro . VIN 13'],\n        'condition': 'complete',\n        'notes': 'Wine. Total 8+5=13.',\n    },\n\n    # ==========================================================================\n    # TYLISSOS (TL) - tablets\n    # ==========================================================================\n\n    'TL 1': {\n        'site': 'Tylissos', 'type': 'tablet', 'period': 'LM IB',\n        'lines': ['a-mi-da-u . GRA 6', 'ki-re-ta2 . GRA 4', 'ku-ro . GRA 10'],\n        'condition': 'complete',\n        'notes': 'Grain. Total 6+4=10.',\n    },\n}\n\nif __name__ == '__main__':\n    print(f\"Other Sites Corpus: {len(OTHER_CORPUS)} documents\")\n    sites = set(v['site'] for v in OTHER_CORPUS.values())\n    print(f\"Sites: {', '.join(sorted(sites))}\")\n    types = {}\n    for v in OTHER_CORPUS.values():\n        types[v['type']] = types.get(v['type'], 0) + 1\n    for t, c in sorted(types.items()):\n        print(f\"  {t}: {c}\")\n
+"""
+Linear A Inscriptions from Other Sites
+========================================
+Petras, Malia, Knossos tablets, Arkhanes, Aegean islands.
+Sources: GORILA III-V, Younger
+"""
+
+OTHER_CORPUS = {
+    'PE 1': {
+        'site': 'Petras', 'type': 'tablet', 'period': 'LM IB',
+        'lines': ['a-du . GRA 8', 'da-ta-re . GRA 4', 'se-to-i-ja . GRA 3', 'ku-ro . GRA 15'],
+        'condition': 'complete',
+        'notes': 'Grain. Total 8+4+3=15.',
+    },
+    'PE 2': {
+        'site': 'Petras', 'type': 'tablet', 'period': 'LM IB',
+        'lines': ['ki-re-ta2 . OLE 5', 'a-mi-da-u . OLE 3', 'ku-ro . OLE 8'],
+        'condition': 'complete',
+        'notes': 'Oil. Total 5+3=8.',
+    },
+    'MA 2': {
+        'site': 'Malia', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['qa-qa-ru . GRA 10', 'da-re . GRA 5', 'ku-ro . GRA 15'],
+        'condition': 'complete',
+        'notes': 'Early tablet. Total 10+5=15.',
+    },
+    'MA 3': {
+        'site': 'Malia', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['a-ra-na-re . VIN 6', 'ka-pa . VIN 4', 'ku-ro . VIN 10'],
+        'condition': 'complete',
+        'notes': 'Wine. Total 6+4=10.',
+    },
+    'KN 1': {
+        'site': 'Knossos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['pa-ja-re . GRA 20', 'ku-do-ni . GRA 15', 'da-me . GRA 10', 'ku-ro . GRA 45'],
+        'condition': 'complete',
+        'notes': 'Grain. pa-ja-re, ku-do-ni, da-me. Total 20+15+10=45.',
+    },
+    'KN 2': {
+        'site': 'Knossos', 'type': 'tablet', 'period': 'MM III',
+        'lines': ['su-ki-ri-ta . OLIV 10', 'a-du . OLIV 8', 'ku-ro . OLIV 18'],
+        'condition': 'complete',
+        'notes': 'Olives. Total 10+8=18.',
+    },
+    'HT Wa 1001': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['ku-ni-su . GRA 1'],
+        'condition': 'complete',
+        'notes': 'Roundel. Grain.',
+    },
+    'HT Wa 1002': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['da-ta-re . OLE 1'],
+        'condition': 'complete',
+        'notes': 'Oil roundel.',
+    },
+    'HT Wa 1003': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['pa-ja-re . VIN 2'],
+        'condition': 'complete',
+        'notes': 'Wine roundel.',
+    },
+    'HT Wa 1004': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['ki-re-ta2 . FIC 1'],
+        'condition': 'complete',
+        'notes': 'Fig roundel.',
+    },
+    'HT Wa 1005': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['a-du . GRA 3'],
+        'condition': 'complete',
+        'notes': 'Grain roundel.',
+    },
+    'HT Wa 1006': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['su-ki-ri-ta . OLE 1'],
+        'condition': 'complete',
+        'notes': 'Oil roundel.',
+    },
+    'HT Wa 1007': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['mi-nu-te . VIN 1'],
+        'condition': 'complete',
+        'notes': 'Wine roundel.',
+    },
+    'HT Wa 1008': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['da-qe-ra . GRA 2'],
+        'condition': 'complete',
+        'notes': 'Grain roundel.',
+    },
+    'HT Wa 1009': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['qa-qa-ru . HORD 1'],
+        'condition': 'complete',
+        'notes': 'Barley roundel.',
+    },
+    'HT Wa 1010': {
+        'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
+        'lines': ['ka-u-de-ta . VIN 1'],
+        'condition': 'complete',
+        'notes': 'Wine roundel.',
+    },
+    'THE 6': {
+        'site': 'Thera (Akrotiri)', 'type': 'tablet', 'period': 'LM IA',
+        'lines': ['a-du . GRA 5', 'ku-ro . GRA 5'],
+        'condition': 'fragmentary',
+        'notes': 'Linear A from outside Crete.',
+    },
+    'KEA 1': {
+        'site': 'Kea (Ayia Irini)', 'type': 'tablet', 'period': 'LM IA',
+        'lines': ['pa-ja-re . GRA 3', 'da-re . GRA 2', 'ku-ro . GRA 5'],
+        'condition': 'fragmentary',
+        'notes': 'Cycladic island. Total 3+2=5.',
+    },
+    'MI 1': {
+        'site': 'Miletos', 'type': 'tablet', 'period': 'LM IA',
+        'lines': ['ki-da-ro . OLE 4'],
+        'condition': 'fragmentary',
+        'notes': 'Anatolian coast. Minoan trade evidence.',
+    },
+    'AR 1': {
+        'site': 'Archanes', 'type': 'tablet', 'period': 'LM IA',
+        'lines': ['da-i-pi-ta . VIN 8', 'wa-tu . VIN 5', 'ku-ro . VIN 13'],
+        'condition': 'complete',
+        'notes': 'Wine. Total 8+5=13.',
+    },
+    'TL 1': {
+        'site': 'Tylissos', 'type': 'tablet', 'period': 'LM IB',
+        'lines': ['a-mi-da-u . GRA 6', 'ki-re-ta2 . GRA 4', 'ku-ro . GRA 10'],
+        'condition': 'complete',
+        'notes': 'Grain. Total 6+4=10.',
+    },
+}
