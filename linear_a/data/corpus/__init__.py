@@ -66,6 +66,16 @@ try:
 except ImportError:
     pass
 
+# GORILA corpus (1,721 inscriptions from lineara.xyz)
+# Merged last so hand-curated entries take priority
+try:
+    from .gorila_corpus import GORILA_CORPUS
+    for k, v in GORILA_CORPUS.items():
+        if k not in CORPUS:
+            CORPUS[k] = v
+except (ImportError, FileNotFoundError):
+    pass
+
 
 # === HELPER FUNCTIONS ===
 
