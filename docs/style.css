@@ -137,6 +137,40 @@ footer { border-top: 1px solid var(--border); padding: 2rem; margin-top: 2rem; }
 .footer-left p, .footer-right p { font-size: 0.85rem; color: var(--text2); margin-bottom: 0.3rem; }
 footer a { color: var(--accent); text-decoration: none; }
 
+/* Findings */
+.findings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.2rem; }
+.finding-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; }
+.finding-card.featured { border-color: var(--accent2); }
+.finding-card h3 { color: var(--accent); margin-bottom: 0.8rem; }
+.finding-evidence { display: flex; gap: 1.5rem; margin: 1rem 0; flex-wrap: wrap; }
+.lang-scores { display: flex; flex-direction: column; gap: 0.5rem; margin: 1rem 0; }
+.lang-row { display: flex; align-items: center; gap: 0.8rem; }
+.lang-name { font-size: 0.85rem; color: var(--text2); min-width: 130px; text-align: right; }
+.formula-block { background: var(--surface2); border-radius: 6px; padding: 1.2rem; margin: 1rem 0; text-align: center; }
+.formula { font-size: 1.1rem; color: var(--accent); display: block; margin-bottom: 0.5rem; }
+.formula-trans { font-style: italic; color: var(--text2); font-size: 1rem; }
+
+/* Morphology */
+.morph-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.2rem; margin-bottom: 1.2rem; }
+.morph-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem; }
+.morph-card h3 { color: var(--accent); margin-bottom: 0.8rem; font-size: 1rem; }
+.morph-card ul { margin: 0.5rem 0 0 1.2rem; }
+.morph-card li { margin-bottom: 0.4rem; font-size: 0.9rem; }
+.morph-card code strong { color: var(--accent); }
+
+/* Corpus note */
+.corpus-note { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; }
+.corpus-note h3 { color: var(--accent); margin-bottom: 0.8rem; }
+
+/* References */
+.ref-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.2rem; }
+.ref-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem; }
+.ref-card h3 { color: var(--accent); margin-bottom: 0.8rem; font-size: 1rem; }
+.ref-list { list-style: none; padding: 0; }
+.ref-list li { margin-bottom: 0.6rem; font-size: 0.85rem; color: var(--text2); line-height: 1.5; }
+.ref-list a { color: var(--accent); text-decoration: none; }
+.ref-list a:hover { text-decoration: underline; }
+
 @media (max-width: 768px) {
   .header-content { flex-direction: column; text-align: center; }
   .header-stats { justify-content: center; }
