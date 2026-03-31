@@ -1,9 +1,11 @@
-# FM Role Count: Sign Presence/Absence Matrix
+# FM Role Count: Image Detail Inventory
 
-731 documents x 62 sign columns (1=present, 0=absent)
+Each row is a document. Each column indicates how many images exist at that detail level.
+Columns are alphabetically sorted (FileMaker export order).
+731 documents x 62 detail levels + Overview.
 
-| Document | S01 | S02 | S03 | S04 | S05 | S06 | S07 | S08 | S09 | S10 | S11 | S12 | S13 | S14 | S15 | S16 | S17 | S18 | S19 | S20 | S21 | S22 | S23 | S24 | S25 | S26 | S27 | S28 | S29 | S30 | S31 | S32 | S33 | S34 | S35 | S36 | S37 | S38 | S39 | S40 | S41 | S42 | S43 | S44 | S45 | S46 | S47 | S48 | S49 | S50 | S51 | S52 | S53 | S54 | S55 | S56 | S57 | S58 | S59 | S60 | S61 | S62 |
-|----------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| Document | Detail/1 | Detail/10 | Detail/11 | Detail/12 | Detail/13 | Detail/14 | Detail/15 | Detail/16 | Detail/17 | Detail/18 | Detail/19 | Detail/2 | Detail/20 | Detail/21 | Detail/22 | Detail/23 | Detail/24 | Detail/25 | Detail/26 | Detail/27 | Detail/28 | Detail/29 | Detail/3 | Detail/30 | Detail/31 | Detail/32 | Detail/33 | Detail/34 | Detail/35 | Detail/36 | Detail/37 | Detail/38 | Detail/39 | Detail/4 | Detail/40 | Detail/41 | Detail/42 | Detail/43 | Detail/44 | Detail/45 | Detail/46 | Detail/47 | Detail/48 | Detail/49 | Detail/5 | Detail/50 | Detail/51 | Detail/52 | Detail/53 | Detail/54 | Detail/55 | Detail/56 | Detail/57 | Detail/58 | Detail/59 | Detail/6 | Detail/60 | Detail/61 | Detail/7 | Detail/8 | Detail/9 | Overview |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ARKH 1a | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
 | ARKH 1b | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
 | ARKH 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |

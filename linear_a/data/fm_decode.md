@@ -1,7 +1,9 @@
 # FM Decode: Image Metadata
 
-| Inscription | Image | Normalized | Site | Number | Region | Full ID | Seq | Detail |
-|-------------|-------|------------|------|--------|--------|---------|-----|--------|
+5714 image records linking inscriptions to photographs.
+
+| Inscription | Image | Normalized | Site | Number | Region | FullID | Seq | Detail |
+|---|---|---|---|---|---|---|---|---|
 | KN 22c | KN 22c_3.png | KN 22c | KN | 22c |  | KN 22c | 3 | Detail/3 |
 | KN 22c | KN 22c_2.png | KN 22c | KN | 22c |  | KN 22c | 2 | Detail/2 |
 | KN 22c | KN 22c_6.png | KN 22c | KN | 22c |  | KN 22c | 6 | Detail/6 |

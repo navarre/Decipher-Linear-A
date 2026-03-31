@@ -1,7 +1,7 @@
 # FM Summary: Site Statistics
 
 | Site | Documents | Signs |
-|------|-----------|-------|
+|---|---|---|
 | ARKH | 10 | 128 |
 | GO | 2 | 9 |
 | HS | 1 | 3 |

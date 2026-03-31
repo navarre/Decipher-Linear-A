@@ -1,7 +1,9 @@
 # FM Document Catalog
 
-| Document | Normalized | Site | Number | Sub | Signs |
-|----------|------------|------|--------|-----|-------|
+773 Linear A documents with sign counts.
+
+| Document | Normalized | Site | Number | Sub | SignCount |
+|---|---|---|---|---|---|
 | ARKH 1a | ARKH 1a | ARKH | 1a |  | 19 |
 | ARKH 1b | ARKH 1b | ARKH | 1b |  | 6 |
 | ARKH 2 | ARKH 2 | ARKH | 2 |  | 24 |
