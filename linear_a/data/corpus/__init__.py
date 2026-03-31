@@ -23,48 +23,41 @@ def _merge(module_corpus):
     """Merge a sub-corpus into the main CORPUS."""
     CORPUS.update(module_corpus)
 
-# Import sub-corpora as they're built
-try:
-    from .libation_formulas import LIBATION_CORPUS
-    _merge(LIBATION_CORPUS)
-except ImportError:
-    pass
+# Import sub-corpora - works both as package import and standalone script
+import importlib
+import os as _os
 
-try:
-    from .haghia_triada import HT_CORPUS
-    _merge(HT_CORPUS)
-except ImportError:
-    pass
+def _load_sub_corpora():
+    """Load all sub-corpus modules, handling both package and standalone execution."""
+    _sub_corpora = [
+        ('libation_formulas', 'LIBATION_CORPUS'),
+        ('haghia_triada', 'HT_CORPUS'),
+        ('haghia_triada_2', 'HT_CORPUS_2'),
+        ('zakros', 'ZA_CORPUS'),
+        ('khania', 'KH_CORPUS'),
+        ('phaistos', 'PH_CORPUS'),
+        ('other_sites', 'OTHER_CORPUS'),
+    ]
 
-try:
-    from .haghia_triada_2 import HT_CORPUS_2
-    _merge(HT_CORPUS_2)
-except ImportError:
-    pass
+    for module_name, corpus_var in _sub_corpora:
+        try:
+            # Try relative import first (package mode)
+            mod = importlib.import_module(f'.{module_name}', package=__package__ or 'linear_a.data.corpus')
+        except (ImportError, ModuleNotFoundError):
+            try:
+                # Fall back to direct import (standalone mode)
+                import sys
+                corpus_dir = _os.path.dirname(_os.path.abspath(__file__))
+                if corpus_dir not in sys.path:
+                    sys.path.insert(0, corpus_dir)
+                mod = importlib.import_module(module_name)
+            except (ImportError, ModuleNotFoundError):
+                continue
+        sub_corpus = getattr(mod, corpus_var, None)
+        if sub_corpus:
+            _merge(sub_corpus)
 
-try:
-    from .zakros import ZA_CORPUS
-    _merge(ZA_CORPUS)
-except ImportError:
-    pass
-
-try:
-    from .khania import KH_CORPUS
-    _merge(KH_CORPUS)
-except ImportError:
-    pass
-
-try:
-    from .phaistos import PH_CORPUS
-    _merge(PH_CORPUS)
-except ImportError:
-    pass
-
-try:
-    from .other_sites import OTHER_CORPUS
-    _merge(OTHER_CORPUS)
-except ImportError:
-    pass
+_load_sub_corpora()
 
 
 # === HELPER FUNCTIONS ===
