@@ -15,7 +15,7 @@
       <p class="subtitle">Computational analysis of Europe's oldest undeciphered writing system</p>
     </div>
     <div class="header-stats">
-      <div class="header-stat"><span class="stat-num">~1,400</span><span class="stat-label">Inscriptions</span></div>
+      <div class="header-stat"><span class="stat-num">772</span><span class="stat-label">Documents</span></div>
       <div class="header-stat"><span class="stat-num">106</span><span class="stat-label">Syllabograms</span></div>
       <div class="header-stat"><span class="stat-num">23</span><span class="stat-label">Sites</span></div>
       <div class="header-stat"><span class="stat-num">14</span><span class="stat-label">Words Read</span></div>
@@ -376,22 +376,22 @@
   <h2>Corpus Overview</h2>
   <div class="stats-row">
     <div class="stat-card">
-      <div class="stat-big">~1,400</div>
-      <div class="stat-desc">Inscriptions Digitized</div>
-      <div class="stat-context">Full corpus from imported site + FileMaker</div>
+      <div class="stat-big">772</div>
+      <div class="stat-desc">Documents with Sign Data</div>
+      <div class="stat-context">From imported SigLA website snapshot</div>
     </div>
     <div class="stat-card">
-      <div class="stat-big">773</div>
-      <div class="stat-desc">Documents in Database</div>
-      <div class="stat-context">5,714 total signs across 19 sites</div>
+      <div class="stat-big">4,942</div>
+      <div class="stat-desc">Total Signs</div>
+      <div class="stat-context">Across all documents</div>
     </div>
     <div class="stat-card">
-      <div class="stat-big">129</div>
-      <div class="stat-desc">In Python Corpus</div>
-      <div class="stat-context">Structured for computational analysis</div>
+      <div class="stat-big">2,110</div>
+      <div class="stat-desc">Word Occurrences</div>
+      <div class="stat-context">Extracted from word-view pages</div>
     </div>
     <div class="stat-card">
-      <div class="stat-big">66</div>
+      <div class="stat-big">1,025</div>
       <div class="stat-desc">Unique Words</div>
     </div>
   </div>
@@ -530,7 +530,64 @@
 <!-- SITES -->
 <section id="sites" class="section">
   <h2>Inscription Sites</h2>
-  <p class="section-intro">Linear A inscriptions have been found across Crete and the wider Aegean, from palace archives to mountain-top sanctuaries.</p>
+  <p class="section-intro">Linear A inscriptions have been found across Crete and the wider Aegean, from palace archives to mountain-top sanctuaries. <a href="https://sigla.phis.me/map.html" target="_blank" style="color:var(--accent)">View interactive map on SigLA</a></p>
+
+  <div class="map-container">
+    <svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:900px;margin:0 auto;display:block">
+      <!-- Sea background -->
+      <rect width="900" height="420" fill="#0a1525" rx="8"/>
+      <!-- Crete outline (simplified) -->
+      <path d="M60,240 Q100,200 180,195 Q250,180 320,190 Q380,175 440,180 Q500,170 540,175 Q600,165 650,175 Q700,168 740,180 Q780,185 810,200 Q830,210 840,230 Q830,250 800,260 Q760,275 700,270 Q650,280 600,275 Q550,280 500,278 Q440,285 380,278 Q320,285 260,275 Q200,280 140,265 Q100,260 70,255 Q55,250 60,240Z" fill="#1a1a25" stroke="#2a2a3a" stroke-width="1.5"/>
+      <!-- Peloponnese hint -->
+      <path d="M300,60 Q340,50 380,55 Q400,70 390,90 Q370,100 350,95 Q320,90 310,75 Q300,65 300,60Z" fill="#1a1a25" stroke="#2a2a3a" stroke-width="1"/>
+      <!-- Cyclades islands -->
+      <ellipse cx="520" cy="80" rx="12" ry="10" fill="#1a1a25" stroke="#2a2a3a"/>
+      <ellipse cx="580" cy="100" rx="10" ry="8" fill="#1a1a25" stroke="#2a2a3a"/>
+      <ellipse cx="560" cy="55" rx="8" ry="6" fill="#1a1a25" stroke="#2a2a3a"/>
+      <!-- Kea -->
+      <ellipse cx="420" cy="75" rx="8" ry="10" fill="#1a1a25" stroke="#2a2a3a"/>
+      <!-- Thera -->
+      <ellipse cx="570" cy="130" rx="10" ry="10" fill="#1a1a25" stroke="#2a2a3a"/>
+      <!-- Anatolia hint -->
+      <path d="M850,100 Q880,90 900,95 L900,180 Q880,190 860,185 Q850,160 850,100Z" fill="#1a1a25" stroke="#2a2a3a" stroke-width="1"/>
+
+      <!-- Site markers - sized by document count -->
+      <!-- Haghia Triada (373 docs) -->
+      <circle cx="330" cy="255" r="12" fill="#c49b5c" opacity="0.9"/><text x="330" y="280" text-anchor="middle" fill="#c49b5c" font-size="10" font-family="sans-serif">Haghia Triada</text><text x="330" y="291" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">373 docs</text>
+      <!-- Khania (213 docs) -->
+      <circle cx="160" cy="210" r="10" fill="#c49b5c" opacity="0.85"/><text x="160" y="200" text-anchor="middle" fill="#c49b5c" font-size="10" font-family="sans-serif">Khania</text><text x="160" y="189" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">213</text>
+      <!-- Phaistos (63 docs) -->
+      <circle cx="360" cy="240" r="7" fill="#c49b5c" opacity="0.8"/><text x="375" y="233" fill="#c49b5c" font-size="9" font-family="sans-serif">Phaistos</text>
+      <!-- Zakros (44 docs) -->
+      <circle cx="750" cy="230" r="6" fill="#c49b5c" opacity="0.8"/><text x="750" y="220" text-anchor="middle" fill="#c49b5c" font-size="9" font-family="sans-serif">Zakros</text>
+      <!-- Knossos (31 docs) -->
+      <circle cx="380" cy="205" r="5.5" fill="#c49b5c" opacity="0.8"/><text x="395" y="200" fill="#c49b5c" font-size="9" font-family="sans-serif">Knossos</text>
+      <!-- Malia (20 docs) -->
+      <circle cx="480" cy="200" r="4.5" fill="#c49b5c" opacity="0.75"/><text x="480" y="192" text-anchor="middle" fill="#c49b5c" font-size="9" font-family="sans-serif">Malia</text>
+      <!-- Arkhanes (10 docs) -->
+      <circle cx="400" cy="220" r="3.5" fill="#c49b5c" opacity="0.7"/><text x="415" y="218" fill="#9090a0" font-size="8" font-family="sans-serif">Arkhanes</text>
+      <!-- Petras -->
+      <circle cx="700" cy="210" r="3" fill="#c49b5c" opacity="0.7"/><text x="700" y="202" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">Petras</text>
+      <!-- Tylissos -->
+      <circle cx="340" cy="205" r="3" fill="#c49b5c" opacity="0.7"/><text x="320" y="200" fill="#9090a0" font-size="8" font-family="sans-serif" text-anchor="end">Tylissos</text>
+      <!-- Palaikastro -->
+      <circle cx="730" cy="205" r="3" fill="#c49b5c" opacity="0.7"/><text x="730" y="197" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">Palaikastro</text>
+      <!-- Peak sanctuaries -->
+      <circle cx="410" cy="230" r="3" fill="#5a8fc4" opacity="0.7"/><text x="425" y="235" fill="#5a8fc4" font-size="8" font-family="sans-serif">Ioukhtas</text>
+      <circle cx="620" cy="245" r="3" fill="#5a8fc4" opacity="0.7"/><text x="635" y="248" fill="#5a8fc4" font-size="8" font-family="sans-serif">Psychro</text>
+      <circle cx="570" cy="250" r="3" fill="#5a8fc4" opacity="0.7"/><text x="570" y="265" text-anchor="middle" fill="#5a8fc4" font-size="8" font-family="sans-serif">Syme</text>
+      <!-- Aegean outliers -->
+      <circle cx="420" cy="75" r="3" fill="#4a9" opacity="0.7"/><text x="435" y="73" fill="#4a9" font-size="8" font-family="sans-serif">Kea</text>
+      <circle cx="570" cy="130" r="3" fill="#4a9" opacity="0.7"/><text x="585" y="128" fill="#4a9" font-size="8" font-family="sans-serif">Thera</text>
+      <circle cx="860" cy="150" r="3" fill="#4a9" opacity="0.7"/><text x="845" y="148" text-anchor="end" fill="#4a9" font-size="8" font-family="sans-serif">Miletos</text>
+
+      <!-- Legend -->
+      <circle cx="40" cy="370" r="4" fill="#c49b5c" opacity="0.8"/><text x="50" y="374" fill="#9090a0" font-size="9" font-family="sans-serif">Palace / settlement</text>
+      <circle cx="40" cy="388" r="4" fill="#5a8fc4" opacity="0.8"/><text x="50" y="392" fill="#9090a0" font-size="9" font-family="sans-serif">Peak sanctuary / cave</text>
+      <circle cx="40" cy="406" r="4" fill="#4a9" opacity="0.8"/><text x="50" y="410" fill="#9090a0" font-size="9" font-family="sans-serif">Aegean outlier</text>
+      <text x="250" y="392" fill="#9090a0" font-size="8" font-family="sans-serif">Circle size = document count</text>
+    </svg>
+  </div>
 
   <div class="sites-grid">
     <div class="site-card major">
