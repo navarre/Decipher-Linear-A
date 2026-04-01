@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "noto";
+    src:url("https://sigla.phis.me/noto-lb.ttf");
+}   
+body {
+    background: #dddddd;
+    margin: 0px;
+    font-family: "noto";
+}
+article {
+    width: 50em;
+    margin: auto;
+    margin-top:0px;
+    border-left: 3px solid #9999dd;
+    border-right: 3px solid #9999dd;
+    background: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 100vh;
+    font-family: "noto";
+}
+
+#title, #subtitle, #authors {
+    text-align: center;
+}
+
+#title {
+    font-size: 2em;
+    margin-top: 0px;
+}
+
+#subtitle {
+    font-size: 1.5em;
+}
+
+#authors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+#authors li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#authors li a {
+    color: inherit;
+    text-decoration: underline dotted;
+}
+#authors li a:hover {
+    text-decoration: underline dashed;
+}
+
+.author-institution {
+    font-style: italic;
+}
+
+.DisplayMath img {
+    margin: auto;
+    display: block;
+}
+
+.InlineMath img {
+    margin-bottom:-0.15em;
+    display: inline-block;
+}
+
+#abstract:before {
+    content: 'Abstract.';
+    font-weight: bold;
+    margin-bottom: 0;
+}
+#abstract {
+    margin: auto;
+    width: 30em;
+}
+#abstract p {
+    margin-top:0px;
+    text-align: justify;
+}
+
+p {
+    text-align: justify;
+}
+
+figure img {
+    max-width: 80%;
+}
+
+figure {
+    text-align: center;
+}
+
+img.inline {
+    height: 1.2em;
+    margin-bottom:-0.2em;
+}
