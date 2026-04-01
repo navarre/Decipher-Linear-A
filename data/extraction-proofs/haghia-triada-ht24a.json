@@ -1,0 +1,547 @@
+{
+  "subset_id": "haghia-triada-ht24a-proof",
+  "subset_scope": "single-document pilot within Haghia Triada",
+  "why_this_subset": "HT 24a is small enough for careful manual verification but rich enough to expose document metadata, sign occurrences, sequence pages, crop images, and cross-page coordinate linkage.",
+  "source_snapshot_root": "inbox/lineara website",
+  "source_location_context": {
+    "location_name": "Haghia Triada",
+    "reported_document_count": 372,
+    "source_page": "inbox/lineara website/location/Haghia Triada/index.html"
+  },
+  "document": {
+    "document_id": "HT_24a",
+    "schema_concept": "Document",
+    "document_code": "HT 24a",
+    "kind": {
+      "label": "Tablet",
+      "source_slug": "Tablet"
+    },
+    "location": {
+      "label": "Haghia Triada",
+      "source_slug": "Haghia Triada"
+    },
+    "period": {
+      "label": "LM IB",
+      "source_slug": "LM IB"
+    },
+    "dimensions_cm": {
+      "width_cm": 5.9,
+      "height_cm": 7.9,
+      "thickness_cm": 0.9
+    },
+    "corpus_url": "https://cefael.efa.gr/detail.php?site_id=1&actionID=page&serie_id=EtCret&volume_number=21&issue_number=1&ce=540ecor2uudeumpibfksblm7ss9s2lsi&sp=78",
+    "drawing_image": "inbox/lineara website/document/HT 24a/HT 24a.png",
+    "reported_sign_count": 20,
+    "reported_word_count": 3,
+    "source_page": "inbox/lineara website/document/HT 24a/index.html"
+  },
+  "sign_occurrences": [
+    {
+      "attestation_id": "HT_24a_occ_1",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 1,
+      "display_label": "#1: ku",
+      "sign_code": "AB81",
+      "display_reading": "ku",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 182,
+        "y": 170,
+        "width": 243,
+        "height": 394
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-1.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_1.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_2",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 2,
+      "display_label": "#2: *56",
+      "sign_code": "AB56",
+      "display_reading": "*56",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 541,
+        "y": 64,
+        "width": 237,
+        "height": 387
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-2.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_2.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_3",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 3,
+      "display_label": "#3: ri",
+      "sign_code": "AB53",
+      "display_reading": "ri",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 955,
+        "y": 50,
+        "width": 127,
+        "height": 310
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-3.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_3.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_4",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 4,
+      "display_label": "#4: ja",
+      "sign_code": "AB57",
+      "display_reading": "ja",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 1082,
+        "y": 41,
+        "width": 177,
+        "height": 353
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-4.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_4.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_5",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 5,
+      "display_label": "#5: A546",
+      "sign_code": "A546",
+      "display_reading": "A546",
+      "role": "Logogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 1331,
+        "y": 52,
+        "width": 390,
+        "height": 366
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-5.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_5.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_6",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 6,
+      "display_label": "#6: A561",
+      "sign_code": "A561",
+      "display_reading": "A561",
+      "role": "Logogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 560,
+        "y": 491,
+        "width": 743,
+        "height": 561
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-6.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_6.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_7",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 7,
+      "display_label": "#7: [?]",
+      "sign_code": null,
+      "display_reading": null,
+      "role": "Erasure (Unknown?)",
+      "certainty_note": "erased_or_unknown",
+      "bbox_on_document_image": {
+        "x": 572,
+        "y": 577,
+        "width": 23,
+        "height": 283
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-7.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_7.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_8",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 8,
+      "display_label": "#8: A707",
+      "sign_code": "A707",
+      "display_reading": "A707",
+      "role": "Fraction",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 600,
+        "y": 1313,
+        "width": 186,
+        "height": 197
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-8.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_8.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_9",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 9,
+      "display_label": "#9: A561",
+      "sign_code": "A561",
+      "display_reading": "A561",
+      "role": "Logogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 857,
+        "y": 1062,
+        "width": 611,
+        "height": 448
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-9.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_9.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_10",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 10,
+      "display_label": "#10: [?]",
+      "sign_code": null,
+      "display_reading": null,
+      "role": "Erasure (Unknown?)",
+      "certainty_note": "erased_or_unknown",
+      "bbox_on_document_image": {
+        "x": 882,
+        "y": 1122,
+        "width": 300,
+        "height": 261
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-10.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_10.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_11",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 11,
+      "display_label": "#11: pa",
+      "sign_code": "AB03",
+      "display_reading": "pa",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 161,
+        "y": 1691,
+        "width": 244,
+        "height": 503
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-11.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_11.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_12",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 12,
+      "display_label": "#12: sa",
+      "sign_code": "AB31",
+      "display_reading": "sa",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 410,
+        "y": 1707,
+        "width": 208,
+        "height": 375
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-12.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_12.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_13",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 13,
+      "display_label": "#13: ri",
+      "sign_code": "AB53",
+      "display_reading": "ri",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 755,
+        "y": 1758,
+        "width": 153,
+        "height": 341
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-13.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_13.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_14",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 14,
+      "display_label": "#14: ja",
+      "sign_code": "AB57",
+      "display_reading": "ja",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 923,
+        "y": 1705,
+        "width": 163,
+        "height": 375
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-14.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_14.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_15",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 15,
+      "display_label": "#15: A561",
+      "sign_code": "A561",
+      "display_reading": "A561",
+      "role": "Logogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 1163,
+        "y": 1634,
+        "width": 595,
+        "height": 482
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-15.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_15.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_16",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 16,
+      "display_label": "#16: ru",
+      "sign_code": "AB26",
+      "display_reading": "ru",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 173,
+        "y": 2251,
+        "width": 232,
+        "height": 316
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-16.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_16.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_17",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 17,
+      "display_label": "#17: [?]",
+      "sign_code": null,
+      "display_reading": null,
+      "role": "Erasure (Unknown?)",
+      "certainty_note": "erased_or_unknown",
+      "bbox_on_document_image": {
+        "x": 218,
+        "y": 2335,
+        "width": 176,
+        "height": 216
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-17.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_17.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_18",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 18,
+      "display_label": "#18: i",
+      "sign_code": "AB28",
+      "display_reading": "i",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 447,
+        "y": 2189,
+        "width": 316,
+        "height": 391
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-18.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_18.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_19",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 19,
+      "display_label": "#19: ko",
+      "sign_code": "AB70",
+      "display_reading": "ko",
+      "role": "Syllabogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 842,
+        "y": 2212,
+        "width": 222,
+        "height": 381
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-19.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_19.png"
+    },
+    {
+      "attestation_id": "HT_24a_occ_20",
+      "schema_concept": "SignOccurrence",
+      "occurrence_number": 20,
+      "display_label": "#20: A560",
+      "sign_code": "A560",
+      "display_reading": "A560",
+      "role": "Logogram",
+      "certainty_note": "certain_or_editorially_supplied",
+      "bbox_on_document_image": {
+        "x": 1157,
+        "y": 2222,
+        "width": 320,
+        "height": 335
+      },
+      "source_page": "inbox/lineara website/document/HT 24a/index.html",
+      "source_occurrence_page": "inbox/lineara website/document/HT 24a/index-20.html",
+      "source_crop_image": "inbox/lineara website/document/HT 24a/HT 24a_20.png"
+    }
+  ],
+  "sequences": [
+    {
+      "sequence_id": "HT_24a_seq_1",
+      "schema_concept": "Sequence",
+      "sequence_number_within_document": 1,
+      "normalized_pattern": "AB81-AB56-AB53-AB57",
+      "display_reading": "ku-*56-ri-ja",
+      "reported_sign_count": 4,
+      "matched_occurrence_numbers_by_bbox": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_word_bboxes": [
+        {
+          "x": 182,
+          "y": 170,
+          "width": 243,
+          "height": 394
+        },
+        {
+          "x": 541,
+          "y": 64,
+          "width": 237,
+          "height": 387
+        },
+        {
+          "x": 955,
+          "y": 50,
+          "width": 127,
+          "height": 310
+        },
+        {
+          "x": 1082,
+          "y": 41,
+          "width": 177,
+          "height": 353
+        }
+      ],
+      "source_page": "inbox/lineara website/document/HT 24a/index-word-0.html",
+      "matching_method": "Matched selected word SVG rects from index-word-N.html to occurrence rects in index.html by exact x/y/width/height equality."
+    },
+    {
+      "sequence_id": "HT_24a_seq_2",
+      "schema_concept": "Sequence",
+      "sequence_number_within_document": 2,
+      "normalized_pattern": "AB03-AB31-AB53-AB57",
+      "display_reading": "pa-sa-ri-ja",
+      "reported_sign_count": 4,
+      "matched_occurrence_numbers_by_bbox": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "selected_word_bboxes": [
+        {
+          "x": 161,
+          "y": 1691,
+          "width": 244,
+          "height": 503
+        },
+        {
+          "x": 410,
+          "y": 1707,
+          "width": 208,
+          "height": 375
+        },
+        {
+          "x": 755,
+          "y": 1758,
+          "width": 153,
+          "height": 341
+        },
+        {
+          "x": 923,
+          "y": 1705,
+          "width": 163,
+          "height": 375
+        }
+      ],
+      "source_page": "inbox/lineara website/document/HT 24a/index-word-1.html",
+      "matching_method": "Matched selected word SVG rects from index-word-N.html to occurrence rects in index.html by exact x/y/width/height equality."
+    },
+    {
+      "sequence_id": "HT_24a_seq_3",
+      "schema_concept": "Sequence",
+      "sequence_number_within_document": 3,
+      "normalized_pattern": "AB26-AB28-AB70",
+      "display_reading": "ru-i-ko",
+      "reported_sign_count": 3,
+      "matched_occurrence_numbers_by_bbox": [
+        16,
+        18,
+        19
+      ],
+      "selected_word_bboxes": [
+        {
+          "x": 173,
+          "y": 2251,
+          "width": 232,
+          "height": 316
+        },
+        {
+          "x": 447,
+          "y": 2189,
+          "width": 316,
+          "height": 391
+        },
+        {
+          "x": 842,
+          "y": 2212,
+          "width": 222,
+          "height": 381
+        }
+      ],
+      "source_page": "inbox/lineara website/document/HT 24a/index-word-2.html",
+      "matching_method": "Matched selected word SVG rects from index-word-N.html to occurrence rects in index.html by exact x/y/width/height equality."
+    }
+  ],
+  "ambiguities_and_limits": [
+    "Sequence pages expose only three word-level sequences, while the document page reports 20 signs total; not every sign occurrence is clearly assigned to a word sequence in the visible HTML.",
+    "Occurrences 7, 10, and 17 are labeled \"[?]\" with role \"Erasure (Unknown?)\"; these should not be normalized into definite sign values without external evidence.",
+    "Role labels such as \"Syllabogram\" and \"Logogram\" are taken directly from the site and treated as source assertions, not independently re-verified epigraphic judgments.",
+    "The sign/sequence linkage is strong where bounding boxes match exactly across pages, but this method should still be recorded as a derived linkage rather than first-order source text."
+  ]
+}
