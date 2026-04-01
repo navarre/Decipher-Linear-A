@@ -113,7 +113,7 @@ def get_words():
                         float(w)
                     except ValueError:
                         if len(w) > 1:
-                            words.append(w)
+                            words.append(w.lower())
     return words
 
 def get_unique_words():
