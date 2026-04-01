@@ -1,0 +1,341 @@
+{
+  "generated": true,
+  "corpus": {
+    "total_inscriptions": 129,
+    "total_lines": 346,
+    "total_words": 376,
+    "unique_words": 66,
+    "sites_count": 23,
+    "top_words": [
+      {
+        "word": "ku-ro",
+        "count": 80
+      },
+      {
+        "word": "a-ta-i-*301-wa-ja",
+        "count": 21
+      },
+      {
+        "word": "a-du",
+        "count": 17
+      },
+      {
+        "word": "ja-sa-sa-ra-me",
+        "count": 15
+      },
+      {
+        "word": "pa-ja-re",
+        "count": 15
+      },
+      {
+        "word": "ki-re-ta2",
+        "count": 15
+      },
+      {
+        "word": "su-ki-ri-ta",
+        "count": 11
+      },
+      {
+        "word": "da-ta-re",
+        "count": 11
+      },
+      {
+        "word": "ki-da-ro",
+        "count": 10
+      },
+      {
+        "word": "qa-qa-ru",
+        "count": 10
+      },
+      {
+        "word": "a-mi-da-u",
+        "count": 9
+      },
+      {
+        "word": "ku-ni-su",
+        "count": 8
+      },
+      {
+        "word": "da-me",
+        "count": 8
+      },
+      {
+        "word": "di-na-u",
+        "count": 8
+      },
+      {
+        "word": "i-da-ma-te",
+        "count": 7
+      },
+      {
+        "word": "da-re",
+        "count": 7
+      },
+      {
+        "word": "ka-u-de-ta",
+        "count": 6
+      },
+      {
+        "word": "si-da-te",
+        "count": 6
+      },
+      {
+        "word": "pa-ta-ne",
+        "count": 6
+      },
+      {
+        "word": "da-i-pi-ta",
+        "count": 6
+      },
+      {
+        "word": "mi-nu-te",
+        "count": 6
+      },
+      {
+        "word": "se-to-i-ja",
+        "count": 6
+      },
+      {
+        "word": "ku-do-ni",
+        "count": 5
+      },
+      {
+        "word": "da-qe-ra",
+        "count": 5
+      },
+      {
+        "word": "ki-ro",
+        "count": 5
+      },
+      {
+        "word": "wa-tu",
+        "count": 5
+      },
+      {
+        "word": "ru-ja",
+        "count": 5
+      },
+      {
+        "word": "te-ki",
+        "count": 5
+      },
+      {
+        "word": "ka-pa",
+        "count": 4
+      },
+      {
+        "word": "pi-te-za",
+        "count": 3
+      }
+    ],
+    "by_site": {
+      "Haghia Triada": 52,
+      "Zakros": 14,
+      "Khania": 12,
+      "Phaistos": 10,
+      "Ioukhtas": 6,
+      "Knossos": 5,
+      "Syme Viannou": 4,
+      "Archanes": 3,
+      "Malia": 3,
+      "Apodoulou": 2,
+      "Psychro": 2,
+      "Palaikastro": 2,
+      "Troullos": 2,
+      "Tylissos": 2,
+      "Petras": 2,
+      "Kophinas": 1,
+      "Prassa": 1,
+      "Vrysinas": 1,
+      "Petsophas": 1,
+      "Platanos": 1,
+      "Thera (Akrotiri)": 1,
+      "Kea (Ayia Irini)": 1,
+      "Miletos": 1
+    },
+    "by_type": {
+      "tablet": 83,
+      "libation_table": 19,
+      "roundel": 15,
+      "stone_vessel": 10,
+      "ivory_scepter": 2
+    },
+    "by_period": {
+      "LM IB": 81,
+      "LM IA": 24,
+      "MM III": 14,
+      "MM III - LM IA": 9,
+      "MM II": 1
+    }
+  },
+  "signs": {
+    "syllabograms": 106,
+    "logograms": 32,
+    "numerals": 5,
+    "fractions": 10,
+    "confidence": {
+      "high": 57,
+      "medium": 16,
+      "low": 11,
+      "none": 22
+    },
+    "transaction_signs": 5,
+    "recurring_sequences": 10
+  },
+  "recurring_sequences": {
+    "a-ta-i-*301-wa-ja": {
+      "freq": 5,
+      "context": "libation formula",
+      "notes": ""
+    },
+    "ja-sa-sa-ra-me": {
+      "freq": 8,
+      "context": "libation formula",
+      "notes": "Most famous recurring religious phrase. Possibly a deity name or prayer formula."
+    },
+    "a-su-pu-wa": {
+      "freq": 3,
+      "context": "libation tables",
+      "notes": ""
+    },
+    "i-da-ma-te": {
+      "freq": 4,
+      "context": "libation formula",
+      "notes": "Possibly related to Mount Ida (i-da) + 'mother' (ma-te)?"
+    },
+    "a-di-ki-te": {
+      "freq": 3,
+      "context": "libation formula",
+      "notes": "Possibly = Dikte/Dikta, the mountain associated with Zeus' birth"
+    },
+    "ta-na-te": {
+      "freq": 2,
+      "context": "libation formula",
+      "notes": "Possibly a deity name. Compare Tanit?"
+    },
+    "da-me": {
+      "freq": 6,
+      "context": "administrative",
+      "notes": "Possibly 'total' or a type of assessment"
+    },
+    "ku-ro": {
+      "freq": 15,
+      "context": "administrative",
+      "notes": "Almost certainly means 'total' - appears at end of lists before sum"
+    },
+    "ki-ro": {
+      "freq": 12,
+      "context": "administrative",
+      "notes": "Likely 'deficit' or 'owed' - cf. Linear B ki-ri-to"
+    },
+    "po-to-ku-ro": {
+      "freq": 3,
+      "context": "administrative",
+      "notes": "Possibly 'grand total' - po-to may be an intensifier"
+    }
+  },
+  "active_excavations": {
+    "Knossos (Anetaki)": {
+      "team": "Athanasia Kanta (INSTAP)",
+      "status": "Published 2025",
+      "finds": "Ivory scepter with longest Linear A inscription (119 signs)",
+      "reference": "Kanta et al. 2025, Ariadne Suppl. 5",
+      "url": "https://ejournals.lib.uoc.gr/Ariadne/article/view/1841"
+    },
+    "Sissi": {
+      "team": "Belgian School at Athens (Jan Driessen)",
+      "status": "Active excavation",
+      "finds": "Neopalatial buildings, potential Linear A contexts",
+      "url": "https://www.aegean-archaeology.be/sissi/"
+    },
+    "Petras (Siteia)": {
+      "team": "Metaxia Tsipopoulou",
+      "status": "Active excavation",
+      "finds": "Linear A tablets already recovered; ongoing"
+    },
+    "Zominthos": {
+      "team": "Yannis Sakellarakis / Efi Sapouna-Sakellaraki",
+      "status": "Active excavation",
+      "finds": "Highland Minoan site near Mt. Ida; Neopalatial levels"
+    },
+    "Palaikastro": {
+      "team": "British School at Athens",
+      "status": "Periodic excavation",
+      "finds": "Eastern Crete; Neopalatial contexts"
+    },
+    "Mochlos": {
+      "team": "INSTAP / Jeffrey Soles",
+      "status": "Active excavation",
+      "finds": "Coastal Neopalatial site"
+    },
+    "Papoura Hill (Kastelli)": {
+      "team": "Greek Ministry of Culture",
+      "status": "Discovered June 2024",
+      "finds": "Protopalatial maze-like structure (2000-1700 BCE), 157ft diameter, 8 stone rings",
+      "url": "https://minoanmagissa.com/2024/07/05/a-mystifying-minoan-monument-recently-discovered-in-crete/"
+    }
+  },
+  "online_databases": {
+    "SigLA": {
+      "name": "The Signs of Linear A",
+      "authors": "Ester Salgarella & Simon Castellan",
+      "url": "https://sigla.phis.me/",
+      "description": "300 standard signs, 400+ inscriptions, 3000+ searchable individual signs",
+      "status": "Launched 2020; update status uncertain"
+    },
+    "Younger": {
+      "name": "Younger's Linear A Texts in Phonetic Transcription",
+      "authors": "John G. Younger",
+      "url": "https://people.ku.edu/~jyounger/LinearA/",
+      "description": "Standard phonetic transcription reference for the field",
+      "status": "Maintained (last checked 2024)"
+    },
+    "GORILA_EFA": {
+      "name": "GORILA / RILA (EFA publications)",
+      "authors": "Godart & Olivier; Del Freo & Zurbach (Suppl. 2025)",
+      "url": "https://editions.efa.gr/?id=1050&r=publication",
+      "description": "Official corpus publication. RILA Suppl\u00e9ment 1 (2025) updates inventory.",
+      "status": "New supplement published 2025"
+    },
+    "Petrolito_Corpus": {
+      "name": "Linear A Digital Corpus",
+      "authors": "Petrolito et al.",
+      "url": "https://aclanthology.org/W15-3715.pdf",
+      "description": "Computational/digital framing of Linear A corpus",
+      "status": "Published 2015"
+    },
+    "Nestor_Bibliography": {
+      "name": "Nestor Bibliography of Aegean Prehistory",
+      "authors": "University of Cincinnati",
+      "url": "https://nestor.classics.uc.edu/",
+      "description": "Monthly bibliography tracking all Aegean Bronze Age publications",
+      "status": "Active, ongoing"
+    }
+  },
+  "key_papers": {
+    "Kanta_et_al_2025": {
+      "authors": "Kanta, A., Nakassis, D., Palaima, T.G., & Perna, M.",
+      "year": 2025,
+      "title": "An archaeological and epigraphical overview of some inscriptions found in the Cult Center of the city of Knossos (Anetaki plot)",
+      "journal": "Ariadne Supplement Series 5",
+      "pages": "27-43",
+      "url": "https://ejournals.lib.uoc.gr/Ariadne/article/view/1841",
+      "significance": "Publication of the longest known Linear A inscription (119 signs on ivory scepter)"
+    },
+    "RILA_Supplement_2025": {
+      "authors": "Del Freo, M. & Zurbach, J.",
+      "year": 2025,
+      "title": "RILA Suppl\u00e9ment 1",
+      "journal": "EFA \u00c9tudes Cr\u00e9toises",
+      "url": "https://editions.efa.gr/?id=1050&r=publication",
+      "significance": "Updated corpus inventory for Linear A inscriptions"
+    },
+    "Madhu_2024": {
+      "authors": "Madhu, A.",
+      "year": 2024,
+      "title": "An Anatolian Hypothesis for Linear A",
+      "journal": "Preprint",
+      "significance": "Recent independent Anatolian language family proposal"
+    }
+  }
+}

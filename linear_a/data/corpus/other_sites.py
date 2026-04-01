@@ -1,19 +1,16 @@
 """
 Linear A Inscriptions from Other Sites
 ========================================
-Smaller collections from Petras, Malia, Knossos tablets, Arkhanes,
-and Aegean islands (Thera, Kea, Miletos, etc.)
-
+Petras, Malia, Knossos tablets, Arkhanes, Aegean islands.
 Sources: GORILA III-V, Younger
 """
 
 OTHER_CORPUS = {
-
     'PE 1': {
         'site': 'Petras', 'type': 'tablet', 'period': 'LM IB',
         'lines': ['a-du . GRA 8', 'da-ta-re . GRA 4', 'se-to-i-ja . GRA 3', 'ku-ro . GRA 15'],
         'condition': 'complete',
-        'notes': 'Grain. se-to-i-ja may refer to nearby Seteia. Total 8+4+3=15.',
+        'notes': 'Grain. Total 8+4+3=15.',
     },
     'PE 2': {
         'site': 'Petras', 'type': 'tablet', 'period': 'LM IB',
@@ -25,7 +22,7 @@ OTHER_CORPUS = {
         'site': 'Malia', 'type': 'tablet', 'period': 'MM III',
         'lines': ['qa-qa-ru . GRA 10', 'da-re . GRA 5', 'ku-ro . GRA 15'],
         'condition': 'complete',
-        'notes': 'Early tablet from Malia palace. Total 10+5=15.',
+        'notes': 'Early tablet. Total 10+5=15.',
     },
     'MA 3': {
         'site': 'Malia', 'type': 'tablet', 'period': 'MM III',
@@ -37,7 +34,7 @@ OTHER_CORPUS = {
         'site': 'Knossos', 'type': 'tablet', 'period': 'MM III',
         'lines': ['pa-ja-re . GRA 20', 'ku-do-ni . GRA 15', 'da-me . GRA 10', 'ku-ro . GRA 45'],
         'condition': 'complete',
-        'notes': 'Grain from Knossos. pa-ja-re, ku-do-ni, da-me. Total 20+15+10=45.',
+        'notes': 'Grain. pa-ja-re, ku-do-ni, da-me. Total 20+15+10=45.',
     },
     'KN 2': {
         'site': 'Knossos', 'type': 'tablet', 'period': 'MM III',
@@ -49,7 +46,7 @@ OTHER_CORPUS = {
         'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
         'lines': ['ku-ni-su . GRA 1'],
         'condition': 'complete',
-        'notes': 'Roundel. ku-ni-su with single grain unit.',
+        'notes': 'Roundel. Grain.',
     },
     'HT Wa 1002': {
         'site': 'Haghia Triada', 'type': 'roundel', 'period': 'LM IB',
@@ -109,19 +106,19 @@ OTHER_CORPUS = {
         'site': 'Thera (Akrotiri)', 'type': 'tablet', 'period': 'LM IA',
         'lines': ['a-du . GRA 5', 'ku-ro . GRA 5'],
         'condition': 'fragmentary',
-        'notes': 'One of very few Linear A texts from outside Crete.',
+        'notes': 'Linear A from outside Crete.',
     },
     'KEA 1': {
         'site': 'Kea (Ayia Irini)', 'type': 'tablet', 'period': 'LM IA',
         'lines': ['pa-ja-re . GRA 3', 'da-re . GRA 2', 'ku-ro . GRA 5'],
         'condition': 'fragmentary',
-        'notes': 'Cycladic island. Minoan presence. Total 3+2=5.',
+        'notes': 'Cycladic island. Total 3+2=5.',
     },
     'MI 1': {
         'site': 'Miletos', 'type': 'tablet', 'period': 'LM IA',
         'lines': ['ki-da-ro . OLE 4'],
         'condition': 'fragmentary',
-        'notes': 'Anatolian coast. Evidence of Minoan trade/colonization.',
+        'notes': 'Anatolian coast. Minoan trade evidence.',
     },
     'AR 1': {
         'site': 'Archanes', 'type': 'tablet', 'period': 'LM IA',
@@ -136,6 +133,3 @@ OTHER_CORPUS = {
         'notes': 'Grain. Total 6+4=10.',
     },
 }
-
-if __name__ == '__main__':
-    print(f"Other Sites Corpus: {len(OTHER_CORPUS)} documents")

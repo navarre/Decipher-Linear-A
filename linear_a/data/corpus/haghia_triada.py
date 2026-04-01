@@ -291,21 +291,3 @@ if __name__ == '__main__':
     print(f"Haghia Triada Corpus (Part 1)")
     print(f"{'='*50}")
     print(f"Total tablets: {len(HT_CORPUS)}")
-    verified = 0
-    for tid, tablet in HT_CORPUS.items():
-        for line in tablet['lines']:
-            if 'ku-ro' in line and 'po-to-ku-ro' not in line:
-                verified += 1
-    print(f"Tablets with ku-ro totals: {verified}")
-    words = set()
-    for tablet in HT_CORPUS.values():
-        for line in tablet['lines']:
-            for part in line.split(' . '):
-                p = part.strip()
-                if p and not any(c.isdigit() for c in p) and p not in (
-                    'GRA', 'OLE', 'VIN', 'FIC', 'OVIS', 'CAP', 'SUS', 'BOS',
-                    'TELA', 'HORD', 'OLIV', 'AROM', 'CYP', 'VIR', 'MUL', 'OLE+KI', 'J'):
-                    words.add(p)
-    print(f"Unique words/names: {len(words)}")
-    for w in sorted(words):
-        print(f"  {w}")

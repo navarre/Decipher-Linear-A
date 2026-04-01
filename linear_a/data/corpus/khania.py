@@ -1,20 +1,16 @@
 """
 Linear A Tablets from Khania (KH)
 ==================================
-Khania (ancient Kydonia) - major site on the northwestern coast of Crete.
-~99 documents including tablets, roundels, and nodules.
-Important because ku-do-ni in other tablets likely refers to this city.
-
+Khania (ancient Kydonia) - major site on northwestern Crete.
 Sources: GORILA IV, Younger, Hallager (1996)
 """
 
 KH_CORPUS = {
-
     'KH 3': {
         'site': 'Khania', 'type': 'tablet', 'period': 'LM IB',
         'lines': ['a-du . GRA 10', 'ki-re-ta2 . GRA 5', 'pa-ja-re . GRA 8', 'ku-ro . GRA 23'],
         'condition': 'complete',
-        'notes': 'Grain. Same names as HT. Total 10+5+8=23.',
+        'notes': 'Grain. Total 10+5+8=23.',
     },
     'KH 5': {
         'site': 'Khania', 'type': 'tablet', 'period': 'LM IB',
@@ -26,7 +22,7 @@ KH_CORPUS = {
         'site': 'Khania', 'type': 'tablet', 'period': 'LM IB',
         'lines': ['si-da-te . VIN 15', 'su-ki-ri-ta . VIN 10', 'ku-ro . VIN 25'],
         'condition': 'complete',
-        'notes': 'Wine. si-da-te, su-ki-ri-ta recur. Total 15+10=25.',
+        'notes': 'Wine. Total 15+10=25.',
     },
     'KH 7': {
         'site': 'Khania', 'type': 'tablet', 'period': 'LM IB',
@@ -51,13 +47,13 @@ KH_CORPUS = {
         'site': 'Khania', 'type': 'tablet', 'period': 'LM IB',
         'lines': ['ku-ni-su . GRA 12', 'da-i-pi-ta . GRA 8', 'ku-ro . GRA 20'],
         'condition': 'complete',
-        'notes': 'Grain. ku-ni-su recurs. Total 12+8=20.',
+        'notes': 'Grain. Total 12+8=20.',
     },
     'KH Wc 2001': {
         'site': 'Khania', 'type': 'roundel', 'period': 'LM IB',
         'lines': ['da-ta-re . VIN 1'],
         'condition': 'complete',
-        'notes': 'Roundel with single wine entry.',
+        'notes': 'Roundel. Wine.',
     },
     'KH Wc 2002': {
         'site': 'Khania', 'type': 'roundel', 'period': 'LM IB',
@@ -84,6 +80,3 @@ KH_CORPUS = {
         'notes': 'Wine roundel.',
     },
 }
-
-if __name__ == '__main__':
-    print(f"Khania Corpus: {len(KH_CORPUS)} documents")

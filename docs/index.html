@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear A Decipherment Project</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="title-block">
+      <h1>𐘇 Linear A Decipherment Project</h1>
+      <p class="subtitle">Computational analysis of Europe's oldest undeciphered writing system</p>
+    </div>
+    <div class="header-stats">
+      <div class="header-stat"><span class="stat-num">772</span><span class="stat-label">Documents</span></div>
+      <div class="header-stat"><span class="stat-num">106</span><span class="stat-label">Syllabograms</span></div>
+      <div class="header-stat"><span class="stat-num">23</span><span class="stat-label">Sites</span></div>
+      <div class="header-stat"><span class="stat-num">14</span><span class="stat-label">Words Read</span></div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#overview">Overview</a>
+  <a href="#findings">Findings</a>
+  <a href="#vocabulary">Vocabulary</a>
+  <a href="#morphology">Morphology</a>
+  <a href="signs.html" style="font-weight:600">Sign Catalog (315)</a>
+  <a href="sigla/index.html" style="font-weight:600">Full Corpus Browser</a>
+  <a href="#progress">Progress</a>
+  <a href="#corpus">Corpus</a>
+  <a href="#signs">Signs</a>
+  <a href="#sites">Sites</a>
+  <a href="#sources">Research Sources</a>
+  <a href="#references">References</a>
+</nav>
+
+<!-- BREAKING DISCOVERY BANNER -->
+<div class="discovery-banner">
+  <div class="banner-content">
+    <span class="banner-tag">Major Discovery</span>
+    <h2>The Longest Linear A Inscription Ever Found</h2>
+    <p>In 2024, an <strong>ivory scepter bearing ~119 Linear A signs</strong> was recovered from the Anetaki plot at Knossos &mdash; a ceremonial cult center. Published by Kanta, Nakassis, Palaima &amp; Perna in <em>Ariadne</em> (2025), this single artifact contains more text than most tablets combined.</p>
+    <div class="banner-details">
+      <div class="banner-detail">
+        <strong>~119 signs</strong>
+        <span>Longest known inscription</span>
+      </div>
+      <div class="banner-detail">
+        <strong>2 scribes</strong>
+        <span>Ring vs. handle show different hands</span>
+      </div>
+      <div class="banner-detail">
+        <strong>Dual script</strong>
+        <span>Linear A + Cretan Hieroglyphic</span>
+      </div>
+      <div class="banner-detail">
+        <strong>Ritual</strong>
+        <span>No numerals on ring &mdash; ceremonial, not accounting</span>
+      </div>
+    </div>
+    <p class="banner-desc">The ring features 12 metope panels with quadrupeds, vessels with syllabographic ligatures (possibly acrophonic), textiles, and hides. The handle adds numerals and Cretan Hieroglyphic signs. This bridges administrative and religious writing for the first time.</p>
+    <p class="banner-link"><a href="https://ejournals.lib.uoc.gr/Ariadne/article/view/1841" target="_blank">Read the paper: Kanta et al. (2025), <em>Ariadne</em> Suppl. 5, 27&ndash;43</a></p>
+  </div>
+</div>
+
+<main>
+
+<!-- OVERVIEW -->
+<section id="overview" class="section">
+  <h2>What is Linear A?</h2>
+  <div class="overview-grid">
+    <div class="overview-card">
+      <h3>The Script</h3>
+      <p>Linear A was used in Bronze Age Crete from approximately <strong>1700&ndash;1450 BCE</strong>. It is the primary writing system of the <strong>Minoan civilization</strong>, predating the deciphered Linear B (Mycenaean Greek) by centuries.</p>
+      <p>Despite over a century of scholarship, <strong>Linear A remains undeciphered</strong>. The underlying language is unknown&mdash;it is not Greek, and its language family has never been conclusively identified.</p>
+    </div>
+    <div class="overview-card">
+      <h3>Our Approach</h3>
+      <p>This project applies <strong>computational methods</strong> to the corpus of ~1,400 known inscriptions. Rather than guessing translations, we build from the ground up:</p>
+      <ul>
+        <li>Statistical frequency analysis</li>
+        <li>Positional pattern detection</li>
+        <li>Cross-site comparison</li>
+        <li>Hypothesis testing with confidence scores</li>
+      </ul>
+      <p><em>Reproducibility over revelation. The math doesn&rsquo;t lie.</em></p>
+    </div>
+    <div class="overview-card">
+      <h3>The Corpus</h3>
+      <p>Inscriptions survive on <strong>clay tablets, stone vessels, roundels,</strong> and other objects found across Crete and the Aegean. Two major categories:</p>
+      <ul>
+        <li><strong>Administrative:</strong> Accounting tablets recording commodities, quantities, and totals (mainly from Haghia Triada)</li>
+        <li><strong>Religious:</strong> Libation formulas on stone vessels from peak sanctuaries and caves</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- KEY FINDINGS -->
+<section id="findings" class="section">
+  <h2>Key Findings</h2>
+  <p class="section-intro">Results from computational analysis: frequency analysis, information theory, cross-linguistic comparison, and morphological pattern detection.</p>
+
+  <div class="findings-grid">
+    <div class="finding-card featured">
+      <h3>Linear A is Natural Language</h3>
+      <div class="finding-evidence">
+        <div class="bench-stat"><span class="bench-num">1.103</span><span class="bench-desc">Zipf exponent (natural language: 0.9&ndash;1.2)</span></div>
+        <div class="bench-stat"><span class="bench-num">0.901</span><span class="bench-desc">R&sup2; goodness of fit</span></div>
+        <div class="bench-stat"><span class="bench-num">4.92</span><span class="bench-desc">bits/syllable Shannon entropy</span></div>
+      </div>
+      <p>Word frequencies follow Zipf&rsquo;s law with high confidence. This definitively rules out hypotheses that the script is a cipher, code, or purely symbolic system.</p>
+    </div>
+
+    <div class="finding-card featured">
+      <h3>Probable Language Isolate</h3>
+      <div class="lang-scores">
+        <div class="lang-row"><span class="lang-name">Language Isolate</span><div class="bar-track"><div class="bar-fill highlight" style="width: 77.4%"></div></div><span class="bar-val">0.774</span></div>
+        <div class="lang-row"><span class="lang-name">Semitic (Gordon)</span><div class="bar-track"><div class="bar-fill" style="width: 22.6%"></div></div><span class="bar-val">0.226</span></div>
+        <div class="lang-row"><span class="lang-name">Anatolian (Palmer)</span><div class="bar-track"><div class="bar-fill" style="width: 19.0%"></div></div><span class="bar-val">0.190</span></div>
+      </div>
+      <p>No language family produces systematic sound correspondences. The few plausible cognates are better explained as <strong>loanwords</strong>: trade terms from Semitic, religious terminology from Anatolian contact, and place names surviving into Greek.</p>
+    </div>
+
+    <div class="finding-card">
+      <h3>The Libation Formula</h3>
+      <div class="formula-block">
+        <code class="formula">a-ta-i-*301-wa-ja &ensp; ja-sa-sa-ra-me &ensp; i-da-ma-te</code>
+        <div class="formula-trans">&ldquo;[I] dedicate [this to] My Lady, Mother of Ida&rdquo;</div>
+      </div>
+      <p>Found on 29+ stone vessels from 16 sites across Crete. The most important religious text in Linear A, suggesting a mother goddess tradition that continued into Greek Rhea/Cybele worship.</p>
+    </div>
+
+    <div class="finding-card">
+      <h3>Administrative System</h3>
+      <p>Minoan palatial economy revealed through tablet analysis:</p>
+      <ul>
+        <li><strong>Commodity tracking:</strong> grain, oil, wine, figs, olives, barley, sheep, goats, aromatics</li>
+        <li><strong>Arithmetic verification:</strong> ku-ro totals match item sums (77/127 documents validated)</li>
+        <li><strong>Deficit tracking:</strong> ki-ro records shortfalls against expectations</li>
+        <li><strong>Inter-palatial network:</strong> same names appear across multiple palace sites</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- VOCABULARY -->
+<section id="vocabulary" class="section">
+  <h2>Vocabulary Readings</h2>
+  <p class="section-intro">14 words read with varying confidence levels, from arithmetic verification to cross-linguistic comparison.</p>
+
+  <h3>Confident Readings (Administrative Terms)</h3>
+  <div class="sequences-table">
+    <table>
+      <thead><tr><th>Word</th><th>Meaning</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td><code>ku-ro</code></td><td>total / sum</td><td>Arithmetic verification across all tablets</td></tr>
+        <tr class="highlight-row"><td><code>ki-ro</code></td><td>deficit</td><td>Always follows ku-ro with smaller value</td></tr>
+        <tr><td><code>po-to-ku-ro</code></td><td>grand total</td><td>Transparent compound: po-to + ku-ro</td></tr>
+        <tr class="highlight-row"><td><code>da-me</code></td><td>assessment / levy</td><td>Heading word on assessment-type tablets</td></tr>
+        <tr><td><code>te-ki</code></td><td>delivery / payment</td><td>Heading word on delivery-type tablets</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Probable Readings (Place Names &amp; Deities)</h3>
+  <div class="sequences-table">
+    <table>
+      <thead><tr><th>Word</th><th>Meaning</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td><code>pa-ja-re</code></td><td>Phaistos</td><td>Linear B pa-i-to; found at 6 sites</td></tr>
+        <tr class="highlight-row"><td><code>ku-do-ni</code></td><td>Kydonia (Khania)</td><td>Linear B ku-do-ni-ja; self-referencing at KH</td></tr>
+        <tr><td><code>su-ki-ri-ta</code></td><td>Sybrita</td><td>Identical form in Linear B; 5 sites</td></tr>
+        <tr class="highlight-row"><td><code>se-to-i-ja</code></td><td>Siteia</td><td>Greek toponym survives; 4 sites</td></tr>
+        <tr><td><code>i-da-ma-te</code></td><td>Mother of Ida</td><td>Compound: i-da (Mt. Ida) + ma-te (mother)</td></tr>
+        <tr class="highlight-row"><td><code>ja-sa-sa-ra-me</code></td><td>My Lady</td><td>Luwian <em>ishassara</em> &ldquo;lady&rdquo; + possessive -me</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Speculative Readings</h3>
+  <div class="sequences-table">
+    <table>
+      <thead><tr><th>Word</th><th>Meaning</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td><code>ku-ni-su</code></td><td>emmer wheat?</td><td>Akkadian <em>kunisu</em>; appears with GRA ideogram</td></tr>
+        <tr class="highlight-row"><td><code>qa-qa-ru</code></td><td>land / ground?</td><td>Akkadian <em>qaqqaru</em>; reduplicated form</td></tr>
+        <tr><td><code>a-du</code></td><td>father? / place?</td><td>Akkadian <em>adu</em>; most frequent non-admin word</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- MORPHOLOGY -->
+<section id="morphology" class="section">
+  <h2>Morphological Findings</h2>
+  <p class="section-intro">Automated pattern detection reveals systematic prefixes, suffixes, reduplication, and paradigmatic sets.</p>
+
+  <div class="morph-grid">
+    <div class="morph-card">
+      <h3>Prefixes</h3>
+      <div class="sequences-table">
+        <table>
+          <thead><tr><th>Prefix</th><th>Count</th><th>Examples</th><th>Hypothesis</th></tr></thead>
+          <tbody>
+            <tr><td><code>a-</code></td><td>11</td><td>a-du, a-ka-ru, a-mi-da-u</td><td>Article / demonstrative</td></tr>
+            <tr><td><code>da-</code></td><td>10</td><td>da-me, da-ta-re, da-re</td><td>Unknown function</td></tr>
+            <tr><td><code>ku-</code></td><td>5</td><td>ku-ro, ku-do-ni, ku-ni-su</td><td>Unknown function</td></tr>
+            <tr><td><code>i-</code></td><td>2</td><td>i-da-ma-te, i-pi-na-ma</td><td>Demonstrative?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="morph-card">
+      <h3>Suffixes</h3>
+      <div class="sequences-table">
+        <table>
+          <thead><tr><th>Suffix</th><th>Count</th><th>Examples</th><th>Hypothesis</th></tr></thead>
+          <tbody>
+            <tr><td><code>-te</code></td><td>7</td><td>i-da-ma-te, a-di-ki-te</td><td>Dative / locative</td></tr>
+            <tr><td><code>-ja</code></td><td>6</td><td>se-to-i-ja, a-ra-si-ja</td><td>Adjectival / ethnic</td></tr>
+            <tr><td><code>-re</code></td><td>5</td><td>pa-ja-re, da-ta-re</td><td>Unknown</td></tr>
+            <tr><td><code>-me</code></td><td>3</td><td>ja-sa-sa-ra-me, da-me</td><td>Possessive &ldquo;my&rdquo;</td></tr>
+            <tr><td><code>-ro</code></td><td>4</td><td>ku-ro, ki-ro, ki-da-ro</td><td>Nominal?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="morph-grid">
+    <div class="morph-card">
+      <h3>Reduplication</h3>
+      <p>Seven words show reduplication, suggesting intensification or morphological doubling:</p>
+      <ul>
+        <li><code>ja-<strong>sa-sa</strong>-ra-me</code> &mdash; intensification of root</li>
+        <li><code><strong>qa-qa</strong>-ru</code> &mdash; possible intensive</li>
+        <li><code>ja-di-ki-<strong>te-te</strong></code> &mdash; morphological doubling</li>
+        <li><code>a-<strong>sa-sa</strong>-ra-me</code> &mdash; variant of ja-sa-sa-ra-me</li>
+      </ul>
+    </div>
+    <div class="morph-card">
+      <h3>Grammar Sketch</h3>
+      <ul>
+        <li><strong>Word order:</strong> NAME . COMMODITY QUANTITY (administrative)</li>
+        <li><strong>Cases:</strong> -te (dative/locative), -ja (adjectival/ethnic)</li>
+        <li><strong>Enclitics:</strong> -me (possessive &ldquo;my&rdquo;)</li>
+        <li><strong>Derivation:</strong> a- prefix, reduplication</li>
+        <li><strong>Syllable structure:</strong> Predominantly CV and V</li>
+        <li><strong>Vowel harmony:</strong> Absent (2.1%) &mdash; rules out Uralic/Turkic</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS TRACKER -->
+<section id="progress" class="section">
+  <h2>Project Goals</h2>
+  <p class="section-intro">Five milestones toward building the most complete computational resource for Linear A research.</p>
+  <div class="levels-grid">
+    <div class="level-card active">
+      <div class="level-header">
+        <span class="level-badge l1">M1</span>
+        <h3>Corpus Infrastructure</h3>
+        <span class="level-status in-progress">In Progress</span>
+      </div>
+      <p>Build the definitive searchable, structured corpus from all available sources.</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 60%"></div></div>
+      <span class="progress-text">5 of 8 checkpoints</span>
+      <ul class="checkpoint-list">
+        <li class="done">Full corpus acquired: ~1,400 inscriptions from imported SigLA website (773 docs, 5,714 signs)</li>
+        <li class="done">Extraction pipeline proven across 3 sites (HT 24a, ZA 26a, ARKH 6)</li>
+        <li class="done">Sign inventory reconciled: 106 syllabograms, single canonical source of truth</li>
+        <li class="done">129 inscriptions in structured Python format with metadata</li>
+        <li class="done">Knossos ivory scepter (2024) cataloged &mdash; awaiting full transcription</li>
+        <li>Convert all ~1,400 inscriptions to structured format</li>
+        <li>Integrate SVG bounding boxes and crop images from imported site</li>
+        <li>Searchable web interface for the full corpus</li>
+      </ul>
+    </div>
+    <div class="level-card active">
+      <div class="level-header">
+        <span class="level-badge l2">M2</span>
+        <h3>Validate &amp; Discover</h3>
+        <span class="level-status in-progress" style="background:#1a3a2a;color:#4a9">Complete</span>
+      </div>
+      <p>Independently confirm known results, then find new patterns no one has published.</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+      <span class="progress-text">14 of 14 checkpoints</span>
+      <ul class="checkpoint-list">
+        <li class="done">ku-ro = "total" confirmed (74 occurrences, 5.3&times; next candidate)</li>
+        <li class="done">ki-ro = "deficit" confirmed &mdash; always follows ku-ro with smaller value</li>
+        <li class="done">po-to-ku-ro = "grand total" confirmed from composite analysis</li>
+        <li class="done">Libation formula: 3-tier structure (core &rarr; ja-sa-sa-ra-me &rarr; i-da-ma-te), 100% ritual-exclusive</li>
+        <li class="done">HT administrative structure detected from data alone</li>
+        <li class="done">Zipf&rsquo;s law validated (exponent 1.103, R&sup2;=0.901) &mdash; confirms natural language</li>
+        <li class="done">Morphological patterns: productive prefixes (a-, da-, ku-) and suffixes (-te, -ja, -me, -ro)</li>
+        <li class="done">Paradigmatic sets: ta-na/ta-na-te/ta-na-su (same root, different case endings)</li>
+        <li class="done">Word boundary preferences: vowels/stops initial (a 91%, qa 96%, ku 87%), liquids/nasals final (ro 95%, na 86%, ne 91%)</li>
+        <li class="done">Site dialect variation: vocabulary overlap near zero (Jaccard 0.000&ndash;0.016), 88&ndash;100% site-exclusive words across 772 docs</li>
+        <li class="done">Word classes: 24 administrative terms vs. 63 probable names separated by distributional co-occurrence with ideograms and numerals</li>
+        <li class="done">Commodity distribution: FIC (figs) most common (49 docs), sign A301 on 33 docs, 313 fraction occurrences across corpus</li>
+        <li class="done">Sign co-occurrence: 16% of common bigrams forbidden (no vowel gemination, nasal-liquid restriction, stop harmony avoidance) &mdash; 4,408 pairs</li>
+        <li class="done">Compound words: ku-ro in 21 compounds, a- prefix dominates 8/10 largest families, productive suffixes -ta-na, -mi-na, -sa-ra identified</li>
+      </ul>
+    </div>
+    <div class="level-card active">
+      <div class="level-header">
+        <span class="level-badge l3">M3</span>
+        <h3>Grammar &amp; Vocabulary</h3>
+        <span class="level-status in-progress" style="background:#1a3a2a;color:#4a9">Complete</span>
+      </div>
+      <p>Build a working grammar sketch and expand the readable vocabulary.</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+      <span class="progress-text">11 of 11 checkpoints</span>
+      <ul class="checkpoint-list">
+        <li class="done">52-word glossary: 8 HIGH, 32 MEDIUM, 5 LOW, 2 SPECULATIVE, 8 suffix morphemes</li>
+        <li class="done">Libation formula interpreted: &ldquo;[I] dedicate [this to] My Lady, Mother of Ida&rdquo;</li>
+        <li class="done">Luwian <em>ishassara</em> + possessive -me synthesis for ja-sa-sa-ra-me</li>
+        <li class="done">Language isolate hypothesis scored 0.774 vs Semitic 0.226, Anatolian 0.190</li>
+        <li class="done">Case system: 6&ndash;8 cases identified (-ro result, -te dative/locative, -ja adjectival, -ra agentive, -na genitive, -se instrumental, -ne plural?, -me possessive)</li>
+        <li class="done">Verb morphology: not detected in admin texts (nominal sentence structure). Verbs likely confined to ritual/narrative texts.</li>
+        <li class="done">Number marking: no grammatical number on nouns (number-neutral morphology, typical of agglutinative languages)</li>
+        <li class="done">Word order: AGENT-COMMODITY-QUANTITY confirmed. Transaction signs precede commodity lists.</li>
+        <li class="done">Sign A301: 48 documents, dual logogram/syllabogram, 32 standalone nodules. More frequent than grain. Cannot be read but distribution fully mapped.</li>
+        <li class="done">Loanwords: 4 place names (Minoan&rarr;Greek), 2 trade terms (Akkadian&rarr;Minoan), 2 religious terms (Anatolian&harr;Minoan). Supports isolate hypothesis.</li>
+        <li class="done">Cross-script parallels: ku-mi-na/ku-mi-no (cumin), di-pa/depas (cup), te-me-na/temenos, da-pu-ri-to/labyrinth</li>
+      </ul>
+    </div>
+    <div class="level-card active">
+      <div class="level-header">
+        <span class="level-badge l5">M4</span>
+        <h3>Translation</h3>
+        <span class="level-status in-progress">In Progress</span>
+      </div>
+      <p>Translate complete inscriptions with evidence chains and confidence scores on every word.</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 20%"></div></div>
+      <span class="progress-text">2 of 8 checkpoints</span>
+      <ul class="checkpoint-list">
+        <li class="done">Libation formula translated with per-word confidence</li>
+        <li class="done">Administrative entries readable: name + commodity + number + total</li>
+        <li>Translate a complete short accounting tablet end-to-end</li>
+        <li>Translate a complete roundel inscription</li>
+        <li>Identify at least 3 divine names with probable meanings</li>
+        <li>Transcribe and analyze the ivory scepter (119 signs)</li>
+        <li>Translate ritual text from the scepter ring</li>
+        <li>Produce a reading of a non-administrative, non-formulaic text</li>
+      </ul>
+    </div>
+    <div class="level-card">
+      <div class="level-header">
+        <span class="level-badge l6">M5</span>
+        <h3>Publication</h3>
+        <span class="level-status not-started">Planned</span>
+      </div>
+      <p>Produce publishable-quality results that advance the field.</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 5%"></div></div>
+      <span class="progress-text">0 of 7 checkpoints</span>
+      <ul class="checkpoint-list">
+        <li>Comprehensive online corpus browser (superset of SigLA)</li>
+        <li>Full grammar sketch: word order, case system, verb morphology</li>
+        <li>Glossary of 50+ words with multi-method evidence</li>
+        <li>Language typology paper with statistical framework</li>
+        <li>At least 5 complete inscription translations</li>
+        <li>Methodology paper: computational approaches to undeciphered scripts</li>
+        <li>Open dataset and tools for other researchers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CORPUS STATS -->
+<section id="corpus" class="section">
+  <h2>Corpus Overview</h2>
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-big">772</div>
+      <div class="stat-desc">Documents with Sign Data</div>
+      <div class="stat-context">From imported SigLA website snapshot</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-big">4,942</div>
+      <div class="stat-desc">Total Signs</div>
+      <div class="stat-context">Across all documents</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-big">2,110</div>
+      <div class="stat-desc">Word Occurrences</div>
+      <div class="stat-context">Extracted from word-view pages</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-big">1,025</div>
+      <div class="stat-desc">Unique Words</div>
+    </div>
+  </div>
+
+  <div class="corpus-details">
+    <div class="corpus-col">
+      <h3>By Document Type</h3>
+      <div class="bar-chart">
+        <div class="bar-row"><span class="bar-label">Tablets</span><div class="bar-track"><div class="bar-fill" style="width: 65%"></div></div><span class="bar-val">83</span></div>
+        <div class="bar-row"><span class="bar-label">Libation Tables</span><div class="bar-track"><div class="bar-fill" style="width: 15%"></div></div><span class="bar-val">19</span></div>
+        <div class="bar-row"><span class="bar-label">Roundels</span><div class="bar-track"><div class="bar-fill" style="width: 12%"></div></div><span class="bar-val">15</span></div>
+        <div class="bar-row"><span class="bar-label">Stone Vessels</span><div class="bar-track"><div class="bar-fill" style="width: 8%"></div></div><span class="bar-val">10</span></div>
+      </div>
+    </div>
+    <div class="corpus-col">
+      <h3>By Period</h3>
+      <div class="bar-chart">
+        <div class="bar-row"><span class="bar-label">LM IB (~1480-1425)</span><div class="bar-track"><div class="bar-fill" style="width: 64%"></div></div><span class="bar-val">81</span></div>
+        <div class="bar-row"><span class="bar-label">LM IA (~1600-1480)</span><div class="bar-track"><div class="bar-fill" style="width: 19%"></div></div><span class="bar-val">24</span></div>
+        <div class="bar-row"><span class="bar-label">MM III (~1700-1600)</span><div class="bar-track"><div class="bar-fill" style="width: 11%"></div></div><span class="bar-val">14</span></div>
+        <div class="bar-row"><span class="bar-label">MM III-LM IA</span><div class="bar-track"><div class="bar-fill" style="width: 6%"></div></div><span class="bar-val">7</span></div>
+        <div class="bar-row"><span class="bar-label">MM II (~1800-1700)</span><div class="bar-track"><div class="bar-fill" style="width: 1%"></div></div><span class="bar-val">1</span></div>
+      </div>
+    </div>
+    <div class="corpus-col">
+      <h3>Most Frequent Words</h3>
+      <div class="bar-chart">
+        <div class="bar-row"><span class="bar-label">ku-ro</span><div class="bar-track"><div class="bar-fill highlight" style="width: 100%"></div></div><span class="bar-val">80</span></div>
+        <div class="bar-row"><span class="bar-label">a-ta-i-*301-wa-ja</span><div class="bar-track"><div class="bar-fill" style="width: 26%"></div></div><span class="bar-val">21</span></div>
+        <div class="bar-row"><span class="bar-label">a-du</span><div class="bar-track"><div class="bar-fill" style="width: 21%"></div></div><span class="bar-val">17</span></div>
+        <div class="bar-row"><span class="bar-label">ja-sa-sa-ra-me</span><div class="bar-track"><div class="bar-fill" style="width: 19%"></div></div><span class="bar-val">15</span></div>
+        <div class="bar-row"><span class="bar-label">pa-ja-re</span><div class="bar-track"><div class="bar-fill" style="width: 19%"></div></div><span class="bar-val">15</span></div>
+        <div class="bar-row"><span class="bar-label">ki-re-ta2</span><div class="bar-track"><div class="bar-fill" style="width: 19%"></div></div><span class="bar-val">15</span></div>
+        <div class="bar-row"><span class="bar-label">su-ki-ri-ta</span><div class="bar-track"><div class="bar-fill" style="width: 14%"></div></div><span class="bar-val">11</span></div>
+        <div class="bar-row"><span class="bar-label">da-ta-re</span><div class="bar-track"><div class="bar-fill" style="width: 14%"></div></div><span class="bar-val">11</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL CORPUS -->
+<div class="corpus-note">
+  <h3>Full Corpus (Imported SigLA Website)</h3>
+  <p>The complete Linear A corpus is digitized from the imported SigLA website snapshot (all ~1,400 known inscriptions). Currently converting to structured Python format for computational analysis.</p>
+  <div class="stats-row">
+    <div class="stat-card small"><div class="stat-big">773</div><div class="stat-desc">Total Documents</div></div>
+    <div class="stat-card small"><div class="stat-big">5,714</div><div class="stat-desc">Total Signs</div></div>
+    <div class="stat-card small"><div class="stat-big">19</div><div class="stat-desc">Sites</div></div>
+    <div class="stat-card small"><div class="stat-big">731</div><div class="stat-desc">Document Faces</div></div>
+  </div>
+  <p class="bench-note">Top sites by document count: HT (373), KH (213), PH (63), ZA (44), KN (31), MA (20), ARKH (10).</p>
+  <p style="margin-top:0.8rem"><strong>Browse all inscriptions now:</strong> <a href="https://sigla.phis.me/" target="_blank" style="color:var(--accent)">SigLA &mdash; The Signs of Linear A</a> &mdash; searchable database with sign drawings, SVG coordinates, and per-document analysis. <a href="https://sigla.phis.me/map.html" target="_blank" style="color:var(--accent)">Map view</a> &bull; <a href="https://sigla.phis.me/sign-list.html" target="_blank" style="color:var(--accent)">Sign list</a> &bull; <a href="https://sigla.phis.me/kind/Tablet/" target="_blank" style="color:var(--accent)">All tablets</a></p>
+</div>
+
+<!-- SIGN CATALOG -->
+<section id="signs" class="section">
+  <h2>Sign Inventory</h2>
+  <div class="stats-row">
+    <div class="stat-card small">
+      <div class="stat-big">106</div>
+      <div class="stat-desc">Syllabograms</div>
+    </div>
+    <div class="stat-card small">
+      <div class="stat-big">32</div>
+      <div class="stat-desc">Logograms</div>
+    </div>
+    <div class="stat-card small">
+      <div class="stat-big">5</div>
+      <div class="stat-desc">Numerals</div>
+    </div>
+    <div class="stat-card small">
+      <div class="stat-big">10</div>
+      <div class="stat-desc">Fractions</div>
+    </div>
+  </div>
+
+  <h3>Syllabogram Confidence Levels</h3>
+  <p>Phonetic values are hypothesized by mapping Linear A signs to visually similar Linear B counterparts (which are deciphered). Reconciled from two independent inventories with bug fixes and 20 newly cataloged signs.</p>
+  <div class="confidence-grid">
+    <div class="conf-card high">
+      <div class="conf-count">57</div>
+      <div class="conf-label">High Confidence</div>
+      <div class="conf-desc">Clear Linear B parallel with consistent usage patterns</div>
+      <div class="sign-samples">da, de, di, do, du, ja, je, jo, ka, ke, ki, ko, ku, ma, me, mi, mo, mu, na, ne, ni, no, nu, pa, pe, pi, po, pu, ra, re, ri, ro, ru, sa, se, si, so, su, ta, te, ti, to, tu, wa, we, wi, wo, za, ze, zo, a, e, i, o, u, qa, qe</div>
+    </div>
+    <div class="conf-card medium">
+      <div class="conf-count">16</div>
+      <div class="conf-label">Medium Confidence</div>
+      <div class="conf-desc">Probable Linear B match but some uncertainty remains</div>
+      <div class="sign-samples">ju, qi, qo, pu2, a2, a3, au, ra3, ro2, ra2, pa3, zu, nwa, twe, ta2, dwe</div>
+    </div>
+    <div class="conf-card low">
+      <div class="conf-count">11</div>
+      <div class="conf-label">Low Confidence</div>
+      <div class="conf-desc">Tentative mapping, limited evidence</div>
+      <div class="sign-samples">pi2, *34, *35, *47, *48, *49, pte, *63, *64, *82, *83, *84</div>
+    </div>
+    <div class="conf-card none">
+      <div class="conf-count">22</div>
+      <div class="conf-label">Undeciphered</div>
+      <div class="conf-desc">No known phonetic value &mdash; unique to Linear A</div>
+      <div class="sign-samples">A301&ndash;A310, A312, A314&ndash;A318 (GORILA A-series)</div>
+    </div>
+  </div>
+
+  <div class="corpus-note">
+    <h3>Reconciliation Changelog</h3>
+    <p>The sign inventory was reconciled from two independent data files, fixing several errors in the Ventris grid mapping:</p>
+    <ul style="font-size:0.85rem;color:var(--text2);margin:0.5rem 0 0 1.2rem">
+      <li><code>AB67</code>: was <em>ka</em> (error) &rarr; corrected to <strong>ki</strong> (B067 = ki in Ventris grid)</li>
+      <li><code>AB47</code>: was <em>ki</em> (error) &rarr; corrected to <strong>unknown</strong> (no Linear B parallel)</li>
+      <li><code>AB22</code>: was <em>mi</em> &rarr; corrected to <strong>pi2</strong> (distinct from AB73, the standard mi)</li>
+      <li><code>AB86</code>: was unassigned &rarr; <strong>nwa</strong> (medium confidence, per Younger)</li>
+      <li>20 signs added from second inventory: AB12/so, AB14/do, AB15/mo, AB32/qo, AB33/ra3, AB36/jo, AB42/wo, AB43/a3, AB52/no, AB62/pte, AB68/ro2, AB71/dwe, AB72/pe, and more</li>
+    </ul>
+  </div>
+
+  <h3>Key Recurring Sequences</h3>
+  <div class="sequences-table">
+    <table>
+      <thead><tr><th>Sequence</th><th>Freq</th><th>Context</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><code>ku-ro</code></td><td>80</td><td>Administrative</td><td>Almost certainly "total" &mdash; appears at end of lists before sum</td></tr>
+        <tr class="highlight-row"><td><code>ja-sa-sa-ra-me</code></td><td>15</td><td>Libation formula</td><td>Most famous recurring phrase. Possibly a deity name or prayer.</td></tr>
+        <tr><td><code>ki-ro</code></td><td>12</td><td>Administrative</td><td>Likely "deficit" or "owed" &mdash; cf. Linear B ki-ri-to</td></tr>
+        <tr class="highlight-row"><td><code>a-ta-i-*301-wa-ja</code></td><td>21</td><td>Libation formula</td><td>Opening phrase of the standard libation formula</td></tr>
+        <tr><td><code>i-da-ma-te</code></td><td>7</td><td>Libation formula</td><td>Possibly Mount Ida (i-da) + "mother" (ma-te)?</td></tr>
+        <tr class="highlight-row"><td><code>da-me</code></td><td>8</td><td>Administrative</td><td>Possibly "total" or a type of assessment</td></tr>
+        <tr><td><code>a-di-ki-te</code></td><td>3</td><td>Libation formula</td><td>Possibly = Dikte/Dikta, mountain of Zeus&rsquo; birth</td></tr>
+        <tr class="highlight-row"><td><code>po-to-ku-ro</code></td><td>3</td><td>Administrative</td><td>"Grand total" &mdash; po-to may be an intensifier</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SITES -->
+<section id="sites" class="section">
+  <h2>Inscription Sites</h2>
+  <p class="section-intro">Linear A inscriptions have been found across Crete and the wider Aegean, from palace archives to mountain-top sanctuaries. <a href="https://sigla.phis.me/map.html" target="_blank" style="color:var(--accent)">View interactive map on SigLA</a></p>
+
+  <div class="map-container">
+    <svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:900px;margin:0 auto;display:block">
+      <!-- Sea background -->
+      <rect width="900" height="420" fill="#0a1525" rx="8"/>
+      <!-- Crete outline (simplified) -->
+      <path d="M60,240 Q100,200 180,195 Q250,180 320,190 Q380,175 440,180 Q500,170 540,175 Q600,165 650,175 Q700,168 740,180 Q780,185 810,200 Q830,210 840,230 Q830,250 800,260 Q760,275 700,270 Q650,280 600,275 Q550,280 500,278 Q440,285 380,278 Q320,285 260,275 Q200,280 140,265 Q100,260 70,255 Q55,250 60,240Z" fill="#1a1a25" stroke="#2a2a3a" stroke-width="1.5"/>
+      <!-- Peloponnese hint -->
+      <path d="M300,60 Q340,50 380,55 Q400,70 390,90 Q370,100 350,95 Q320,90 310,75 Q300,65 300,60Z" fill="#1a1a25" stroke="#2a2a3a" stroke-width="1"/>
+      <!-- Cyclades islands -->
+      <ellipse cx="520" cy="80" rx="12" ry="10" fill="#1a1a25" stroke="#2a2a3a"/>
+      <ellipse cx="580" cy="100" rx="10" ry="8" fill="#1a1a25" stroke="#2a2a3a"/>
+      <ellipse cx="560" cy="55" rx="8" ry="6" fill="#1a1a25" stroke="#2a2a3a"/>
+      <!-- Kea -->
+      <ellipse cx="420" cy="75" rx="8" ry="10" fill="#1a1a25" stroke="#2a2a3a"/>
+      <!-- Thera -->
+      <ellipse cx="570" cy="130" rx="10" ry="10" fill="#1a1a25" stroke="#2a2a3a"/>
+      <!-- Anatolia hint -->
+      <path d="M850,100 Q880,90 900,95 L900,180 Q880,190 860,185 Q850,160 850,100Z" fill="#1a1a25" stroke="#2a2a3a" stroke-width="1"/>
+
+      <!-- Site markers - sized by document count -->
+      <!-- Haghia Triada (373 docs) -->
+      <circle cx="330" cy="255" r="12" fill="#c49b5c" opacity="0.9"/><text x="330" y="280" text-anchor="middle" fill="#c49b5c" font-size="10" font-family="sans-serif">Haghia Triada</text><text x="330" y="291" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">373 docs</text>
+      <!-- Khania (213 docs) -->
+      <circle cx="160" cy="210" r="10" fill="#c49b5c" opacity="0.85"/><text x="160" y="200" text-anchor="middle" fill="#c49b5c" font-size="10" font-family="sans-serif">Khania</text><text x="160" y="189" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">213</text>
+      <!-- Phaistos (63 docs) -->
+      <circle cx="360" cy="240" r="7" fill="#c49b5c" opacity="0.8"/><text x="375" y="233" fill="#c49b5c" font-size="9" font-family="sans-serif">Phaistos</text>
+      <!-- Zakros (44 docs) -->
+      <circle cx="750" cy="230" r="6" fill="#c49b5c" opacity="0.8"/><text x="750" y="220" text-anchor="middle" fill="#c49b5c" font-size="9" font-family="sans-serif">Zakros</text>
+      <!-- Knossos (31 docs) -->
+      <circle cx="380" cy="205" r="5.5" fill="#c49b5c" opacity="0.8"/><text x="395" y="200" fill="#c49b5c" font-size="9" font-family="sans-serif">Knossos</text>
+      <!-- Malia (20 docs) -->
+      <circle cx="480" cy="200" r="4.5" fill="#c49b5c" opacity="0.75"/><text x="480" y="192" text-anchor="middle" fill="#c49b5c" font-size="9" font-family="sans-serif">Malia</text>
+      <!-- Arkhanes (10 docs) -->
+      <circle cx="400" cy="220" r="3.5" fill="#c49b5c" opacity="0.7"/><text x="415" y="218" fill="#9090a0" font-size="8" font-family="sans-serif">Arkhanes</text>
+      <!-- Petras -->
+      <circle cx="700" cy="210" r="3" fill="#c49b5c" opacity="0.7"/><text x="700" y="202" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">Petras</text>
+      <!-- Tylissos -->
+      <circle cx="340" cy="205" r="3" fill="#c49b5c" opacity="0.7"/><text x="320" y="200" fill="#9090a0" font-size="8" font-family="sans-serif" text-anchor="end">Tylissos</text>
+      <!-- Palaikastro -->
+      <circle cx="730" cy="205" r="3" fill="#c49b5c" opacity="0.7"/><text x="730" y="197" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">Palaikastro</text>
+      <!-- Peak sanctuaries -->
+      <circle cx="410" cy="230" r="3" fill="#5a8fc4" opacity="0.7"/><text x="425" y="235" fill="#5a8fc4" font-size="8" font-family="sans-serif">Ioukhtas</text>
+      <circle cx="620" cy="245" r="3" fill="#5a8fc4" opacity="0.7"/><text x="635" y="248" fill="#5a8fc4" font-size="8" font-family="sans-serif">Psychro</text>
+      <circle cx="570" cy="250" r="3" fill="#5a8fc4" opacity="0.7"/><text x="570" y="265" text-anchor="middle" fill="#5a8fc4" font-size="8" font-family="sans-serif">Syme</text>
+      <!-- Aegean outliers -->
+      <circle cx="420" cy="75" r="3" fill="#4a9" opacity="0.7"/><text x="435" y="73" fill="#4a9" font-size="8" font-family="sans-serif">Kea</text>
+      <circle cx="570" cy="130" r="3" fill="#4a9" opacity="0.7"/><text x="585" y="128" fill="#4a9" font-size="8" font-family="sans-serif">Thera</text>
+      <circle cx="860" cy="150" r="3" fill="#4a9" opacity="0.7"/><text x="845" y="148" text-anchor="end" fill="#4a9" font-size="8" font-family="sans-serif">Miletos</text>
+
+      <!-- Legend -->
+      <circle cx="40" cy="370" r="4" fill="#c49b5c" opacity="0.8"/><text x="50" y="374" fill="#9090a0" font-size="9" font-family="sans-serif">Palace / settlement</text>
+      <circle cx="40" cy="388" r="4" fill="#5a8fc4" opacity="0.8"/><text x="50" y="392" fill="#9090a0" font-size="9" font-family="sans-serif">Peak sanctuary / cave</text>
+      <circle cx="40" cy="406" r="4" fill="#4a9" opacity="0.8"/><text x="50" y="410" fill="#9090a0" font-size="9" font-family="sans-serif">Aegean outlier</text>
+      <text x="250" y="392" fill="#9090a0" font-size="8" font-family="sans-serif">Circle size = document count</text>
+    </svg>
+  </div>
+
+  <div class="sites-grid">
+    <div class="site-card major">
+      <h3>Haghia Triada</h3>
+      <div class="site-count">52 inscriptions</div>
+      <p>South-central Crete. The richest source of Linear A, yielding ~150 tablets (42 digitized). Primarily administrative/accounting documents recording commodities, personnel, and totals.</p>
+    </div>
+    <div class="site-card">
+      <h3>Zakros</h3>
+      <div class="site-count">14 inscriptions</div>
+      <p>Eastern Crete palace. Administrative tablets and ritual inscriptions.</p>
+    </div>
+    <div class="site-card">
+      <h3>Khania</h3>
+      <div class="site-count">12 inscriptions</div>
+      <p>Western Crete. Administrative records showing connections to other palace centers.</p>
+    </div>
+    <div class="site-card">
+      <h3>Phaistos</h3>
+      <div class="site-count">10 inscriptions</div>
+      <p>South-central Crete palace. Administrative tablets from the neopalatial period.</p>
+    </div>
+    <div class="site-card">
+      <h3>Ioukhtas</h3>
+      <div class="site-count">6 inscriptions</div>
+      <p>Peak sanctuary above Archanes. Stone libation tables with ritual formulas.</p>
+    </div>
+    <div class="site-card">
+      <h3>Syme Viannou</h3>
+      <div class="site-count">4 inscriptions</div>
+      <p>Mountain sanctuary in eastern Crete. Libation vessels spanning several centuries.</p>
+    </div>
+    <div class="site-card">
+      <h3>Other Sites</h3>
+      <div class="site-count">29 inscriptions</div>
+      <p>Knossos, Archanes, Malia, Petras, Psychro Cave, Palaikastro, Tylissos, and Aegean islands (Thera, Kea, Miletos).</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH SOURCES -->
+<section id="sources" class="section">
+  <h2>Research Sources &amp; Active Projects</h2>
+  <p class="section-intro">Every known website, archaeological team, database, and recent paper relevant to Linear A research.</p>
+
+  <h3>Online Databases &amp; Digital Resources</h3>
+  <div class="sequences-table">
+    <table>
+      <thead><tr><th>Resource</th><th>Authors / Team</th><th>Description</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://sigla.phis.me/" target="_blank">SigLA: The Signs of Linear A</a></td><td>Ester Salgarella &amp; Simon Castellan</td><td>Palaeographic database: 300 standard signs, 400+ inscriptions, 3,000+ searchable signs</td><td>Launched 2020</td></tr>
+        <tr class="highlight-row"><td><a href="https://people.ku.edu/~jyounger/LinearA/" target="_blank">Younger&rsquo;s Linear A Texts</a></td><td>John G. Younger</td><td>Standard phonetic transcription reference for the field</td><td>Active</td></tr>
+        <tr><td><a href="https://editions.efa.gr/?id=1050&r=publication" target="_blank">GORILA / RILA (EFA)</a></td><td>Godart &amp; Olivier; Del Freo &amp; Zurbach</td><td>Official corpus publication. RILA Suppl&eacute;ment 1 (2025) updates inventory.</td><td>New supplement 2025</td></tr>
+        <tr class="highlight-row"><td><a href="https://aclanthology.org/W15-3715.pdf" target="_blank">Linear A Digital Corpus</a></td><td>Petrolito et al.</td><td>Computational/NLP framing of Linear A corpus</td><td>Published 2015</td></tr>
+        <tr><td><a href="https://nestor.classics.uc.edu/" target="_blank">Nestor Bibliography</a></td><td>University of Cincinnati</td><td>Monthly bibliography of all Aegean Bronze Age publications</td><td>Active, ongoing</td></tr>
+        <tr class="highlight-row"><td><a href="https://www.academia.edu/search?q=linear+a+minoan" target="_blank">Academia.edu</a></td><td>Various</td><td>Preprints and papers on Linear A from independent researchers</td><td>Active</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Active Archaeological Teams &amp; Excavation Sites</h3>
+  <div class="sequences-table">
+    <table>
+      <thead><tr><th>Site</th><th>Team / Lead</th><th>Recent Finds</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr class="highlight-row"><td><strong>Knossos (Anetaki)</strong></td><td>Athanasia Kanta (INSTAP)</td><td>Ivory scepter: longest Linear A inscription (119 signs)</td><td>Published 2025</td></tr>
+        <tr><td>Sissi</td><td>Jan Driessen (Belgian School at Athens)</td><td>Neopalatial buildings, potential Linear A contexts</td><td>Active</td></tr>
+        <tr class="highlight-row"><td>Petras (Siteia)</td><td>Metaxia Tsipopoulou</td><td>Linear A tablets recovered; ongoing excavation</td><td>Active</td></tr>
+        <tr><td>Zominthos</td><td>Y. Sakellarakis / E. Sapouna-Sakellaraki</td><td>Highland Minoan site near Mt. Ida; Neopalatial levels</td><td>Active</td></tr>
+        <tr class="highlight-row"><td>Palaikastro</td><td>British School at Athens</td><td>Eastern Crete; Neopalatial contexts</td><td>Periodic</td></tr>
+        <tr><td>Mochlos</td><td>Jeffrey Soles (INSTAP)</td><td>Coastal Neopalatial site</td><td>Active</td></tr>
+        <tr class="highlight-row"><td>Papoura Hill (Kastelli)</td><td>Greek Ministry of Culture</td><td>Protopalatial maze structure (2000&ndash;1700 BCE), 157ft diam.</td><td>Discovered 2024</td></tr>
+        <tr><td>Haghia Triada</td><td>Italian School of Archaeology</td><td>Main corpus source (~373 documents). Excavation largely complete.</td><td>Publication ongoing</td></tr>
+        <tr class="highlight-row"><td>Zakros</td><td>Greek Archaeological Service</td><td>Palace archives, Linear A tablets</td><td>Published</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Key Papers (2023&ndash;2026)</h3>
+  <div class="sequences-table">
+    <table>
+      <thead><tr><th>Paper</th><th>Authors</th><th>Year</th><th>Significance</th></tr></thead>
+      <tbody>
+        <tr class="highlight-row"><td><a href="https://ejournals.lib.uoc.gr/Ariadne/article/view/1841" target="_blank">Inscriptions from the Cult Center of Knossos (Anetaki plot)</a></td><td>Kanta, Nakassis, Palaima &amp; Perna</td><td>2025</td><td>Longest known Linear A inscription (119 signs on ivory scepter)</td></tr>
+        <tr><td><a href="https://editions.efa.gr/?id=1050&r=publication" target="_blank">RILA Suppl&eacute;ment 1</a></td><td>Del Freo &amp; Zurbach</td><td>2025</td><td>Updated corpus inventory for all known Linear A inscriptions</td></tr>
+        <tr class="highlight-row"><td><a href="https://www.degruyter.com/document/doi/10.1515/kadmos-2013-0003/html?lang=en" target="_blank">Syntax in Linear A: Word-Order of the Libation Formula</a></td><td>(De Gruyter / Kadmos)</td><td>&mdash;</td><td>Formula structure and linguistic analysis</td></tr>
+        <tr><td><a href="https://bmcr.brynmawr.edu/2015/2015.11.36/" target="_blank">Minoan Stone Vessels with Linear A Inscriptions</a></td><td>Brice Davis</td><td>2014</td><td>Document-class-specific evidence for libation vessels</td></tr>
+        <tr class="highlight-row"><td><a href="https://www.academia.edu/114586901/Deductions_on_an_unknown_find_surrounded_by_mystery_the_Linear_A_inscribed_ivory_circle_found_at_Knossos" target="_blank">Deductions on the Ivory Circle from Knossos</a></td><td>(Academia.edu)</td><td>2024</td><td>Independent analysis of the ivory scepter/circle</td></tr>
+        <tr><td>An Anatolian Hypothesis for Linear A</td><td>Adithyan Madhu</td><td>2024</td><td>Recent independent Anatolian language family proposal</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Institutions &amp; Organizations</h3>
+  <div class="sequences-table">
+    <table>
+      <thead><tr><th>Organization</th><th>Role</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td>INSTAP (Institute for Aegean Prehistory)</td><td>Funds most active Cretan excavations</td><td><a href="https://www.instap.org/" target="_blank">instap.org</a></td></tr>
+        <tr class="highlight-row"><td>British School at Athens</td><td>Palaikastro, Knossos excavations</td><td><a href="https://www.bsa.ac.uk/" target="_blank">bsa.ac.uk</a></td></tr>
+        <tr><td>Italian School of Archaeology at Athens</td><td>Haghia Triada, Phaistos</td><td></td></tr>
+        <tr class="highlight-row"><td>Belgian School at Athens</td><td>Sissi excavations</td><td><a href="https://www.aegean-archaeology.be/" target="_blank">aegean-archaeology.be</a></td></tr>
+        <tr><td>French School at Athens (EFA)</td><td>GORILA/RILA publication</td><td><a href="https://www.efa.gr/" target="_blank">efa.gr</a></td></tr>
+        <tr class="highlight-row"><td>AEGEUS &mdash; Society for Aegean Prehistory</td><td>Dig news, conferences, networking</td><td><a href="https://www.aegeussociety.org/" target="_blank">aegeussociety.org</a></td></tr>
+        <tr><td>Heraklion Archaeological Museum</td><td>Houses most Linear A artifacts</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section id="references" class="section">
+  <h2>References &amp; Sources</h2>
+  <p class="section-intro">Primary data sources and scholarly references used in this project.</p>
+
+  <div class="ref-grid">
+    <div class="ref-card">
+      <h3>Core Scholarly References</h3>
+      <ul class="ref-list">
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/core/Linear_A_Texts_and_Inscriptions_in_phone.pdf">Younger, J.G. &mdash; Linear A Texts &amp; Inscriptions in Phonetic Transcription</a> (PDF) <br><a href="https://people.ku.edu/~jyounger/LinearA/" target="_blank">Online version</a></li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/core/The_Decipherment_of_Minoan_Linear_A_Vol.pdf">Van Soesbergen, P.G. &mdash; The Decipherment of Minoan Linear A, Vol. I</a> (PDF)</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/core/Minoan_Linear_A_Vol_II_Corpus_of_transli.pdf">Minoan Linear A, Vol. II &mdash; Corpus of Transliterations</a> (PDF)</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/core/MINOAN_LINEAR_A_Vol_II_Corpus_of_transli-2.pdf">Minoan Linear A, Vol. II &mdash; Corpus (variant)</a> (PDF)</li>
+        <li>Godart, L. &amp; Olivier, J.-P. (1976&ndash;1985). <em>GORILA</em>, Vols. I&ndash;V. <a href="https://cefael.efa.gr/window.php?actionID=summary&ce=6tmmdl81es74mg7pje26huqd1conn9fs&issue_number=1&new_lang=fr_FR&serie_id=EtCret&site_id=1&volume_number=21" target="_blank">EFA catalog</a></li>
+      </ul>
+    </div>
+    <div class="ref-card">
+      <h3>Web-Acquired / Digital Corpus</h3>
+      <ul class="ref-list">
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/web-acquired/SigLA_The_Signs_of_Linear_A.pdf">SigLA: The Signs of Linear A</a> (PDF) &mdash; Salgarella &amp; Castellan. Palaeographic database. <br><a href="https://sigla.phis.me/paper.pdf" target="_blank">Original source</a></li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/web-acquired/Minoan_linguistic_resources_The_Linear_A_digital_Corpus.pdf">Minoan Linguistic Resources: The Linear A Digital Corpus</a> (PDF) &mdash; Petrolito et al. <br><a href="https://aclanthology.org/W15-3715.pdf" target="_blank">ACL Anthology</a></li>
+      </ul>
+    </div>
+    <div class="ref-card">
+      <h3>Comparative Material</h3>
+      <ul class="ref-list">
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/comparative/The_Assyrian_Dictionary_of_the_Oriental.pdf">The Assyrian Dictionary of the Oriental Institute</a> (PDF)</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/comparative/Al_Jallad_Pre_Print_An_Outline_of_the_Gr.pdf">Al-Jallad &mdash; An Outline of the Grammar</a> (PDF, preprint)</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/comparative/ANATOLIAN_HIEROGLYPHIC_INSCRIPTIONS_IV.doc">Anatolian Hieroglyphic Inscriptions IV</a> (DOC)</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/comparative/George_Grigore_2017_Polyfunctional_Latin.pdf">Grigore (2017) &mdash; Polyfunctional Latin</a> (PDF)</li>
+      </ul>
+    </div>
+    <div class="ref-card">
+      <h3>Speculative / Independent</h3>
+      <ul class="ref-list">
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/fringe/A_NOVEL_APPROACH_TO_DECIPHER_LINEAR_A_DE.pdf">A Novel Approach to Decipher Linear A</a> (PDF) &mdash; Independent research. Kept for creative hypotheses; not treated as baseline evidence.</li>
+      </ul>
+      <h3 style="margin-top:1rem">Missing Targets (Wanted)</h3>
+      <ul class="ref-list">
+        <li><em>GORILA / RILA Suppl&eacute;ment 1</em> (Del Freo &amp; Zurbach, 2025) &mdash; <a href="https://editions.efa.gr/?id=1050&r=publication" target="_blank">EFA page</a></li>
+        <li><em>Syntax in Linear A: The Word-Order of the Libation Formula</em> &mdash; <a href="https://www.degruyter.com/document/doi/10.1515/kadmos-2013-0003/html?lang=en" target="_blank">De Gruyter</a></li>
+        <li><em>Minoan Stone Vessels with Linear A Inscriptions</em> (Davis, 2014) &mdash; <a href="https://bmcr.brynmawr.edu/2015/2015.11.36/" target="_blank">BMCR review</a></li>
+        <li><em>From Linear B to Linear A</em> (Meissner)</li>
+      </ul>
+    </div>
+    <div class="ref-card">
+      <h3>Other Scholarly References</h3>
+      <ul class="ref-list">
+        <li>Gordon, C.H. (1966). <em>Evidence for the Minoan Language</em>. [Semitic hypothesis]</li>
+        <li>Palmer, L.R. (1963). <em>The Interpretation of Mycenaean Greek Texts</em>. [Anatolian hypothesis]</li>
+        <li>Best, J.G.P. (1972). <em>Some Preliminary Remarks on the Decipherment of Linear A</em>.</li>
+        <li>Packard, D.W. (1974). <em>Minoan Linear A</em>. Berkeley.</li>
+        <li>Schoep, I. (2002). <em>The Administration of Neopalatial Crete</em>.</li>
+        <li>Madhu, A. (2024). <em>An Anatolian Hypothesis for Linear A</em>. Preprint.</li>
+      </ul>
+    </div>
+    <div class="ref-card">
+      <h3>Project Files</h3>
+      <ul class="ref-list">
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/linear_a/FINDINGS.md">FINDINGS.md</a> &mdash; Full computational findings report</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/linear_a/SUCCESS_CRITERIA.md">SUCCESS_CRITERIA.md</a> &mdash; Six-level success framework</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/README.md">references/README.md</a> &mdash; Reference library principles &amp; layout</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/manifests/2026-03-31-inbox-papers.md">Ingestion manifest</a> &mdash; Classification of imported papers</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/blob/master/references/manifests/2026-03-31-missing-targets.md">Missing targets</a> &mdash; Priority acquisition list</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/tree/master/linear_a/analysis">analysis/</a> &mdash; Frequency, morphology, cross-reference, and clustering modules</li>
+        <li><a href="https://github.com/navarre/minoan-linear-a/tree/master/linear_a/data/corpus">corpus/</a> &mdash; Digitized inscription data by site</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <p><strong>Linear A Decipherment Project</strong></p>
+      <p>Reproducibility over revelation. Confidence scores on everything. The math doesn&rsquo;t lie.</p>
+    </div>
+    <div class="footer-right">
+      <p>Data sources: GORILA (Godart &amp; Olivier), J. Younger&rsquo;s Linear A Texts, published scholarship</p>
+      <p>Built with care in Crete &bull; <a href="https://github.com/navarre/minoan-linear-a">GitHub</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

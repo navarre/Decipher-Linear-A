@@ -98,7 +98,6 @@ def get_words():
     words = []
     for entry in CORPUS.values():
         for line in entry.get('lines', []):
-            # Split on word dividers (dots, spaces, |)
             parts = line.replace('|', '.').replace('  ', '.').split('.')
             for part in parts:
                 w = part.strip()

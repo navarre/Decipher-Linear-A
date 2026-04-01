@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear A Sign Catalog</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.catalog-header { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; }
+.catalog-header h1 { color: var(--accent); font-size: 1.6rem; margin-bottom: 0.5rem; }
+.catalog-stats { color: var(--text2); font-size: 0.9rem; margin-bottom: 1rem; }
+.search-box { width: 100%; max-width: 400px; padding: 0.6rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 1rem; }
+.search-box:focus { outline: none; border-color: var(--accent); }
+.sign-grid { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.8rem; }
+.sign-item { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem; text-align: center; transition: border-color 0.2s; cursor: pointer; }
+.sign-item:hover { border-color: var(--accent); }
+.sign-item img { width: 70px; height: 70px; object-fit: contain; display: block; margin: 0 auto 0.3rem; }
+.sign-code { font-size: 0.7rem; color: var(--text2); }
+.sign-reading { font-size: 0.9rem; color: var(--accent); font-weight: 600; }
+.sign-item.hidden { display: none; }
+.back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+.back-link:hover { text-decoration: underline; }
+.filter-row { display: flex; gap: 0.8rem; margin-top: 0.8rem; flex-wrap: wrap; }
+.filter-btn { padding: 0.3rem 0.8rem; border-radius: 4px; border: 1px solid var(--border); background: var(--surface); color: var(--text2); font-size: 0.8rem; cursor: pointer; }
+.filter-btn.active { background: var(--accent2); color: #fff; border-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="title-block">
+      <h1>Linear A Sign Catalog</h1>
+      <p class="subtitle">All 315 attested signs with representative drawings from the corpus</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Dashboard</a>
+  <a href="signs.html" style="color:var(--accent)">Sign Catalog</a>
+  <a href="https://sigla.phis.me/sign-list.html" target="_blank">SigLA Original</a>
+</nav>
+
+<div class="catalog-header">
+  <p class="catalog-stats">315 signs &bull; Images from SigLA (Salgarella &amp; Castellan, CC BY-NC-SA 4.0) &bull; <a href="https://sigla.phis.me/" target="_blank" class="back-link">View on SigLA</a></p>
+  <input type="text" class="search-box" placeholder="Search signs (e.g. AB01, da, ku, A301...)" id="signSearch"/>
+  <div class="filter-row">
+    <button class="filter-btn active" data-filter="all">All (315)</button>
+    <button class="filter-btn" data-filter="ab">AB signs</button>
+    <button class="filter-btn" data-filter="a3">A300+ (Linear A only)</button>
+    <button class="filter-btn" data-filter="a5">A500+ (Logograms)</button>
+    <button class="filter-btn" data-filter="a6">A600+ (Complex)</button>
+    <button class="filter-btn" data-filter="a7">A700+ (Fractions)</button>
+  </div>
+</div>
+
+<div class="sign-grid" id="signGrid">
+      <div class="sign-item" data-code="ab01" data-reading="da">
+        <img src="sign-images/AB01_da.png" alt="AB01/da" loading="lazy"/>
+        <div class="sign-code">AB01</div>
+        <div class="sign-reading">da</div>
+      </div>
+      <div class="sign-item" data-code="ab02" data-reading="ro">
+        <img src="sign-images/AB02_ro.png" alt="AB02/ro" loading="lazy"/>
+        <div class="sign-code">AB02</div>
+        <div class="sign-reading">ro</div>
+      </div>
+      <div class="sign-item" data-code="ab03" data-reading="pa">
+        <img src="sign-images/AB03_pa.png" alt="AB03/pa" loading="lazy"/>
+        <div class="sign-code">AB03</div>
+        <div class="sign-reading">pa</div>
+      </div>
+      <div class="sign-item" data-code="ab04" data-reading="te">
+        <img src="sign-images/AB04_te.png" alt="AB04/te" loading="lazy"/>
+        <div class="sign-code">AB04</div>
+        <div class="sign-reading">te</div>
+      </div>
+      <div class="sign-item" data-code="ab05" data-reading="to">
+        <img src="sign-images/AB05_to.png" alt="AB05/to" loading="lazy"/>
+        <div class="sign-code">AB05</div>
+        <div class="sign-reading">to</div>
+      </div>
+      <div class="sign-item" data-code="ab06" data-reading="na">
+        <img src="sign-images/AB06_na.png" alt="AB06/na" loading="lazy"/>
+        <div class="sign-code">AB06</div>
+        <div class="sign-reading">na</div>
+      </div>
+      <div class="sign-item" data-code="ab07" data-reading="di">
+        <img src="sign-images/AB07_di.png" alt="AB07/di" loading="lazy"/>
+        <div class="sign-code">AB07</div>
+        <div class="sign-reading">di</div>
+      </div>
+      <div class="sign-item" data-code="ab08" data-reading="a">
+        <img src="sign-images/AB08_a.png" alt="AB08/a" loading="lazy"/>
+        <div class="sign-code">AB08</div>
+        <div class="sign-reading">a</div>
+      </div>
+      <div class="sign-item" data-code="ab09" data-reading="se">
+        <img src="sign-images/AB09_se.png" alt="AB09/se" loading="lazy"/>
+        <div class="sign-code">AB09</div>
+        <div class="sign-reading">se</div>
+      </div>
+      <div class="sign-item" data-code="ab10" data-reading="u">
+        <img src="sign-images/AB10_u.png" alt="AB10/u" loading="lazy"/>
+        <div class="sign-code">AB10</div>
+        <div class="sign-reading">u</div>
+      </div>
+      <div class="sign-item" data-code="ab11" data-reading="po">
+        <img src="sign-images/AB11_po.png" alt="AB11/po" loading="lazy"/>
+        <div class="sign-code">AB11</div>
+        <div class="sign-reading">po</div>
+      </div>
+      <div class="sign-item" data-code="ab13" data-reading="me">
+        <img src="sign-images/AB13_me.png" alt="AB13/me" loading="lazy"/>
+        <div class="sign-code">AB13</div>
+        <div class="sign-reading">me</div>
+      </div>
+      <div class="sign-item" data-code="ab16" data-reading="qa">
+        <img src="sign-images/AB16_qa.png" alt="AB16/qa" loading="lazy"/>
+        <div class="sign-code">AB16</div>
+        <div class="sign-reading">qa</div>
+      </div>
+      <div class="sign-item" data-code="ab17" data-reading="za">
+        <img src="sign-images/AB17_za.png" alt="AB17/za" loading="lazy"/>
+        <div class="sign-code">AB17</div>
+        <div class="sign-reading">za</div>
+      </div>
+      <div class="sign-item" data-code="ab20" data-reading="zo">
+        <img src="sign-images/AB20_zo.png" alt="AB20/zo" loading="lazy"/>
+        <div class="sign-code">AB20</div>
+        <div class="sign-reading">zo</div>
+      </div>
+      <div class="sign-item" data-code="ab21" data-reading="qi">
+        <img src="sign-images/AB21_qi_OVIS.png" alt="AB21/qi/OVIS" loading="lazy"/>
+        <div class="sign-code">AB21</div>
+        <div class="sign-reading">qi</div>
+      </div>
+      <div class="sign-item" data-code="ab22" data-reading="cap">
+        <img src="sign-images/AB22_CAP.png" alt="AB22/CAP" loading="lazy"/>
+        <div class="sign-code">AB22</div>
+        <div class="sign-reading">CAP</div>
+      </div>
+      <div class="sign-item" data-code="ab23" data-reading="mu">
+        <img src="sign-images/AB23_mu_BOS.png" alt="AB23/mu/BOS" loading="lazy"/>
+        <div class="sign-code">AB23</div>
+        <div class="sign-reading">mu</div>
+      </div>
+      <div class="sign-item" data-code="ab24" data-reading="ne">
+        <img src="sign-images/AB24_ne.png" alt="AB24/ne" loading="lazy"/>
+        <div class="sign-code">AB24</div>
+        <div class="sign-reading">ne</div>
+      </div>
+      <div class="sign-item" data-code="ab26" data-reading="ru">
+        <img src="sign-images/AB26_ru.png" alt="AB26/ru" loading="lazy"/>
+        <div class="sign-code">AB26</div>
+        <div class="sign-reading">ru</div>
+      </div>
+      <div class="sign-item" data-code="ab27" data-reading="re">
+        <img src="sign-images/AB27_re.png" alt="AB27/re" loading="lazy"/>
+        <div class="sign-code">AB27</div>
+        <div class="sign-reading">re</div>
+      </div>
+      <div class="sign-item" data-code="ab28" data-reading="i">
+        <img src="sign-images/AB28_i.png" alt="AB28/i" loading="lazy"/>
+        <div class="sign-code">AB28</div>
+        <div class="sign-reading">i</div>
+      </div>
+      <div class="sign-item" data-code="ab30" data-reading="ni">
+        <img src="sign-images/AB30_ni_FIC.png" alt="AB30/ni/FIC" loading="lazy"/>
+        <div class="sign-code">AB30</div>
+        <div class="sign-reading">ni</div>
+      </div>
+      <div class="sign-item" data-code="ab31" data-reading="sa">
+        <img src="sign-images/AB31_sa.png" alt="AB31/sa" loading="lazy"/>
+        <div class="sign-code">AB31</div>
+        <div class="sign-reading">sa</div>
+      </div>
+      <div class="sign-item" data-code="ab34" data-reading="">
+        <img src="sign-images/AB34.png" alt="AB34" loading="lazy"/>
+        <div class="sign-code">AB34</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab37" data-reading="ti">
+        <img src="sign-images/AB37_ti.png" alt="AB37/ti" loading="lazy"/>
+        <div class="sign-code">AB37</div>
+        <div class="sign-reading">ti</div>
+      </div>
+      <div class="sign-item" data-code="ab38" data-reading="e">
+        <img src="sign-images/AB38_e.png" alt="AB38/e" loading="lazy"/>
+        <div class="sign-code">AB38</div>
+        <div class="sign-reading">e</div>
+      </div>
+      <div class="sign-item" data-code="ab39" data-reading="pi">
+        <img src="sign-images/AB39_pi.png" alt="AB39/pi" loading="lazy"/>
+        <div class="sign-code">AB39</div>
+        <div class="sign-reading">pi</div>
+      </div>
+      <div class="sign-item" data-code="ab40" data-reading="wi">
+        <img src="sign-images/AB40_wi.png" alt="AB40/wi" loading="lazy"/>
+        <div class="sign-code">AB40</div>
+        <div class="sign-reading">wi</div>
+      </div>
+      <div class="sign-item" data-code="ab41" data-reading="si">
+        <img src="sign-images/AB41_si.png" alt="AB41/si" loading="lazy"/>
+        <div class="sign-code">AB41</div>
+        <div class="sign-reading">si</div>
+      </div>
+      <div class="sign-item" data-code="ab44" data-reading="ke">
+        <img src="sign-images/AB44_ke.png" alt="AB44/ke" loading="lazy"/>
+        <div class="sign-code">AB44</div>
+        <div class="sign-reading">ke</div>
+      </div>
+      <div class="sign-item" data-code="ab45" data-reading="de">
+        <img src="sign-images/AB45_de.png" alt="AB45/de" loading="lazy"/>
+        <div class="sign-code">AB45</div>
+        <div class="sign-reading">de</div>
+      </div>
+      <div class="sign-item" data-code="ab46" data-reading="je">
+        <img src="sign-images/AB46_je.png" alt="AB46/je" loading="lazy"/>
+        <div class="sign-code">AB46</div>
+        <div class="sign-reading">je</div>
+      </div>
+      <div class="sign-item" data-code="ab47" data-reading="">
+        <img src="sign-images/AB47.png" alt="AB47" loading="lazy"/>
+        <div class="sign-code">AB47</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab48" data-reading="nwa">
+        <img src="sign-images/AB48_nwa.png" alt="AB48/nwa" loading="lazy"/>
+        <div class="sign-code">AB48</div>
+        <div class="sign-reading">nwa</div>
+      </div>
+      <div class="sign-item" data-code="ab49" data-reading="">
+        <img src="sign-images/AB49.png" alt="AB49" loading="lazy"/>
+        <div class="sign-code">AB49</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab50" data-reading="pu">
+        <img src="sign-images/AB50_pu.png" alt="AB50/pu" loading="lazy"/>
+        <div class="sign-code">AB50</div>
+        <div class="sign-reading">pu</div>
+      </div>
+      <div class="sign-item" data-code="ab51" data-reading="du">
+        <img src="sign-images/AB51_du.png" alt="AB51/du" loading="lazy"/>
+        <div class="sign-code">AB51</div>
+        <div class="sign-reading">du</div>
+      </div>
+      <div class="sign-item" data-code="ab53" data-reading="ri">
+        <img src="sign-images/AB53_ri.png" alt="AB53/ri" loading="lazy"/>
+        <div class="sign-code">AB53</div>
+        <div class="sign-reading">ri</div>
+      </div>
+      <div class="sign-item" data-code="ab54" data-reading="wa">
+        <img src="sign-images/AB54_wa_TELA.png" alt="AB54/wa/TELA" loading="lazy"/>
+        <div class="sign-code">AB54</div>
+        <div class="sign-reading">wa</div>
+      </div>
+      <div class="sign-item" data-code="ab55" data-reading="nu">
+        <img src="sign-images/AB55_nu.png" alt="AB55/nu" loading="lazy"/>
+        <div class="sign-code">AB55</div>
+        <div class="sign-reading">nu</div>
+      </div>
+      <div class="sign-item" data-code="ab56" data-reading="">
+        <img src="sign-images/AB56.png" alt="AB56" loading="lazy"/>
+        <div class="sign-code">AB56</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab57" data-reading="ja">
+        <img src="sign-images/AB57_ja.png" alt="AB57/ja" loading="lazy"/>
+        <div class="sign-code">AB57</div>
+        <div class="sign-reading">ja</div>
+      </div>
+      <div class="sign-item" data-code="ab58" data-reading="su">
+        <img src="sign-images/AB58_su.png" alt="AB58/su" loading="lazy"/>
+        <div class="sign-code">AB58</div>
+        <div class="sign-reading">su</div>
+      </div>
+      <div class="sign-item" data-code="ab59" data-reading="ta">
+        <img src="sign-images/AB59_ta.png" alt="AB59/ta" loading="lazy"/>
+        <div class="sign-code">AB59</div>
+        <div class="sign-reading">ta</div>
+      </div>
+      <div class="sign-item" data-code="ab60" data-reading="ra">
+        <img src="sign-images/AB60_ra.png" alt="AB60/ra" loading="lazy"/>
+        <div class="sign-code">AB60</div>
+        <div class="sign-reading">ra</div>
+      </div>
+      <div class="sign-item" data-code="ab61" data-reading="o">
+        <img src="sign-images/AB61_o.png" alt="AB61/o" loading="lazy"/>
+        <div class="sign-code">AB61</div>
+        <div class="sign-reading">o</div>
+      </div>
+      <div class="sign-item" data-code="ab65" data-reading="ju">
+        <img src="sign-images/AB65_ju.png" alt="AB65/ju" loading="lazy"/>
+        <div class="sign-code">AB65</div>
+        <div class="sign-reading">ju</div>
+      </div>
+      <div class="sign-item" data-code="ab67" data-reading="ki">
+        <img src="sign-images/AB67_ki.png" alt="AB67/ki" loading="lazy"/>
+        <div class="sign-code">AB67</div>
+        <div class="sign-reading">ki</div>
+      </div>
+      <div class="sign-item" data-code="ab69" data-reading="tu">
+        <img src="sign-images/AB69_tu.png" alt="AB69/tu" loading="lazy"/>
+        <div class="sign-code">AB69</div>
+        <div class="sign-reading">tu</div>
+      </div>
+      <div class="sign-item" data-code="ab70" data-reading="ko">
+        <img src="sign-images/AB70_ko.png" alt="AB70/ko" loading="lazy"/>
+        <div class="sign-code">AB70</div>
+        <div class="sign-reading">ko</div>
+      </div>
+      <div class="sign-item" data-code="ab73" data-reading="mi">
+        <img src="sign-images/AB73_mi.png" alt="AB73/mi" loading="lazy"/>
+        <div class="sign-code">AB73</div>
+        <div class="sign-reading">mi</div>
+      </div>
+      <div class="sign-item" data-code="ab74" data-reading="ze">
+        <img src="sign-images/AB74_ze.png" alt="AB74/ze" loading="lazy"/>
+        <div class="sign-code">AB74</div>
+        <div class="sign-reading">ze</div>
+      </div>
+      <div class="sign-item" data-code="ab77" data-reading="ka">
+        <img src="sign-images/AB77_ka.png" alt="AB77/ka" loading="lazy"/>
+        <div class="sign-code">AB77</div>
+        <div class="sign-reading">ka</div>
+      </div>
+      <div class="sign-item" data-code="ab78" data-reading="qe">
+        <img src="sign-images/AB78_qe.png" alt="AB78/qe" loading="lazy"/>
+        <div class="sign-code">AB78</div>
+        <div class="sign-reading">qe</div>
+      </div>
+      <div class="sign-item" data-code="ab79" data-reading="">
+        <img src="sign-images/AB79.png" alt="AB79" loading="lazy"/>
+        <div class="sign-code">AB79</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab80" data-reading="ma">
+        <img src="sign-images/AB80_ma.png" alt="AB80/ma" loading="lazy"/>
+        <div class="sign-code">AB80</div>
+        <div class="sign-reading">ma</div>
+      </div>
+      <div class="sign-item" data-code="ab81" data-reading="ku">
+        <img src="sign-images/AB81_ku.png" alt="AB81/ku" loading="lazy"/>
+        <div class="sign-code">AB81</div>
+        <div class="sign-reading">ku</div>
+      </div>
+      <div class="sign-item" data-code="ab82" data-reading="">
+        <img src="sign-images/AB82.png" alt="AB82" loading="lazy"/>
+        <div class="sign-code">AB82</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab85" data-reading="au">
+        <img src="sign-images/AB85_au_SUS.png" alt="AB85/au/SUS" loading="lazy"/>
+        <div class="sign-code">AB85</div>
+        <div class="sign-reading">au</div>
+      </div>
+      <div class="sign-item" data-code="ab86" data-reading="">
+        <img src="sign-images/AB86.png" alt="AB86" loading="lazy"/>
+        <div class="sign-code">AB86</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab87" data-reading="">
+        <img src="sign-images/AB87.png" alt="AB87" loading="lazy"/>
+        <div class="sign-code">AB87</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab100" data-reading="vir">
+        <img src="sign-images/AB100_VIR.png" alt="AB100/VIR" loading="lazy"/>
+        <div class="sign-code">AB100</div>
+        <div class="sign-reading">VIR</div>
+      </div>
+      <div class="sign-item" data-code="ab118" data-reading="">
+        <img src="sign-images/AB118.png" alt="AB118" loading="lazy"/>
+        <div class="sign-code">AB118</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab120" data-reading="gra">
+        <img src="sign-images/AB120_GRA.png" alt="AB120/GRA" loading="lazy"/>
+        <div class="sign-code">AB120</div>
+        <div class="sign-reading">GRA</div>
+      </div>
+      <div class="sign-item" data-code="ab122" data-reading="oliv">
+        <img src="sign-images/AB122_OLIV.png" alt="AB122/OLIV" loading="lazy"/>
+        <div class="sign-code">AB122</div>
+        <div class="sign-reading">OLIV</div>
+      </div>
+      <div class="sign-item" data-code="ab123" data-reading="arom">
+        <img src="sign-images/AB123_AROM.png" alt="AB123/AROM" loading="lazy"/>
+        <div class="sign-code">AB123</div>
+        <div class="sign-reading">AROM</div>
+      </div>
+      <div class="sign-item" data-code="ab171" data-reading="">
+        <img src="sign-images/AB171.png" alt="AB171" loading="lazy"/>
+        <div class="sign-code">AB171</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab180" data-reading="">
+        <img src="sign-images/AB180.png" alt="AB180" loading="lazy"/>
+        <div class="sign-code">AB180</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab188" data-reading="">
+        <img src="sign-images/AB188.png" alt="AB188" loading="lazy"/>
+        <div class="sign-code">AB188</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab191" data-reading="">
+        <img src="sign-images/AB191.png" alt="AB191" loading="lazy"/>
+        <div class="sign-code">AB191</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a301" data-reading="">
+        <img src="sign-images/A301.png" alt="A301" loading="lazy"/>
+        <div class="sign-code">A301</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="ab302" data-reading="ole">
+        <img src="sign-images/AB302_OLE.png" alt="AB302/OLE" loading="lazy"/>
+        <div class="sign-code">AB302</div>
+        <div class="sign-reading">OLE</div>
+      </div>
+      <div class="sign-item" data-code="a303" data-reading="">
+        <img src="sign-images/A303.png" alt="A303" loading="lazy"/>
+        <div class="sign-code">A303</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a304" data-reading="">
+        <img src="sign-images/A304.png" alt="A304" loading="lazy"/>
+        <div class="sign-code">A304</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a305" data-reading="">
+        <img src="sign-images/A305.png" alt="A305" loading="lazy"/>
+        <div class="sign-code">A305</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a306" data-reading="">
+        <img src="sign-images/A306.png" alt="A306" loading="lazy"/>
+        <div class="sign-code">A306</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a307" data-reading="">
+        <img src="sign-images/A307.png" alt="A307" loading="lazy"/>
+        <div class="sign-code">A307</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a308" data-reading="">
+        <img src="sign-images/A308.png" alt="A308" loading="lazy"/>
+        <div class="sign-code">A308</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a310" data-reading="">
+        <img src="sign-images/A310.png" alt="A310" loading="lazy"/>
+        <div class="sign-code">A310</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a311" data-reading="">
+        <img src="sign-images/A311.png" alt="A311" loading="lazy"/>
+        <div class="sign-code">A311</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a312" data-reading="">
+        <img src="sign-images/A312.png" alt="A312" loading="lazy"/>
+        <div class="sign-code">A312</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a314" data-reading="">
+        <img src="sign-images/A314.png" alt="A314" loading="lazy"/>
+        <div class="sign-code">A314</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a315" data-reading="">
+        <img src="sign-images/A315.png" alt="A315" loading="lazy"/>
+        <div class="sign-code">A315</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a316" data-reading="">
+        <img src="sign-images/A316.png" alt="A316" loading="lazy"/>
+        <div class="sign-code">A316</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a317" data-reading="">
+        <img src="sign-images/A317.png" alt="A317" loading="lazy"/>
+        <div class="sign-code">A317</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a318" data-reading="">
+        <img src="sign-images/A318.png" alt="A318" loading="lazy"/>
+        <div class="sign-code">A318</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a319" data-reading="">
+        <img src="sign-images/A319.png" alt="A319" loading="lazy"/>
+        <div class="sign-code">A319</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a320" data-reading="">
+        <img src="sign-images/A320.png" alt="A320" loading="lazy"/>
+        <div class="sign-code">A320</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a321" data-reading="">
+        <img src="sign-images/A321.png" alt="A321" loading="lazy"/>
+        <div class="sign-code">A321</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a322" data-reading="">
+        <img src="sign-images/A322.png" alt="A322" loading="lazy"/>
+        <div class="sign-code">A322</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a323" data-reading="">
+        <img src="sign-images/A323.png" alt="A323" loading="lazy"/>
+        <div class="sign-code">A323</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a324" data-reading="">
+        <img src="sign-images/A324.png" alt="A324" loading="lazy"/>
+        <div class="sign-code">A324</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a325" data-reading="">
+        <img src="sign-images/A325.png" alt="A325" loading="lazy"/>
+        <div class="sign-code">A325</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a326" data-reading="">
+        <img src="sign-images/A326.png" alt="A326" loading="lazy"/>
+        <div class="sign-code">A326</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a327" data-reading="">
+        <img src="sign-images/A327.png" alt="A327" loading="lazy"/>
+        <div class="sign-code">A327</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a328" data-reading="">
+        <img src="sign-images/A328.png" alt="A328" loading="lazy"/>
+        <div class="sign-code">A328</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a329" data-reading="">
+        <img src="sign-images/A329.png" alt="A329" loading="lazy"/>
+        <div class="sign-code">A329</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a330" data-reading="">
+        <img src="sign-images/A330.png" alt="A330" loading="lazy"/>
+        <div class="sign-code">A330</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a331" data-reading="">
+        <img src="sign-images/A331.png" alt="A331" loading="lazy"/>
+        <div class="sign-code">A331</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a332" data-reading="">
+        <img src="sign-images/A332.png" alt="A332" loading="lazy"/>
+        <div class="sign-code">A332</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a333" data-reading="">
+        <img src="sign-images/A333.png" alt="A333" loading="lazy"/>
+        <div class="sign-code">A333</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a334" data-reading="">
+        <img src="sign-images/A334.png" alt="A334" loading="lazy"/>
+        <div class="sign-code">A334</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a335" data-reading="">
+        <img src="sign-images/A335.png" alt="A335" loading="lazy"/>
+        <div class="sign-code">A335</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a336" data-reading="">
+        <img src="sign-images/A336.png" alt="A336" loading="lazy"/>
+        <div class="sign-code">A336</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a337" data-reading="">
+        <img src="sign-images/A337.png" alt="A337" loading="lazy"/>
+        <div class="sign-code">A337</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a338" data-reading="">
+        <img src="sign-images/A338.png" alt="A338" loading="lazy"/>
+        <div class="sign-code">A338</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a339" data-reading="">
+        <img src="sign-images/A339.png" alt="A339" loading="lazy"/>
+        <div class="sign-code">A339</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a340" data-reading="">
+        <img src="sign-images/A340.png" alt="A340" loading="lazy"/>
+        <div class="sign-code">A340</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a341" data-reading="">
+        <img src="sign-images/A341.png" alt="A341" loading="lazy"/>
+        <div class="sign-code">A341</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a342" data-reading="">
+        <img src="sign-images/A342.png" alt="A342" loading="lazy"/>
+        <div class="sign-code">A342</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a343" data-reading="">
+        <img src="sign-images/A343.png" alt="A343" loading="lazy"/>
+        <div class="sign-code">A343</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a344" data-reading="">
+        <img src="sign-images/A344.png" alt="A344" loading="lazy"/>
+        <div class="sign-code">A344</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a345" data-reading="">
+        <img src="sign-images/A345.png" alt="A345" loading="lazy"/>
+        <div class="sign-code">A345</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a346" data-reading="">
+        <img src="sign-images/A346.png" alt="A346" loading="lazy"/>
+        <div class="sign-code">A346</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a347" data-reading="">
+        <img src="sign-images/A347.png" alt="A347" loading="lazy"/>
+        <div class="sign-code">A347</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a348" data-reading="">
+        <img src="sign-images/A348.png" alt="A348" loading="lazy"/>
+        <div class="sign-code">A348</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a349" data-reading="">
+        <img src="sign-images/A349.png" alt="A349" loading="lazy"/>
+        <div class="sign-code">A349</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a350" data-reading="">
+        <img src="sign-images/A350.png" alt="A350" loading="lazy"/>
+        <div class="sign-code">A350</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a351" data-reading="">
+        <img src="sign-images/A351.png" alt="A351" loading="lazy"/>
+        <div class="sign-code">A351</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a352" data-reading="">
+        <img src="sign-images/A352.png" alt="A352" loading="lazy"/>
+        <div class="sign-code">A352</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a353" data-reading="">
+        <img src="sign-images/A353.png" alt="A353" loading="lazy"/>
+        <div class="sign-code">A353</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a354" data-reading="">
+        <img src="sign-images/A354.png" alt="A354" loading="lazy"/>
+        <div class="sign-code">A354</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a355" data-reading="">
+        <img src="sign-images/A355.png" alt="A355" loading="lazy"/>
+        <div class="sign-code">A355</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a356" data-reading="">
+        <img src="sign-images/A356.png" alt="A356" loading="lazy"/>
+        <div class="sign-code">A356</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a357" data-reading="">
+        <img src="sign-images/A357.png" alt="A357" loading="lazy"/>
+        <div class="sign-code">A357</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a358" data-reading="">
+        <img src="sign-images/A358.png" alt="A358" loading="lazy"/>
+        <div class="sign-code">A358</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a359" data-reading="">
+        <img src="sign-images/A359.png" alt="A359" loading="lazy"/>
+        <div class="sign-code">A359</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a360" data-reading="">
+        <img src="sign-images/A360.png" alt="A360" loading="lazy"/>
+        <div class="sign-code">A360</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a361" data-reading="">
+        <img src="sign-images/A361.png" alt="A361" loading="lazy"/>
+        <div class="sign-code">A361</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a362" data-reading="">
+        <img src="sign-images/A362.png" alt="A362" loading="lazy"/>
+        <div class="sign-code">A362</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a363" data-reading="">
+        <img src="sign-images/A363.png" alt="A363" loading="lazy"/>
+        <div class="sign-code">A363</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a364" data-reading="">
+        <img src="sign-images/A364.png" alt="A364" loading="lazy"/>
+        <div class="sign-code">A364</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a365" data-reading="">
+        <img src="sign-images/A365.png" alt="A365" loading="lazy"/>
+        <div class="sign-code">A365</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a366" data-reading="">
+        <img src="sign-images/A366.png" alt="A366" loading="lazy"/>
+        <div class="sign-code">A366</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a367" data-reading="">
+        <img src="sign-images/A367.png" alt="A367" loading="lazy"/>
+        <div class="sign-code">A367</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a368" data-reading="">
+        <img src="sign-images/A368.png" alt="A368" loading="lazy"/>
+        <div class="sign-code">A368</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a369" data-reading="">
+        <img src="sign-images/A369.png" alt="A369" loading="lazy"/>
+        <div class="sign-code">A369</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a370" data-reading="">
+        <img src="sign-images/A370.png" alt="A370" loading="lazy"/>
+        <div class="sign-code">A370</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a371" data-reading="">
+        <img src="sign-images/A371.png" alt="A371" loading="lazy"/>
+        <div class="sign-code">A371</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a400" data-reading="">
+        <img src="sign-images/A400.png" alt="A400" loading="lazy"/>
+        <div class="sign-code">A400</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a717" data-reading="dd">
+        <img src="sign-images/A717_DD.png" alt="A717/DD" loading="lazy"/>
+        <div class="sign-code">A717</div>
+        <div class="sign-reading">DD</div>
+      </div>
+      <div class="sign-item" data-code="a501" data-reading="">
+        <img src="sign-images/A501.png" alt="A501" loading="lazy"/>
+        <div class="sign-code">A501</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a502" data-reading="">
+        <img src="sign-images/A502.png" alt="A502" loading="lazy"/>
+        <div class="sign-code">A502</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a503" data-reading="">
+        <img src="sign-images/A503.png" alt="A503" loading="lazy"/>
+        <div class="sign-code">A503</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a504" data-reading="">
+        <img src="sign-images/A504.png" alt="A504" loading="lazy"/>
+        <div class="sign-code">A504</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a505" data-reading="">
+        <img src="sign-images/A505.png" alt="A505" loading="lazy"/>
+        <div class="sign-code">A505</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a506" data-reading="">
+        <img src="sign-images/A506.png" alt="A506" loading="lazy"/>
+        <div class="sign-code">A506</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a507" data-reading="">
+        <img src="sign-images/A507.png" alt="A507" loading="lazy"/>
+        <div class="sign-code">A507</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a508" data-reading="">
+        <img src="sign-images/A508.png" alt="A508" loading="lazy"/>
+        <div class="sign-code">A508</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a509" data-reading="">
+        <img src="sign-images/A509.png" alt="A509" loading="lazy"/>
+        <div class="sign-code">A509</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a510" data-reading="">
+        <img src="sign-images/A510.png" alt="A510" loading="lazy"/>
+        <div class="sign-code">A510</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a511" data-reading="">
+        <img src="sign-images/A511.png" alt="A511" loading="lazy"/>
+        <div class="sign-code">A511</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a512" data-reading="">
+        <img src="sign-images/A512.png" alt="A512" loading="lazy"/>
+        <div class="sign-code">A512</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a513" data-reading="">
+        <img src="sign-images/A513.png" alt="A513" loading="lazy"/>
+        <div class="sign-code">A513</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a514" data-reading="">
+        <img src="sign-images/A514.png" alt="A514" loading="lazy"/>
+        <div class="sign-code">A514</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a515" data-reading="">
+        <img src="sign-images/A515.png" alt="A515" loading="lazy"/>
+        <div class="sign-code">A515</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a516" data-reading="">
+        <img src="sign-images/A516.png" alt="A516" loading="lazy"/>
+        <div class="sign-code">A516</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a517" data-reading="">
+        <img src="sign-images/A517.png" alt="A517" loading="lazy"/>
+        <div class="sign-code">A517</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a518" data-reading="">
+        <img src="sign-images/A518.png" alt="A518" loading="lazy"/>
+        <div class="sign-code">A518</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a519" data-reading="">
+        <img src="sign-images/A519.png" alt="A519" loading="lazy"/>
+        <div class="sign-code">A519</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a520" data-reading="">
+        <img src="sign-images/A520.png" alt="A520" loading="lazy"/>
+        <div class="sign-code">A520</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a521" data-reading="">
+        <img src="sign-images/A521.png" alt="A521" loading="lazy"/>
+        <div class="sign-code">A521</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a522" data-reading="">
+        <img src="sign-images/A522.png" alt="A522" loading="lazy"/>
+        <div class="sign-code">A522</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a523" data-reading="">
+        <img src="sign-images/A523.png" alt="A523" loading="lazy"/>
+        <div class="sign-code">A523</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a524" data-reading="">
+        <img src="sign-images/A524.png" alt="A524" loading="lazy"/>
+        <div class="sign-code">A524</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a525" data-reading="">
+        <img src="sign-images/A525.png" alt="A525" loading="lazy"/>
+        <div class="sign-code">A525</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a526" data-reading="">
+        <img src="sign-images/A526.png" alt="A526" loading="lazy"/>
+        <div class="sign-code">A526</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a527" data-reading="">
+        <img src="sign-images/A527.png" alt="A527" loading="lazy"/>
+        <div class="sign-code">A527</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a529" data-reading="">
+        <img src="sign-images/A529.png" alt="A529" loading="lazy"/>
+        <div class="sign-code">A529</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a530" data-reading="">
+        <img src="sign-images/A530.png" alt="A530" loading="lazy"/>
+        <div class="sign-code">A530</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a531" data-reading="">
+        <img src="sign-images/A531.png" alt="A531" loading="lazy"/>
+        <div class="sign-code">A531</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a532" data-reading="">
+        <img src="sign-images/A532.png" alt="A532" loading="lazy"/>
+        <div class="sign-code">A532</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a533" data-reading="">
+        <img src="sign-images/A533.png" alt="A533" loading="lazy"/>
+        <div class="sign-code">A533</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a534" data-reading="">
+        <img src="sign-images/A534.png" alt="A534" loading="lazy"/>
+        <div class="sign-code">A534</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a535" data-reading="">
+        <img src="sign-images/A535.png" alt="A535" loading="lazy"/>
+        <div class="sign-code">A535</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a536" data-reading="">
+        <img src="sign-images/A536.png" alt="A536" loading="lazy"/>
+        <div class="sign-code">A536</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a537" data-reading="">
+        <img src="sign-images/A537.png" alt="A537" loading="lazy"/>
+        <div class="sign-code">A537</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a538" data-reading="">
+        <img src="sign-images/A538.png" alt="A538" loading="lazy"/>
+        <div class="sign-code">A538</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a539" data-reading="">
+        <img src="sign-images/A539.png" alt="A539" loading="lazy"/>
+        <div class="sign-code">A539</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a540" data-reading="">
+        <img src="sign-images/A540.png" alt="A540" loading="lazy"/>
+        <div class="sign-code">A540</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a541" data-reading="">
+        <img src="sign-images/A541.png" alt="A541" loading="lazy"/>
+        <div class="sign-code">A541</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a542" data-reading="">
+        <img src="sign-images/A542.png" alt="A542" loading="lazy"/>
+        <div class="sign-code">A542</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a543" data-reading="">
+        <img src="sign-images/A543.png" alt="A543" loading="lazy"/>
+        <div class="sign-code">A543</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a544" data-reading="">
+        <img src="sign-images/A544.png" alt="A544" loading="lazy"/>
+        <div class="sign-code">A544</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a545" data-reading="">
+        <img src="sign-images/A545.png" alt="A545" loading="lazy"/>
+        <div class="sign-code">A545</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a546" data-reading="">
+        <img src="sign-images/A546.png" alt="A546" loading="lazy"/>
+        <div class="sign-code">A546</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a547" data-reading="">
+        <img src="sign-images/A547.png" alt="A547" loading="lazy"/>
+        <div class="sign-code">A547</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a548" data-reading="">
+        <img src="sign-images/A548.png" alt="A548" loading="lazy"/>
+        <div class="sign-code">A548</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a549" data-reading="">
+        <img src="sign-images/A549.png" alt="A549" loading="lazy"/>
+        <div class="sign-code">A549</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a550" data-reading="">
+        <img src="sign-images/A550.png" alt="A550" loading="lazy"/>
+        <div class="sign-code">A550</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a551" data-reading="">
+        <img src="sign-images/A551.png" alt="A551" loading="lazy"/>
+        <div class="sign-code">A551</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a552" data-reading="">
+        <img src="sign-images/A552.png" alt="A552" loading="lazy"/>
+        <div class="sign-code">A552</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a553" data-reading="">
+        <img src="sign-images/A553.png" alt="A553" loading="lazy"/>
+        <div class="sign-code">A553</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a554" data-reading="">
+        <img src="sign-images/A554.png" alt="A554" loading="lazy"/>
+        <div class="sign-code">A554</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a555" data-reading="">
+        <img src="sign-images/A555.png" alt="A555" loading="lazy"/>
+        <div class="sign-code">A555</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a556" data-reading="">
+        <img src="sign-images/A556.png" alt="A556" loading="lazy"/>
+        <div class="sign-code">A556</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a557" data-reading="">
+        <img src="sign-images/A557.png" alt="A557" loading="lazy"/>
+        <div class="sign-code">A557</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a558" data-reading="">
+        <img src="sign-images/A558.png" alt="A558" loading="lazy"/>
+        <div class="sign-code">A558</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a559" data-reading="">
+        <img src="sign-images/A559.png" alt="A559" loading="lazy"/>
+        <div class="sign-code">A559</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a560" data-reading="">
+        <img src="sign-images/A560.png" alt="A560" loading="lazy"/>
+        <div class="sign-code">A560</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a561" data-reading="">
+        <img src="sign-images/A561.png" alt="A561" loading="lazy"/>
+        <div class="sign-code">A561</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a562" data-reading="">
+        <img src="sign-images/A562.png" alt="A562" loading="lazy"/>
+        <div class="sign-code">A562</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a563" data-reading="">
+        <img src="sign-images/A563.png" alt="A563" loading="lazy"/>
+        <div class="sign-code">A563</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a564" data-reading="">
+        <img src="sign-images/A564.png" alt="A564" loading="lazy"/>
+        <div class="sign-code">A564</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a565" data-reading="">
+        <img src="sign-images/A565.png" alt="A565" loading="lazy"/>
+        <div class="sign-code">A565</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a566" data-reading="">
+        <img src="sign-images/A566.png" alt="A566" loading="lazy"/>
+        <div class="sign-code">A566</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a567" data-reading="">
+        <img src="sign-images/A567.png" alt="A567" loading="lazy"/>
+        <div class="sign-code">A567</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a568" data-reading="">
+        <img src="sign-images/A568.png" alt="A568" loading="lazy"/>
+        <div class="sign-code">A568</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a569" data-reading="">
+        <img src="sign-images/A569.png" alt="A569" loading="lazy"/>
+        <div class="sign-code">A569</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a570" data-reading="">
+        <img src="sign-images/A570.png" alt="A570" loading="lazy"/>
+        <div class="sign-code">A570</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a571" data-reading="">
+        <img src="sign-images/A571.png" alt="A571" loading="lazy"/>
+        <div class="sign-code">A571</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a572" data-reading="">
+        <img src="sign-images/A572.png" alt="A572" loading="lazy"/>
+        <div class="sign-code">A572</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a573" data-reading="">
+        <img src="sign-images/A573.png" alt="A573" loading="lazy"/>
+        <div class="sign-code">A573</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a574" data-reading="">
+        <img src="sign-images/A574.png" alt="A574" loading="lazy"/>
+        <div class="sign-code">A574</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a575" data-reading="">
+        <img src="sign-images/A575.png" alt="A575" loading="lazy"/>
+        <div class="sign-code">A575</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a576" data-reading="">
+        <img src="sign-images/A576.png" alt="A576" loading="lazy"/>
+        <div class="sign-code">A576</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a577" data-reading="">
+        <img src="sign-images/A577.png" alt="A577" loading="lazy"/>
+        <div class="sign-code">A577</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a578" data-reading="">
+        <img src="sign-images/A578.png" alt="A578" loading="lazy"/>
+        <div class="sign-code">A578</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a579" data-reading="">
+        <img src="sign-images/A579.png" alt="A579" loading="lazy"/>
+        <div class="sign-code">A579</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a580" data-reading="">
+        <img src="sign-images/A580.png" alt="A580" loading="lazy"/>
+        <div class="sign-code">A580</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a581" data-reading="">
+        <img src="sign-images/A581.png" alt="A581" loading="lazy"/>
+        <div class="sign-code">A581</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a582" data-reading="">
+        <img src="sign-images/A582.png" alt="A582" loading="lazy"/>
+        <div class="sign-code">A582</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a583" data-reading="">
+        <img src="sign-images/A583.png" alt="A583" loading="lazy"/>
+        <div class="sign-code">A583</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a584" data-reading="">
+        <img src="sign-images/A584.png" alt="A584" loading="lazy"/>
+        <div class="sign-code">A584</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a585" data-reading="">
+        <img src="sign-images/A585.png" alt="A585" loading="lazy"/>
+        <div class="sign-code">A585</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a586" data-reading="">
+        <img src="sign-images/A586.png" alt="A586" loading="lazy"/>
+        <div class="sign-code">A586</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a587" data-reading="">
+        <img src="sign-images/A587.png" alt="A587" loading="lazy"/>
+        <div class="sign-code">A587</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a588" data-reading="">
+        <img src="sign-images/A588.png" alt="A588" loading="lazy"/>
+        <div class="sign-code">A588</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a589" data-reading="">
+        <img src="sign-images/A589.png" alt="A589" loading="lazy"/>
+        <div class="sign-code">A589</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a590" data-reading="">
+        <img src="sign-images/A590.png" alt="A590" loading="lazy"/>
+        <div class="sign-code">A590</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a591" data-reading="">
+        <img src="sign-images/A591.png" alt="A591" loading="lazy"/>
+        <div class="sign-code">A591</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a592" data-reading="">
+        <img src="sign-images/A592.png" alt="A592" loading="lazy"/>
+        <div class="sign-code">A592</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a593" data-reading="">
+        <img src="sign-images/A593.png" alt="A593" loading="lazy"/>
+        <div class="sign-code">A593</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a594" data-reading="">
+        <img src="sign-images/A594.png" alt="A594" loading="lazy"/>
+        <div class="sign-code">A594</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a595" data-reading="">
+        <img src="sign-images/A595.png" alt="A595" loading="lazy"/>
+        <div class="sign-code">A595</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a596" data-reading="">
+        <img src="sign-images/A596.png" alt="A596" loading="lazy"/>
+        <div class="sign-code">A596</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a597" data-reading="">
+        <img src="sign-images/A597.png" alt="A597" loading="lazy"/>
+        <div class="sign-code">A597</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a598" data-reading="">
+        <img src="sign-images/A598.png" alt="A598" loading="lazy"/>
+        <div class="sign-code">A598</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a599" data-reading="">
+        <img src="sign-images/A599.png" alt="A599" loading="lazy"/>
+        <div class="sign-code">A599</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a600" data-reading="">
+        <img src="sign-images/A600.png" alt="A600" loading="lazy"/>
+        <div class="sign-code">A600</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a601" data-reading="">
+        <img src="sign-images/A601.png" alt="A601" loading="lazy"/>
+        <div class="sign-code">A601</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a602" data-reading="">
+        <img src="sign-images/A602.png" alt="A602" loading="lazy"/>
+        <div class="sign-code">A602</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a603" data-reading="">
+        <img src="sign-images/A603.png" alt="A603" loading="lazy"/>
+        <div class="sign-code">A603</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a604" data-reading="">
+        <img src="sign-images/A604.png" alt="A604" loading="lazy"/>
+        <div class="sign-code">A604</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a605" data-reading="">
+        <img src="sign-images/A605.png" alt="A605" loading="lazy"/>
+        <div class="sign-code">A605</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a606" data-reading="">
+        <img src="sign-images/A606.png" alt="A606" loading="lazy"/>
+        <div class="sign-code">A606</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a607" data-reading="">
+        <img src="sign-images/A607.png" alt="A607" loading="lazy"/>
+        <div class="sign-code">A607</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a608" data-reading="">
+        <img src="sign-images/A608.png" alt="A608" loading="lazy"/>
+        <div class="sign-code">A608</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a609" data-reading="">
+        <img src="sign-images/A609.png" alt="A609" loading="lazy"/>
+        <div class="sign-code">A609</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a610" data-reading="">
+        <img src="sign-images/A610.png" alt="A610" loading="lazy"/>
+        <div class="sign-code">A610</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a611" data-reading="">
+        <img src="sign-images/A611.png" alt="A611" loading="lazy"/>
+        <div class="sign-code">A611</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a612" data-reading="">
+        <img src="sign-images/A612.png" alt="A612" loading="lazy"/>
+        <div class="sign-code">A612</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a613" data-reading="">
+        <img src="sign-images/A613.png" alt="A613" loading="lazy"/>
+        <div class="sign-code">A613</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a614" data-reading="">
+        <img src="sign-images/A614.png" alt="A614" loading="lazy"/>
+        <div class="sign-code">A614</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a615" data-reading="">
+        <img src="sign-images/A615.png" alt="A615" loading="lazy"/>
+        <div class="sign-code">A615</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a616" data-reading="">
+        <img src="sign-images/A616.png" alt="A616" loading="lazy"/>
+        <div class="sign-code">A616</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a617" data-reading="">
+        <img src="sign-images/A617.png" alt="A617" loading="lazy"/>
+        <div class="sign-code">A617</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a618" data-reading="">
+        <img src="sign-images/A618.png" alt="A618" loading="lazy"/>
+        <div class="sign-code">A618</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a619" data-reading="">
+        <img src="sign-images/A619.png" alt="A619" loading="lazy"/>
+        <div class="sign-code">A619</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a620" data-reading="">
+        <img src="sign-images/A620.png" alt="A620" loading="lazy"/>
+        <div class="sign-code">A620</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a621" data-reading="">
+        <img src="sign-images/A621.png" alt="A621" loading="lazy"/>
+        <div class="sign-code">A621</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a622" data-reading="">
+        <img src="sign-images/A622.png" alt="A622" loading="lazy"/>
+        <div class="sign-code">A622</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a623" data-reading="">
+        <img src="sign-images/A623.png" alt="A623" loading="lazy"/>
+        <div class="sign-code">A623</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a624" data-reading="">
+        <img src="sign-images/A624.png" alt="A624" loading="lazy"/>
+        <div class="sign-code">A624</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a625" data-reading="">
+        <img src="sign-images/A625.png" alt="A625" loading="lazy"/>
+        <div class="sign-code">A625</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a626" data-reading="">
+        <img src="sign-images/A626.png" alt="A626" loading="lazy"/>
+        <div class="sign-code">A626</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a627" data-reading="">
+        <img src="sign-images/A627.png" alt="A627" loading="lazy"/>
+        <div class="sign-code">A627</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a628" data-reading="">
+        <img src="sign-images/A628.png" alt="A628" loading="lazy"/>
+        <div class="sign-code">A628</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a629" data-reading="">
+        <img src="sign-images/A629.png" alt="A629" loading="lazy"/>
+        <div class="sign-code">A629</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a630" data-reading="">
+        <img src="sign-images/A630.png" alt="A630" loading="lazy"/>
+        <div class="sign-code">A630</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a632" data-reading="">
+        <img src="sign-images/A632.png" alt="A632" loading="lazy"/>
+        <div class="sign-code">A632</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a633" data-reading="">
+        <img src="sign-images/A633.png" alt="A633" loading="lazy"/>
+        <div class="sign-code">A633</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a634" data-reading="">
+        <img src="sign-images/A634.png" alt="A634" loading="lazy"/>
+        <div class="sign-code">A634</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a635" data-reading="">
+        <img src="sign-images/A635.png" alt="A635" loading="lazy"/>
+        <div class="sign-code">A635</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a636" data-reading="">
+        <img src="sign-images/A636.png" alt="A636" loading="lazy"/>
+        <div class="sign-code">A636</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a637" data-reading="">
+        <img src="sign-images/A637.png" alt="A637" loading="lazy"/>
+        <div class="sign-code">A637</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a638" data-reading="">
+        <img src="sign-images/A638.png" alt="A638" loading="lazy"/>
+        <div class="sign-code">A638</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a639" data-reading="">
+        <img src="sign-images/A639.png" alt="A639" loading="lazy"/>
+        <div class="sign-code">A639</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a640" data-reading="">
+        <img src="sign-images/A640.png" alt="A640" loading="lazy"/>
+        <div class="sign-code">A640</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a641" data-reading="">
+        <img src="sign-images/A641.png" alt="A641" loading="lazy"/>
+        <div class="sign-code">A641</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a642" data-reading="">
+        <img src="sign-images/A642.png" alt="A642" loading="lazy"/>
+        <div class="sign-code">A642</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a643" data-reading="">
+        <img src="sign-images/A643.png" alt="A643" loading="lazy"/>
+        <div class="sign-code">A643</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a644" data-reading="">
+        <img src="sign-images/A644.png" alt="A644" loading="lazy"/>
+        <div class="sign-code">A644</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a645" data-reading="">
+        <img src="sign-images/A645.png" alt="A645" loading="lazy"/>
+        <div class="sign-code">A645</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a646" data-reading="">
+        <img src="sign-images/A646.png" alt="A646" loading="lazy"/>
+        <div class="sign-code">A646</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a647" data-reading="">
+        <img src="sign-images/A647.png" alt="A647" loading="lazy"/>
+        <div class="sign-code">A647</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a648" data-reading="">
+        <img src="sign-images/A648.png" alt="A648" loading="lazy"/>
+        <div class="sign-code">A648</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a649" data-reading="">
+        <img src="sign-images/A649.png" alt="A649" loading="lazy"/>
+        <div class="sign-code">A649</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a650" data-reading="">
+        <img src="sign-images/A650.png" alt="A650" loading="lazy"/>
+        <div class="sign-code">A650</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a651" data-reading="">
+        <img src="sign-images/A651.png" alt="A651" loading="lazy"/>
+        <div class="sign-code">A651</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a652" data-reading="">
+        <img src="sign-images/A652.png" alt="A652" loading="lazy"/>
+        <div class="sign-code">A652</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a653" data-reading="">
+        <img src="sign-images/A653.png" alt="A653" loading="lazy"/>
+        <div class="sign-code">A653</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a654" data-reading="">
+        <img src="sign-images/A654.png" alt="A654" loading="lazy"/>
+        <div class="sign-code">A654</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a655" data-reading="">
+        <img src="sign-images/A655.png" alt="A655" loading="lazy"/>
+        <div class="sign-code">A655</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a656" data-reading="">
+        <img src="sign-images/A656.png" alt="A656" loading="lazy"/>
+        <div class="sign-code">A656</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a657" data-reading="">
+        <img src="sign-images/A657.png" alt="A657" loading="lazy"/>
+        <div class="sign-code">A657</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a658" data-reading="">
+        <img src="sign-images/A658.png" alt="A658" loading="lazy"/>
+        <div class="sign-code">A658</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a659" data-reading="">
+        <img src="sign-images/A659.png" alt="A659" loading="lazy"/>
+        <div class="sign-code">A659</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a660" data-reading="">
+        <img src="sign-images/A660.png" alt="A660" loading="lazy"/>
+        <div class="sign-code">A660</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a661" data-reading="">
+        <img src="sign-images/A661.png" alt="A661" loading="lazy"/>
+        <div class="sign-code">A661</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a662" data-reading="">
+        <img src="sign-images/A662.png" alt="A662" loading="lazy"/>
+        <div class="sign-code">A662</div>
+        <div class="sign-reading"></div>
+      </div>
+      <div class="sign-item" data-code="a1000" data-reading="sus+si+re">
+        <img src="sign-images/A1000_SUS+SI+RE.png" alt="A1000/SUS+SI+RE" loading="lazy"/>
+        <div class="sign-code">A1000</div>
+        <div class="sign-reading">SUS+SI+RE</div>
+      </div>
+      <div class="sign-item" data-code="a1001" data-reading="sus+si">
+        <img src="sign-images/A1001_SUS+SI.png" alt="A1001/SUS+SI" loading="lazy"/>
+        <div class="sign-code">A1001</div>
+        <div class="sign-reading">SUS+SI</div>
+      </div>
+      <div class="sign-item" data-code="a701" data-reading="a">
+        <img src="sign-images/A701_A.png" alt="A701/A" loading="lazy"/>
+        <div class="sign-code">A701</div>
+        <div class="sign-reading">A</div>
+      </div>
+      <div class="sign-item" data-code="a702" data-reading="b">
+        <img src="sign-images/A702_B.png" alt="A702/B" loading="lazy"/>
+        <div class="sign-code">A702</div>
+        <div class="sign-reading">B</div>
+      </div>
+      <div class="sign-item" data-code="a703" data-reading="d">
+        <img src="sign-images/A703_D.png" alt="A703/D" loading="lazy"/>
+        <div class="sign-code">A703</div>
+        <div class="sign-reading">D</div>
+      </div>
+      <div class="sign-item" data-code="a704" data-reading="e">
+        <img src="sign-images/A704_E.png" alt="A704/E" loading="lazy"/>
+        <div class="sign-code">A704</div>
+        <div class="sign-reading">E</div>
+      </div>
+      <div class="sign-item" data-code="a705" data-reading="f">
+        <img src="sign-images/A705_F.png" alt="A705/F" loading="lazy"/>
+        <div class="sign-code">A705</div>
+        <div class="sign-reading">F</div>
+      </div>
+      <div class="sign-item" data-code="a706" data-reading="h">
+        <img src="sign-images/A706_H.png" alt="A706/H" loading="lazy"/>
+        <div class="sign-code">A706</div>
+        <div class="sign-reading">H</div>
+      </div>
+      <div class="sign-item" data-code="a707" data-reading="j">
+        <img src="sign-images/A707_J.png" alt="A707/J" loading="lazy"/>
+        <div class="sign-code">A707</div>
+        <div class="sign-reading">J</div>
+      </div>
+      <div class="sign-item" data-code="a708" data-reading="k">
+        <img src="sign-images/A708_K.png" alt="A708/K" loading="lazy"/>
+        <div class="sign-code">A708</div>
+        <div class="sign-reading">K</div>
+      </div>
+      <div class="sign-item" data-code="a709" data-reading="l">
+        <img src="sign-images/A709_L.png" alt="A709/L" loading="lazy"/>
+        <div class="sign-code">A709</div>
+        <div class="sign-reading">L</div>
+      </div>
+      <div class="sign-item" data-code="a710" data-reading="w">
+        <img src="sign-images/A710_W.png" alt="A710/W" loading="lazy"/>
+        <div class="sign-code">A710</div>
+        <div class="sign-reading">W</div>
+      </div>
+      <div class="sign-item" data-code="a713" data-reading="ω">
+        <img src="sign-images/A713_Ω.png" alt="A713/Ω" loading="lazy"/>
+        <div class="sign-code">A713</div>
+        <div class="sign-reading">Ω</div>
+      </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <p><strong>Linear A Decipherment Project</strong> &bull; <a href="index.html" style="color:var(--accent)">Back to Dashboard</a></p>
+    </div>
+    <div class="footer-right">
+      <p>Sign drawings: SigLA (Salgarella &amp; Castellan), CC BY-NC-SA 4.0</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var searchBox = document.getElementById('signSearch');
+var grid = document.getElementById('signGrid');
+var items = grid.querySelectorAll('.sign-item');
+var filterBtns = document.querySelectorAll('.filter-btn');
+
+searchBox.addEventListener('input', function() {
+  var q = this.value.toLowerCase();
+  items.forEach(function(item) {
+    var code = item.dataset.code;
+    var reading = item.dataset.reading;
+    var match = code.indexOf(q) >= 0 || reading.indexOf(q) >= 0;
+    item.classList.toggle('hidden', !match);
+  });
+});
+
+filterBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    filterBtns.forEach(function(b) { b.classList.remove('active'); });
+    this.classList.add('active');
+    var filter = this.dataset.filter;
+    searchBox.value = '';
+    items.forEach(function(item) {
+      var code = item.dataset.code;
+      var show = filter === 'all' ||
+        (filter === 'ab' && code.startsWith('ab')) ||
+        (filter === 'a3' && code.startsWith('a3')) ||
+        (filter === 'a5' && code.startsWith('a5')) ||
+        (filter === 'a6' && code.startsWith('a6')) ||
+        (filter === 'a7' && code.startsWith('a7'));
+      item.classList.toggle('hidden', !show);
+    });
+  });
+});
+</script>
+</body>
+</html>

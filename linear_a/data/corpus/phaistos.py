@@ -1,19 +1,16 @@
 """
 Linear A Tablets from Phaistos (PH)
 ====================================
-Phaistos - major palace site in south-central Crete, near Haghia Triada.
-~30 documents. Also the findspot of the Phaistos Disc (which is NOT Linear A).
-
+Phaistos - major palace site in south-central Crete.
 Sources: GORILA II, Younger
 """
 
 PH_CORPUS = {
-
     'PH 1': {
         'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
         'lines': ['a-du . GRA 10', 'pa-ja-re . GRA 15', 'ki-re-ta2 . GRA 5', 'ku-ro . GRA 30'],
         'condition': 'complete',
-        'notes': 'One of the earliest tablets. MM III period. Total 10+15+5=30.',
+        'notes': 'Earliest tablets. MM III. Total 10+15+5=30.',
     },
     'PH 2': {
         'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
@@ -50,13 +47,13 @@ PH_CORPUS = {
         'site': 'Phaistos', 'type': 'tablet', 'period': 'MM III',
         'lines': ['ku-ni-su . FIC 10', 'a-ka-ru . FIC 5', 'ku-ro . FIC 15'],
         'condition': 'complete',
-        'notes': 'Figs. ku-ni-su. Total 10+5=15.',
+        'notes': 'Figs. Total 10+5=15.',
     },
     'PH 14': {
         'site': 'Phaistos', 'type': 'tablet', 'period': 'LM IA',
         'lines': ['se-to-i-ja . VIN 8', 'ru-ja . VIN 7', 'ku-ro . VIN 15'],
         'condition': 'complete',
-        'notes': 'Wine. Later period (LM IA). Total 8+7=15.',
+        'notes': 'Wine. Total 8+7=15.',
     },
     'PH 16': {
         'site': 'Phaistos', 'type': 'tablet', 'period': 'LM IA',
@@ -72,6 +69,3 @@ PH_CORPUS = {
         'notes': 'With deficit. 20+10+15=45. ki-ro=5.',
     },
 }
-
-if __name__ == '__main__':
-    print(f"Phaistos Corpus: {len(PH_CORPUS)} tablets")
