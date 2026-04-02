@@ -20,43 +20,14 @@
 <nav>
   <a href="#overview">Overview</a>
   <a href="#findings">Findings</a>
-  <a href="#progress">Progress</a>
+  <a href="#progress">Goals</a>
   <a href="#corpus">Corpus</a>
   <a href="#sites">Sites</a>
   <a href="#references">References</a>
-  <a href="signs.html">Sign Catalog</a>
-  <a href="terminology.html">Terminology</a>
-  <a href="discrepancies.html">Discrepancies</a>
+  <a href="signs.html">Signs</a>
+  <a href="terminology.html">Terms</a>
+  <a href="discrepancies.html">Data Audit</a>
 </nav>
-
-<!-- BREAKING DISCOVERY BANNER -->
-<div class="discovery-banner">
-  <div class="banner-content">
-    <span class="banner-tag">Major Discovery</span>
-    <h2>The Longest Linear A Inscription Ever Found</h2>
-    <p>In 2024, an <strong>ivory scepter bearing ~119 Linear A signs</strong> was recovered from the Anetaki plot at Knossos &mdash; a ceremonial cult center. Published by Kanta, Nakassis, Palaima &amp; Perna in <em>Ariadne</em> (2025), this single artifact contains more text than most tablets combined.</p>
-    <div class="banner-details">
-      <div class="banner-detail">
-        <strong>~119 signs</strong>
-        <span>Longest known inscription</span>
-      </div>
-      <div class="banner-detail">
-        <strong>2 scribes</strong>
-        <span>Ring vs. handle show different hands</span>
-      </div>
-      <div class="banner-detail">
-        <strong>Dual script</strong>
-        <span>Linear A + Cretan Hieroglyphic</span>
-      </div>
-      <div class="banner-detail">
-        <strong>Ritual</strong>
-        <span>No numerals on ring &mdash; ceremonial, not accounting</span>
-      </div>
-    </div>
-    <p class="banner-desc">The ring features 12 metope panels with quadrupeds, vessels with syllabographic ligatures (possibly acrophonic), textiles, and hides. The handle adds numerals and Cretan Hieroglyphic signs. This bridges administrative and religious writing for the first time.</p>
-    <p class="banner-link"><a href="https://ejournals.lib.uoc.gr/Ariadne/article/view/1841" target="_blank">Read the paper: Kanta et al. (2025), <em>Ariadne</em> Suppl. 5, 27&ndash;43</a></p>
-  </div>
-</div>
 
 <main>
 
@@ -66,55 +37,41 @@
   <div class="overview-grid">
     <div class="overview-card">
       <h3>The Script</h3>
-      <p>Linear A was used in Bronze Age Crete from approximately <strong>1700&ndash;1450 BCE</strong>. It is the primary writing system of the <strong>Minoan civilization</strong>, predating the deciphered Linear B (Mycenaean Greek) by centuries.</p>
-      <p>Despite over a century of scholarship, <strong>Linear A remains undeciphered</strong>. The underlying language is unknown&mdash;it is not Greek, and its language family has never been conclusively identified.</p>
+      <p>Linear A was the writing system of the <strong>Minoan civilization</strong> on Bronze Age Crete, used from approximately <strong>1700&ndash;1450 BCE</strong>. Despite over a century of scholarship since Arthur Evans&rsquo;s discoveries at Knossos, it remains <strong>undeciphered</strong>. The underlying language is unknown &mdash; it is not Greek, and its language family has never been conclusively identified.</p>
+      <p>The total known corpus comprises <strong>1,534 inscriptions</strong> bearing <strong>7,574 signs</strong> (per RILA 2025). This project has assembled <strong>1,880 document records</strong> from multiple sources into a unified, structured, searchable corpus.</p>
     </div>
     <div class="overview-card">
-      <h3>Our Approach</h3>
-      <p>This project applies <strong>computational methods</strong> to the corpus of ~1,400 known inscriptions. Rather than guessing translations, we build from the ground up:</p>
-      <ul>
-        <li>Statistical frequency analysis</li>
-        <li>Positional pattern detection</li>
-        <li>Cross-site comparison</li>
-        <li>Hypothesis testing with confidence scores</li>
-      </ul>
-      <p><em>Reproducibility over revelation. The math doesn&rsquo;t lie.</em></p>
+      <h3>This Project</h3>
+      <p>We are building the most complete computational resource for Linear A research. The corpus merges data from <a href="https://sigla.phis.me/" target="_blank" style="color:var(--accent)">SigLA</a> (772 documents with sign-level palaeographic data), <a href="https://lineara.xyz/" target="_blank" style="color:var(--accent)">lineara.xyz</a> (1,722 documents from GORILA), and hand-curated ritual inscriptions.</p>
+      <p>Every document is tagged by source, object type, linguistic value, site, and period. The canonical data lives in three files: <code>corpus.json</code>, <code>signs.json</code>, and <code>glossary.json</code>.</p>
+      <p><em>Reproducibility over revelation. Confidence scores on everything.</em></p>
     </div>
     <div class="overview-card">
       <h3>The Corpus</h3>
-      <p>Inscriptions survive on <strong>clay tablets, stone vessels, roundels,</strong> and other objects found across Crete and the Aegean. Two major categories:</p>
-      <ul>
-        <li><strong>Administrative:</strong> Accounting tablets recording commodities, quantities, and totals (mainly from Haghia Triada)</li>
-        <li><strong>Religious:</strong> Libation formulas on stone vessels from peak sanctuaries and caves</li>
-      </ul>
+      <p>Inscriptions survive on <strong>tablets</strong> (489), <strong>nodules</strong> (913), <strong>roundels</strong> (192), <strong>stone vessels</strong> (62), <strong>clay vessels</strong> (63), and other objects found across <strong>55 sites</strong> in Crete and the Aegean.</p>
+      <p>Of the 1,880 documents, <strong>554 have high linguistic value</strong> (tablets, stone vessels, lames) and drive most analysis. The remaining 1,037 are ethnographic &mdash; seal stamps and short marks that tell us about Minoan administrative practices but contribute little to language decipherment.</p>
     </div>
   </div>
 </section>
 
-<!-- KEY FINDINGS -->
+<!-- FINDINGS -->
 <section id="findings" class="section">
   <h2>Key Findings</h2>
-  <p class="section-intro">Results from computational analysis: frequency analysis, information theory, cross-linguistic comparison, and morphological pattern detection.</p>
 
   <div class="findings-grid">
     <div class="finding-card featured">
-      <h3>Linear A is Natural Language</h3>
-      <div class="finding-evidence">
-        <div class="bench-stat"><span class="bench-num">1.103</span><span class="bench-desc">Zipf exponent (natural language: 0.9&ndash;1.2)</span></div>
-        <div class="bench-stat"><span class="bench-num">0.901</span><span class="bench-desc">R&sup2; goodness of fit</span></div>
-        <div class="bench-stat"><span class="bench-num">4.92</span><span class="bench-desc">bits/syllable Shannon entropy</span></div>
-      </div>
-      <p>Word frequencies follow Zipf&rsquo;s law with high confidence. This definitively rules out hypotheses that the script is a cipher, code, or purely symbolic system.</p>
+      <h3>Confirmed: Natural Language</h3>
+      <p>Word frequencies follow Zipf&rsquo;s law (exponent 1.103, R&sup2;=0.901). Shannon entropy is 4.92 bits/syllable. This definitively rules out ciphers, codes, and purely symbolic systems.</p>
     </div>
 
     <div class="finding-card featured">
       <h3>Probable Language Isolate</h3>
       <div class="lang-scores">
-        <div class="lang-row"><span class="lang-name">Language Isolate</span><div class="bar-track"><div class="bar-fill highlight" style="width: 77.4%"></div></div><span class="bar-val">0.774</span></div>
-        <div class="lang-row"><span class="lang-name">Semitic (Gordon)</span><div class="bar-track"><div class="bar-fill" style="width: 22.6%"></div></div><span class="bar-val">0.226</span></div>
-        <div class="lang-row"><span class="lang-name">Anatolian (Palmer)</span><div class="bar-track"><div class="bar-fill" style="width: 19.0%"></div></div><span class="bar-val">0.190</span></div>
+        <div class="lang-row"><span class="lang-name">Isolate</span><div class="bar-track"><div class="bar-fill highlight" style="width: 77.4%"></div></div><span class="bar-val">0.774</span></div>
+        <div class="lang-row"><span class="lang-name">Semitic</span><div class="bar-track"><div class="bar-fill" style="width: 22.6%"></div></div><span class="bar-val">0.226</span></div>
+        <div class="lang-row"><span class="lang-name">Anatolian</span><div class="bar-track"><div class="bar-fill" style="width: 19.0%"></div></div><span class="bar-val">0.190</span></div>
       </div>
-      <p>No language family produces systematic sound correspondences. The few plausible cognates are better explained as <strong>loanwords</strong>: trade terms from Semitic, religious terminology from Anatolian contact, and place names surviving into Greek.</p>
+      <p>No systematic sound correspondences with any language family. The few plausible cognates are better explained as loanwords.</p>
     </div>
 
     <div class="finding-card">
@@ -123,127 +80,22 @@
         <code class="formula">a-ta-i-*301-wa-ja &ensp; ja-sa-sa-ra-me &ensp; i-da-ma-te</code>
         <div class="formula-trans">&ldquo;[I] dedicate [this to] My Lady, Mother of Ida&rdquo;</div>
       </div>
-      <p>Found on 29+ stone vessels from 16 sites across Crete. The most important religious text in Linear A, suggesting a mother goddess tradition that continued into Greek Rhea/Cybele worship.</p>
+      <p>Found on 29+ stone vessels from 16 sites. The most important religious text in Linear A. Three-tier structure confirmed: core formula &rarr; deity epithet &rarr; deity name. 100% ritual-exclusive tokens.</p>
     </div>
 
     <div class="finding-card">
-      <h3>Administrative System</h3>
-      <p>Minoan palatial economy revealed through tablet analysis:</p>
-      <ul>
-        <li><strong>Commodity tracking:</strong> grain, oil, wine, figs, olives, barley, sheep, goats, aromatics</li>
-        <li><strong>Arithmetic verification:</strong> ku-ro totals match item sums (77/127 documents validated)</li>
-        <li><strong>Deficit tracking:</strong> ki-ro records shortfalls against expectations</li>
-        <li><strong>Inter-palatial network:</strong> same names appear across multiple palace sites</li>
-      </ul>
+      <h3>52 Words Read</h3>
+      <p>8 high confidence (arithmetic verification), 37 medium (distributional evidence), 5 low, 2 speculative. Includes administrative terms (<code>ku-ro</code> = total, <code>ki-ro</code> = deficit), place names (Phaistos, Kydonia, Sybrita, Siteia), and deity names. Full <a href="https://github.com/navarre/minoan-linear-a/blob/master/linear_a/data/glossary.json" style="color:var(--accent)">glossary</a>.</p>
     </div>
-  </div>
-</section>
 
-<!-- VOCABULARY -->
-<section id="vocabulary" class="section">
-  <h2>Vocabulary Readings</h2>
-  <p class="section-intro">52 words cataloged with confidence scores, from arithmetic verification to cross-linguistic comparison. See <a href="https://github.com/navarre/minoan-linear-a/blob/master/linear_a/data/glossary.json" style="color:var(--accent)">full glossary</a>.</p>
-
-  <h3>Confident Readings (Administrative Terms)</h3>
-  <div class="sequences-table">
-    <table>
-      <thead><tr><th>Word</th><th>Meaning</th><th>Evidence</th></tr></thead>
-      <tbody>
-        <tr><td><code>ku-ro</code></td><td>total / sum</td><td>Arithmetic verification across all tablets</td></tr>
-        <tr class="highlight-row"><td><code>ki-ro</code></td><td>deficit</td><td>Always follows ku-ro with smaller value</td></tr>
-        <tr><td><code>po-to-ku-ro</code></td><td>grand total</td><td>Transparent compound: po-to + ku-ro</td></tr>
-        <tr class="highlight-row"><td><code>da-me</code></td><td>assessment / levy</td><td>Heading word on assessment-type tablets</td></tr>
-        <tr><td><code>te-ki</code></td><td>delivery / payment</td><td>Heading word on delivery-type tablets</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>Probable Readings (Place Names &amp; Deities)</h3>
-  <div class="sequences-table">
-    <table>
-      <thead><tr><th>Word</th><th>Meaning</th><th>Evidence</th></tr></thead>
-      <tbody>
-        <tr><td><code>pa-ja-re</code></td><td>Phaistos</td><td>Linear B pa-i-to; found at 6 sites</td></tr>
-        <tr class="highlight-row"><td><code>ku-do-ni</code></td><td>Kydonia (Khania)</td><td>Linear B ku-do-ni-ja; self-referencing at KH</td></tr>
-        <tr><td><code>su-ki-ri-ta</code></td><td>Sybrita</td><td>Identical form in Linear B; 5 sites</td></tr>
-        <tr class="highlight-row"><td><code>se-to-i-ja</code></td><td>Siteia</td><td>Greek toponym survives; 4 sites</td></tr>
-        <tr><td><code>i-da-ma-te</code></td><td>Mother of Ida</td><td>Compound: i-da (Mt. Ida) + ma-te (mother)</td></tr>
-        <tr class="highlight-row"><td><code>ja-sa-sa-ra-me</code></td><td>My Lady</td><td>Luwian <em>ishassara</em> &ldquo;lady&rdquo; + possessive -me</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>Speculative Readings</h3>
-  <div class="sequences-table">
-    <table>
-      <thead><tr><th>Word</th><th>Meaning</th><th>Evidence</th></tr></thead>
-      <tbody>
-        <tr><td><code>ku-ni-su</code></td><td>emmer wheat?</td><td>Akkadian <em>kunisu</em>; appears with GRA ideogram</td></tr>
-        <tr class="highlight-row"><td><code>qa-qa-ru</code></td><td>land / ground?</td><td>Akkadian <em>qaqqaru</em>; reduplicated form</td></tr>
-        <tr><td><code>a-du</code></td><td>father? / place?</td><td>Akkadian <em>adu</em>; most frequent non-admin word</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- MORPHOLOGY -->
-<section id="morphology" class="section">
-  <h2>Morphological Findings</h2>
-  <p class="section-intro">Automated pattern detection reveals systematic prefixes, suffixes, reduplication, and paradigmatic sets.</p>
-
-  <div class="morph-grid">
-    <div class="morph-card">
-      <h3>Prefixes</h3>
-      <div class="sequences-table">
-        <table>
-          <thead><tr><th>Prefix</th><th>Count</th><th>Examples</th><th>Hypothesis</th></tr></thead>
-          <tbody>
-            <tr><td><code>a-</code></td><td>11</td><td>a-du, a-ka-ru, a-mi-da-u</td><td>Article / demonstrative</td></tr>
-            <tr><td><code>da-</code></td><td>10</td><td>da-me, da-ta-re, da-re</td><td>Unknown function</td></tr>
-            <tr><td><code>ku-</code></td><td>5</td><td>ku-ro, ku-do-ni, ku-ni-su</td><td>Unknown function</td></tr>
-            <tr><td><code>i-</code></td><td>2</td><td>i-da-ma-te, i-pi-na-ma</td><td>Demonstrative?</td></tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="finding-card">
+      <h3>Grammar Emerging</h3>
+      <p>6&ndash;8 case suffixes identified: <code>-ro</code> (result/total), <code>-te</code> (dative/locative), <code>-ja</code> (adjectival/ethnic), <code>-ra</code> (agentive), <code>-na</code> (genitive), <code>-me</code> (possessive). Productive prefix <code>a-</code> dominates 8 of 10 largest word families. Word order: AGENT &ndash; COMMODITY &ndash; QUANTITY. No verb morphology detected in administrative texts.</p>
     </div>
-    <div class="morph-card">
-      <h3>Suffixes</h3>
-      <div class="sequences-table">
-        <table>
-          <thead><tr><th>Suffix</th><th>Count</th><th>Examples</th><th>Hypothesis</th></tr></thead>
-          <tbody>
-            <tr><td><code>-te</code></td><td>7</td><td>i-da-ma-te, a-di-ki-te</td><td>Dative / locative</td></tr>
-            <tr><td><code>-ja</code></td><td>6</td><td>se-to-i-ja, a-ra-si-ja</td><td>Adjectival / ethnic</td></tr>
-            <tr><td><code>-re</code></td><td>5</td><td>pa-ja-re, da-ta-re</td><td>Unknown</td></tr>
-            <tr><td><code>-me</code></td><td>3</td><td>ja-sa-sa-ra-me, da-me</td><td>Possessive &ldquo;my&rdquo;</td></tr>
-            <tr><td><code>-ro</code></td><td>4</td><td>ku-ro, ki-ro, ki-da-ro</td><td>Nominal?</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
 
-  <div class="morph-grid">
-    <div class="morph-card">
-      <h3>Reduplication</h3>
-      <p>Seven words show reduplication, suggesting intensification or morphological doubling:</p>
-      <ul>
-        <li><code>ja-<strong>sa-sa</strong>-ra-me</code> &mdash; intensification of root</li>
-        <li><code><strong>qa-qa</strong>-ru</code> &mdash; possible intensive</li>
-        <li><code>ja-di-ki-<strong>te-te</strong></code> &mdash; morphological doubling</li>
-        <li><code>a-<strong>sa-sa</strong>-ra-me</code> &mdash; variant of ja-sa-sa-ra-me</li>
-      </ul>
-    </div>
-    <div class="morph-card">
-      <h3>Grammar Sketch</h3>
-      <ul>
-        <li><strong>Word order:</strong> NAME . COMMODITY QUANTITY (administrative)</li>
-        <li><strong>Cases:</strong> -te (dative/locative), -ja (adjectival/ethnic)</li>
-        <li><strong>Enclitics:</strong> -me (possessive &ldquo;my&rdquo;)</li>
-        <li><strong>Derivation:</strong> a- prefix, reduplication</li>
-        <li><strong>Syllable structure:</strong> Predominantly CV and V</li>
-        <li><strong>Vowel harmony:</strong> Absent (2.1%) &mdash; rules out Uralic/Turkic</li>
-      </ul>
+    <div class="finding-card">
+      <h3>Novel Discoveries</h3>
+      <p>Full-corpus analysis (1,880 docs) revealed: near-zero vocabulary overlap between sites (Jaccard 0.000&ndash;0.016), 16% of common sign bigrams are forbidden (phonotactic constraints), sign A301 appears on 48 documents as both logogram and syllabogram, and figs (FIC) are the most commonly recorded commodity (49 docs, more than grain).</p>
     </div>
   </div>
 </section>
