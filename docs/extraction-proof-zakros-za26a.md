@@ -134,7 +134,7 @@ Reliable:
 - image-grounded provenance
 - preserved uncertainty
 
-That is exactly what the project needs if the goal is a corpus that can support FileMaker-style relational storage and AI-assisted interpretation without blurring source facts and derived links.
+That is exactly what the project needs if the goal is a corpus that can support relational storage and AI-assisted interpretation without blurring source facts and derived links.
 
 ## Deliverable produced
 

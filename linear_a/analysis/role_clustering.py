@@ -1,7 +1,7 @@
 """
 Sign Role Clustering Analysis
 ===============================
-Analyze the 731-document x 62-role binary matrix from FileMaker data
+Analyze the 731-document x 62-role binary matrix from SigLA-derived data
 to extract structural insights about Linear A documents without
 requiring transcribed text.
 
@@ -26,7 +26,7 @@ DATA_DIR = Path(__file__).parent.parent / 'data'
 
 def load_role_matrix():
     """Load the 731 x 62 binary role matrix."""
-    path = DATA_DIR / 'fm_role_count.csv'
+    path = DATA_DIR / 'sources/sigla/filemaker_export/fm_role_count.csv'
     if not path.exists():
         return {}, 0
 

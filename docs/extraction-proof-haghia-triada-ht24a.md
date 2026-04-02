@@ -101,7 +101,7 @@ Reliable:
 Why these matter:
 - This is the bridge between inscription content and visual evidence.
 - It enables sign-frequency work, image-grounded review, and future annotation layers.
-- It supports a FileMaker-style accountable data model rather than a vague AI-only representation.
+- It supports a accountable data model rather than a vague AI-only representation.
 
 ### Sequence
 Reliable:
@@ -147,7 +147,7 @@ The important result is not just that `HT 24a` can be read. It is that the legac
 
 That is exactly the sort of structure needed for:
 - accountable corpus storage
-- FileMaker-backed records with clean relationships
+- Structured records with clean relationships
 - hybrid browse + query interfaces
 - AI assistance grounded in explicit evidence instead of hallucinated summaries
 

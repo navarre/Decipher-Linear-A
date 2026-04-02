@@ -29,14 +29,11 @@ should be treated as approximate, not exact.
 | Old Python corpus | 129 | ~376 (from line strings) | 376 | 66 |
 | SigLA import | 772 | 4,935 | 1,660 | 1,025 |
 | SigLA metadata | 772 | 4,942 | — | — |
-| FileMaker | 773 faces | 5,714 | — | — |
 
 ### Why the sign counts differ
 
 - **4,935**: Every sign occurrence we parsed from SigLA HTML popups
 - **4,942**: What SigLA reports in its own metadata (7 signs in damaged HTML)
-- **5,714**: FileMaker counts each document FACE separately (tablet side a + side b = 2 rows).
-  This inflates the count because signs on a two-sided tablet get counted under both face entries.
 
 ### Why the word counts differ
 

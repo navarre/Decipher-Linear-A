@@ -33,7 +33,7 @@ code { background: var(--surface2); padding: 0.1rem 0.4rem; border-radius: 3px; 
 <div class="report">
 <h1>Data Discrepancy Report</h1>
 <p>Systematic comparison of all Linear A data sources in this project. Generated for expert review.</p>
-<p>Sources compared: SigLA website import, FileMaker database, old Python corpus, sign inventory.</p>
+<p>Sources compared: SigLA website import, lineara.xyz corpus, old Python corpus, sign inventory.</p>
 <p><a href="index.html" style="color:var(--accent)">Back to Dashboard</a></p>
 
 <h2>1. Document Counts</h2>
@@ -41,18 +41,16 @@ code { background: var(--surface2); padding: 0.1rem 0.4rem; border-radius: 3px; 
 <div class="summary-grid">
 <div class="count-box"><span class="num">773</span><span class="label">SigLA Website Dirs</span></div>
 <div class="count-box"><span class="num">772</span><span class="label">SigLA Parsed</span></div>
-<div class="count-box"><span class="num">741</span><span class="label">FileMaker Doc IDs</span></div>
-<div class="count-box"><span class="num">1050</span><span class="label">FileMaker Face IDs</span></div>
 <div class="count-box"><span class="num">129</span><span class="label">Old Python Corpus</span></div>
 </div>
 <div class="verdict warn">
 <strong>Discrepancy:</strong> SigLA has 773 document directories but only 772 parsed successfully (1 empty). 
-FileMaker has 741 unique document IDs but 1,050 face IDs (because multi-sided tablets get multiple face entries).
+
 The old Python corpus has 129 entries with its own naming scheme.
 </div>
 
-<h3>Documents in FileMaker but NOT on SigLA website (49)</h3>
-<p>These documents exist in the FileMaker export but have no corresponding directory on the SigLA website.</p>
+<h3>Documents in old corpus but NOT on SigLA website</h3>
+<p>These documents exist in the old Python corpus but have no corresponding entry in SigLA.</p>
 <table>
 <thead><tr><th>Document ID</th><th>Notes</th></tr></thead>
 <tbody>
@@ -107,8 +105,8 @@ The old Python corpus has 129 entries with its own naming scheme.
 <tr><td><code>`KE Wc 2</code></td><td>Malformed ID (backtick prefix)</td></tr>
 </tbody></table>
 
-<h3>Documents on SigLA website but NOT in FileMaker (81)</h3>
-<p>These exist as directories on the SigLA website but have no matching document ID in FileMaker. Most are face-specific IDs (e.g., "HT Wa 1020α") that FileMaker groups under a single parent ID.</p>
+
+
 <table>
 <thead><tr><th>Document ID</th><th>Notes</th></tr></thead>
 <tbody>
@@ -149,11 +147,10 @@ The old Python corpus has 129 entries with its own naming scheme.
 <div class="summary-grid">
 <div class="count-box"><span class="num">4,942</span><span class="label">SigLA Metadata</span></div>
 <div class="count-box"><span class="num">4,935</span><span class="label">SigLA Parsed</span></div>
-<div class="count-box"><span class="num">5,714</span><span class="label">FileMaker</span></div>
 </div>
 <div class="verdict">
 <strong>Explanation:</strong> SigLA metadata says 4,942 signs. Our parser captured 4,935 (7 signs in damaged HTML across 7 documents).
-FileMaker reports 5,714 because it counts each document <em>face</em> separately — a two-sided tablet contributes signs to both face entries, inflating the total.
+
 The authoritative count is <strong>4,942</strong> (SigLA metadata).
 </div>
 
@@ -394,11 +391,11 @@ The 25 inventory signs not in the corpus may be extremely rare or only attested 
 <ol style="margin:0.5rem 0 0 1.5rem;color:var(--text2)">
 <li>Verify the 7 documents with missing signs (Section 2) against GORILA originals</li>
 <li>Determine correct GORILA IDs for the 83 old corpus entries not in SigLA</li>
-<li>Confirm whether FileMaker and SigLA are derived from the same source or independent</li>
+<li>RESOLVED: FileMaker was a direct import of SigLA (confirmed by project owner)</li>
 <li>Add the 275 unregistered sign types to signs.py (at minimum the logograms and fractions)</li>
 <li>Review the 25 signs in the inventory that have zero corpus attestations</li>
 <li>Establish whether the old "HT 1" = SigLA "HT 13" mapping is correct for all documents</li>
-<li>Confirm the authoritative sign count: 4,942 (SigLA metadata) vs 5,714 (FileMaker)</li>
+<li>RESOLVED: Authoritative sign count is 4,942 (SigLA metadata). RILA 2025 total: 7,574.</li>
 </ol>
 </div>
 
@@ -424,7 +421,7 @@ Other sources that could fill the gap:
 <thead><tr><th>Source</th><th>What it is</th><th>Authority</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td>SigLA website</td><td>Palaeographic database by Salgarella & Castellan (2020-)</td><td>PRIMARY</td><td class="ok">Imported, 772 docs parsed</td></tr>
-<tr><td>FileMaker DB</td><td>Database export, derived from SigLA/GORILA</td><td>SECONDARY</td><td class="warn">Counts faces separately, 49 ID mismatches with SigLA</td></tr>
+<tr><td>FileMaker DB</td><td>Direct import of SigLA by project owner</td><td>ARCHIVED</td><td>Confirmed identical to SigLA. No longer tracked as separate source.</td></tr>
 <tr><td>Old Python corpus</td><td>Hand-curated from Younger's transcriptions</td><td>DEPRECATED</td><td class="crit">Wrong document IDs, content mismatches, only 129 entries</td></tr>
 <tr><td>signs.py</td><td>Reconciled sign inventory (106 syllabograms)</td><td>PARTIAL</td><td class="warn">Missing 275 sign types (logograms, fractions, complex)</td></tr>
 <tr><td>corpus_structured.json</td><td>Full SigLA import (4,935 signs, 1,025 words)</td><td>CANONICAL</td><td class="ok">Matches SigLA within 7 signs</td></tr>
