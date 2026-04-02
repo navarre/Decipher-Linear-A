@@ -142,7 +142,7 @@
 <!-- VOCABULARY -->
 <section id="vocabulary" class="section">
   <h2>Vocabulary Readings</h2>
-  <p class="section-intro">52 words cataloged with confidence scores, from arithmetic verification to cross-linguistic comparison. See <a href="https://github.com/navarre/minoan-linear-a/blob/master/linear_a/data/glossary.py" style="color:var(--accent)">full glossary</a>.</p>
+  <p class="section-intro">52 words cataloged with confidence scores, from arithmetic verification to cross-linguistic comparison. See <a href="https://github.com/navarre/minoan-linear-a/blob/master/linear_a/data/glossary.json" style="color:var(--accent)">full glossary</a>.</p>
 
   <h3>Confident Readings (Administrative Terms)</h3>
   <div class="sequences-table">
@@ -263,7 +263,7 @@
       <div class="progress-bar"><div class="progress-fill" style="width: 60%"></div></div>
       <span class="progress-text">5 of 8 checkpoints</span>
       <ul class="checkpoint-list">
-        <li class="done">Full corpus acquired: ~1,400 inscriptions from imported SigLA website (773 docs, 5,714 signs)</li>
+        <li class="done">Full corpus acquired: 1,880 documents merged from SigLA + lineara.xyz (7,574 signs per RILA 2025)</li>
         <li class="done">Extraction pipeline proven across 3 sites (HT 24a, ZA 26a, ARKH 6)</li>
         <li class="done">Sign inventory reconciled: 106 syllabograms, single canonical source of truth</li>
         <li class="done">129 inscriptions in structured Python format with metadata</li>
@@ -292,7 +292,7 @@
         <li class="done">Morphological patterns: productive prefixes (a-, da-, ku-) and suffixes (-te, -ja, -me, -ro)</li>
         <li class="done">Paradigmatic sets: ta-na/ta-na-te/ta-na-su (same root, different case endings)</li>
         <li class="done">Word boundary preferences: vowels/stops initial (a 91%, qa 96%, ku 87%), liquids/nasals final (ro 95%, na 86%, ne 91%)</li>
-        <li class="done">Site dialect variation: vocabulary overlap near zero (Jaccard 0.000&ndash;0.016), 88&ndash;100% site-exclusive words across 772 docs</li>
+        <li class="done">Site dialect variation: vocabulary overlap near zero (Jaccard 0.000&ndash;0.016), 88&ndash;100% site-exclusive words across 1,880 docs</li>
         <li class="done">Word classes: 24 administrative terms vs. 63 probable names separated by distributional co-occurrence with ideograms and numerals</li>
         <li class="done">Commodity distribution: FIC (figs) most common (49 docs), sign A301 on 33 docs, 313 fraction occurrences across corpus</li>
         <li class="done">Sign co-occurrence: 16% of common bigrams forbidden (no vowel gemination, nasal-liquid restriction, stop harmony avoidance) &mdash; 4,408 pairs</li>
@@ -369,9 +369,9 @@
   <h2>Corpus Overview</h2>
   <div class="stats-row">
     <div class="stat-card">
-      <div class="stat-big">1,808</div>
+      <div class="stat-big">1,880</div>
       <div class="stat-desc">Total Documents</div>
-      <div class="stat-context">Merged from SigLA + lineara.xyz + GORILA</div>
+      <div class="stat-context">Merged from SigLA + lineara.xyz</div>
     </div>
     <div class="stat-card">
       <div class="stat-big">7,574</div>
@@ -379,14 +379,14 @@
       <div class="stat-context">Per RILA Supplement 2025</div>
     </div>
     <div class="stat-card">
-      <div class="stat-big">528</div>
+      <div class="stat-big">554</div>
       <div class="stat-desc">High-Value Documents</div>
       <div class="stat-context">Tablets, stone vessels, lames</div>
     </div>
     <div class="stat-card">
-      <div class="stat-big">1,025</div>
+      <div class="stat-big">1,211</div>
       <div class="stat-desc">Unique Words</div>
-      <div class="stat-context">From 665 documents with word data</div>
+      <div class="stat-context">From 666 documents with word data</div>
     </div>
   </div>
 
@@ -426,29 +426,18 @@
   </div>
 </section>
 
-<!-- FULL CORPUS -->
-<div class="corpus-note">
-  <h3>Full Corpus (Imported SigLA Website)</h3>
-  <p>The complete Linear A corpus is digitized from the imported SigLA website snapshot (all ~1,400 known inscriptions). Currently converting to structured Python format for computational analysis.</p>
-  <div class="stats-row">
-    <div class="stat-card small"><div class="stat-big">773</div><div class="stat-desc">Total Documents</div></div>
-    <div class="stat-card small"><div class="stat-big">5,714</div><div class="stat-desc">Total Signs</div></div>
-    <div class="stat-card small"><div class="stat-big">19</div><div class="stat-desc">Sites</div></div>
-    <div class="stat-card small"><div class="stat-big">731</div><div class="stat-desc">Document Faces</div></div>
-  </div>
-  <p class="bench-note">Top sites by document count: HT (373), KH (213), PH (63), ZA (44), KN (31), MA (20), ARKH (10). External browsers: <a href="https://sigla.phis.me/" target="_blank" style="color:var(--accent)">SigLA</a> &bull; <a href="https://lineara.xyz/" target="_blank" style="color:var(--accent)">lineara.xyz</a></p>
-</div>
+<p class="bench-note" style="margin-top:1rem">External corpus browsers: <a href="https://sigla.phis.me/" target="_blank" style="color:var(--accent)">SigLA</a> (772 docs, sign-level palaeography) &bull; <a href="https://lineara.xyz/" target="_blank" style="color:var(--accent)">lineara.xyz</a> (1,722 docs, full GORILA coverage)</p>
 
 <!-- SIGN CATALOG -->
 <section id="signs" class="section">
   <h2>Sign Inventory</h2>
   <div class="stats-row">
     <div class="stat-card small">
-      <div class="stat-big">106</div>
+      <div class="stat-big">164</div>
       <div class="stat-desc">Syllabograms</div>
     </div>
     <div class="stat-card small">
-      <div class="stat-big">32</div>
+      <div class="stat-big">117</div>
       <div class="stat-desc">Logograms</div>
     </div>
     <div class="stat-card small">
@@ -488,18 +477,6 @@
       <div class="conf-desc">No known phonetic value &mdash; unique to Linear A</div>
       <div class="sign-samples">A301&ndash;A310, A312, A314&ndash;A318 (GORILA A-series)</div>
     </div>
-  </div>
-
-  <div class="corpus-note">
-    <h3>Reconciliation Changelog</h3>
-    <p>The sign inventory was reconciled from two independent data files, fixing several errors in the Ventris grid mapping:</p>
-    <ul style="font-size:0.85rem;color:var(--text2);margin:0.5rem 0 0 1.2rem">
-      <li><code>AB67</code>: was <em>ka</em> (error) &rarr; corrected to <strong>ki</strong> (B067 = ki in Ventris grid)</li>
-      <li><code>AB47</code>: was <em>ki</em> (error) &rarr; corrected to <strong>unknown</strong> (no Linear B parallel)</li>
-      <li><code>AB22</code>: was <em>mi</em> &rarr; corrected to <strong>pi2</strong> (distinct from AB73, the standard mi)</li>
-      <li><code>AB86</code>: was unassigned &rarr; <strong>nwa</strong> (medium confidence, per Younger)</li>
-      <li>20 signs added from second inventory: AB12/so, AB14/do, AB15/mo, AB32/qo, AB33/ra3, AB36/jo, AB42/wo, AB43/a3, AB52/no, AB62/pte, AB68/ro2, AB71/dwe, AB72/pe, and more</li>
-    </ul>
   </div>
 
   <h3>Key Recurring Sequences</h3>
@@ -545,10 +522,10 @@
       <path d="M850,100 Q880,90 900,95 L900,180 Q880,190 860,185 Q850,160 850,100Z" fill="#1a1a25" stroke="#2a2a3a" stroke-width="1"/>
 
       <!-- Site markers - sized by document count -->
-      <!-- Haghia Triada (373 docs) -->
-      <circle cx="330" cy="255" r="12" fill="#c49b5c" opacity="0.9"/><text x="330" y="280" text-anchor="middle" fill="#c49b5c" font-size="10" font-family="sans-serif">Haghia Triada</text><text x="330" y="291" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">373 docs</text>
+      <!-- Haghia Triada (1167 docs) -->
+      <circle cx="330" cy="255" r="12" fill="#c49b5c" opacity="0.9"/><text x="330" y="280" text-anchor="middle" fill="#c49b5c" font-size="10" font-family="sans-serif">Haghia Triada</text><text x="330" y="291" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">1167 docs</text>
       <!-- Khania (213 docs) -->
-      <circle cx="160" cy="210" r="10" fill="#c49b5c" opacity="0.85"/><text x="160" y="200" text-anchor="middle" fill="#c49b5c" font-size="10" font-family="sans-serif">Khania</text><text x="160" y="189" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">213</text>
+      <circle cx="160" cy="210" r="10" fill="#c49b5c" opacity="0.85"/><text x="160" y="200" text-anchor="middle" fill="#c49b5c" font-size="10" font-family="sans-serif">Khania</text><text x="160" y="189" text-anchor="middle" fill="#9090a0" font-size="8" font-family="sans-serif">244</text>
       <!-- Phaistos (63 docs) -->
       <circle cx="360" cy="240" r="7" fill="#c49b5c" opacity="0.8"/><text x="375" y="233" fill="#c49b5c" font-size="9" font-family="sans-serif">Phaistos</text>
       <!-- Zakros (44 docs) -->
@@ -585,37 +562,37 @@
   <div class="sites-grid">
     <div class="site-card major">
       <h3>Haghia Triada</h3>
-      <div class="site-count">52 inscriptions</div>
-      <p>South-central Crete. The richest source of Linear A, yielding ~150 tablets (42 digitized). Primarily administrative/accounting documents recording commodities, personnel, and totals.</p>
+      <div class="site-count">1,167 documents</div>
+      <p>South-central Crete. The richest source of Linear A, yielding 1,167 documents including tablets, nodules, and roundels. Primarily administrative/accounting documents recording commodities, personnel, and totals.</p>
     </div>
     <div class="site-card">
       <h3>Zakros</h3>
-      <div class="site-count">14 inscriptions</div>
+      <div class="site-count">53 documents</div>
       <p>Eastern Crete palace. Administrative tablets and ritual inscriptions.</p>
     </div>
     <div class="site-card">
       <h3>Khania</h3>
-      <div class="site-count">12 inscriptions</div>
+      <div class="site-count">244 documents</div>
       <p>Western Crete. Administrative records showing connections to other palace centers.</p>
     </div>
     <div class="site-card">
       <h3>Phaistos</h3>
-      <div class="site-count">10 inscriptions</div>
+      <div class="site-count">79 documents</div>
       <p>South-central Crete palace. Administrative tablets from the neopalatial period.</p>
     </div>
     <div class="site-card">
       <h3>Ioukhtas</h3>
-      <div class="site-count">6 inscriptions</div>
+      <div class="site-count">16 documents</div>
       <p>Peak sanctuary above Archanes. Stone libation tables with ritual formulas.</p>
     </div>
     <div class="site-card">
-      <h3>Syme Viannou</h3>
-      <div class="site-count">4 inscriptions</div>
+      <h3>Syme</h3>
+      <div class="site-count">12 documents</div>
       <p>Mountain sanctuary in eastern Crete. Libation vessels spanning several centuries.</p>
     </div>
     <div class="site-card">
       <h3>Other Sites</h3>
-      <div class="site-count">29 inscriptions</div>
+      <div class="site-count">309 documents across 49 sites</div>
       <p>Knossos, Archanes, Malia, Petras, Psychro Cave, Palaikastro, Tylissos, and Aegean islands (Thera, Kea, Miletos).</p>
     </div>
   </div>
