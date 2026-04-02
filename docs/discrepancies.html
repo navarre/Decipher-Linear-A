@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear A Data Discrepancy Report</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.report { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.report h1 { color: var(--accent); font-size: 1.8rem; margin-bottom: 0.5rem; }
+.report h2 { color: var(--accent); font-size: 1.3rem; margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+.report h3 { color: var(--text); font-size: 1rem; margin-top: 1.5rem; }
+.report p { color: var(--text2); margin: 0.5rem 0; }
+.report table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+.report th { text-align: left; padding: 0.5rem 0.8rem; border-bottom: 2px solid var(--border); color: var(--text2); font-size: 0.75rem; text-transform: uppercase; }
+.report td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--border); color: var(--text); }
+.report tr:nth-child(even) { background: var(--surface); }
+.warn { color: #c4885a; }
+.crit { color: #c45a5a; }
+.ok { color: #4a9; }
+.note { font-size: 0.8rem; color: var(--text2); font-style: italic; margin: 0.5rem 0; }
+.count-box { display: inline-block; background: var(--surface); border: 1px solid var(--border); padding: 0.8rem 1.2rem; border-radius: 6px; margin: 0.3rem; text-align: center; }
+.count-box .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+.count-box .label { font-size: 0.75rem; color: var(--text2); }
+.summary-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+code { background: var(--surface2); padding: 0.1rem 0.4rem; border-radius: 3px; color: var(--accent); font-size: 0.85rem; }
+.verdict { background: var(--surface); border-left: 3px solid var(--accent); padding: 0.8rem 1rem; margin: 1rem 0; font-size: 0.9rem; }
+.verdict.warn { border-left-color: #c4885a; }
+.verdict.crit { border-left-color: #c45a5a; }
+</style>
+</head>
+<body>
+<div class="report">
+<h1>Data Discrepancy Report</h1>
+<p>Systematic comparison of all Linear A data sources in this project. Generated for expert review.</p>
+<p>Sources compared: SigLA website import, FileMaker database, old Python corpus, sign inventory.</p>
+<p><a href="index.html" style="color:var(--accent)">Back to Dashboard</a></p>
+
+<h2>1. Document Counts</h2>
+<p>How many documents does each source claim to have?</p>
+<div class="summary-grid">
+<div class="count-box"><span class="num">773</span><span class="label">SigLA Website Dirs</span></div>
+<div class="count-box"><span class="num">772</span><span class="label">SigLA Parsed</span></div>
+<div class="count-box"><span class="num">741</span><span class="label">FileMaker Doc IDs</span></div>
+<div class="count-box"><span class="num">1050</span><span class="label">FileMaker Face IDs</span></div>
+<div class="count-box"><span class="num">129</span><span class="label">Old Python Corpus</span></div>
+</div>
+<div class="verdict warn">
+<strong>Discrepancy:</strong> SigLA has 773 document directories but only 772 parsed successfully (1 empty). 
+FileMaker has 741 unique document IDs but 1,050 face IDs (because multi-sided tablets get multiple face entries).
+The old Python corpus has 129 entries with its own naming scheme.
+</div>
+
+<h3>Documents in FileMaker but NOT on SigLA website (49)</h3>
+<p>These documents exist in the FileMaker export but have no corresponding directory on the SigLA website.</p>
+<table>
+<thead><tr><th>Document ID</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>Wa</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Wb</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Wc</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Za</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Zb</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Zc</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Zd</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Ze</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Zf</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>Zg</code></td><td>Generic document type code, not a real document</td></tr>
+<tr><td><code>HT Wa 1019</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wa 1020</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wa 1021</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wa 1025</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wa 1028</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wa 1029</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3004</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3005</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3006</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3008</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3009</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3012</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3014</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3015</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3016</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3017</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>HT Wc 3020</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>KH Wa 1001</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>KH Wa 1002</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>KH Wa 1013</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>KH Wa 1014</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>KH Wa 1015</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>KH Wa 1016</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>KH Wc 2070</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>KH Wc 2117</code></td><td>Roundel/nodule — may be on SigLA under a different face ID</td></tr>
+<tr><td><code>GO Wc 1</code></td><td>On SigLA as GO Wc 1a and GO Wc 1b (split by face)</td></tr>
+<tr><td><code>HT Zb 158</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>KN Wb 33</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>KN Wc 24</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>KN Wc 25</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>KN Wc 26</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>KN Zg 21</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>MA Wc 5</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>PH Wb 33</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>PH Wc 37</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>PH Wc 39</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>PH Wc 40</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>PH Wc 47</code></td><td>Check GORILA for correct ID</td></tr>
+<tr><td><code>`KE Wc 2</code></td><td>Malformed ID (backtick prefix)</td></tr>
+</tbody></table>
+
+<h3>Documents on SigLA website but NOT in FileMaker (81)</h3>
+<p>These exist as directories on the SigLA website but have no matching document ID in FileMaker. Most are face-specific IDs (e.g., "HT Wa 1020α") that FileMaker groups under a single parent ID.</p>
+<table>
+<thead><tr><th>Document ID</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>GO Wc 1a</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>GO Wc 1b</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT 113 ter</code></td><td>Tertiary copy — FM may not track separately</td></tr>
+<tr><td><code>HT Wa 1019α</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1019γ</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1020α</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1020β</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1020γ</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1021α</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1021β</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1021γ</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1025α</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1025γ</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1028α</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1028γ</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1029α</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa 1029γ</code></td><td>Greek-letter face suffix — FM groups under parent ID</td></tr>
+<tr><td><code>HT Wa <1021bis></code></td><td>Duplicate/variant — FM may not track separately</td></tr>
+<tr><td><code>HT Wc 3001-latus</code></td><td>Edge inscription — FM may not track separately</td></tr>
+<tr><td><code>HT Wc 3004a</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3004b</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3005a</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3005b</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3006a</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3006b</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3008a</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3008b</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3009a</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3009b</code></td><td>Face designation — FM may group under base ID</td></tr>
+<tr><td><code>HT Wc 3012a</code></td><td>Face designation — FM may group under base ID</td></tr>
+</tbody></table>
+
+<h2>2. Sign Counts</h2>
+<p>How many individual sign occurrences does each source report?</p>
+<div class="summary-grid">
+<div class="count-box"><span class="num">4,942</span><span class="label">SigLA Metadata</span></div>
+<div class="count-box"><span class="num">4,935</span><span class="label">SigLA Parsed</span></div>
+<div class="count-box"><span class="num">5,714</span><span class="label">FileMaker</span></div>
+</div>
+<div class="verdict">
+<strong>Explanation:</strong> SigLA metadata says 4,942 signs. Our parser captured 4,935 (7 signs in damaged HTML across 7 documents).
+FileMaker reports 5,714 because it counts each document <em>face</em> separately — a two-sided tablet contributes signs to both face entries, inflating the total.
+The authoritative count is <strong>4,942</strong> (SigLA metadata).
+</div>
+
+<h3>Documents where metadata sign count ≠ parsed count (7)</h3>
+<table>
+<thead><tr><th>Document</th><th>Metadata says</th><th>We parsed</th><th>Missing</th></tr></thead>
+<tbody>
+<tr><td><code>HT 22</code></td><td>3</td><td>2</td><td class="warn">1</td></tr>
+<tr><td><code>HT 33</code></td><td>18</td><td>17</td><td class="warn">1</td></tr>
+<tr><td><code>HT 89</code></td><td>21</td><td>20</td><td class="warn">1</td></tr>
+<tr><td><code>HT 94a</code></td><td>27</td><td>26</td><td class="warn">1</td></tr>
+<tr><td><code>KH Wc 2047</code></td><td>2</td><td>1</td><td class="warn">1</td></tr>
+<tr><td><code>KH Wc 2057</code></td><td>2</td><td>1</td><td class="warn">1</td></tr>
+<tr><td><code>KH Wc 2065</code></td><td>2</td><td>1</td><td class="warn">1</td></tr>
+</tbody></table>
+<p class="note">These 7 documents have signs that exist in the SigLA metadata count but are not present as popup elements in the downloaded HTML. Likely a snapshot/rendering artifact.</p>
+
+<h2>3. Old Python Corpus Problems</h2>
+<p>The original 129-entry hand-curated Python corpus has significant issues when compared to the SigLA canonical data.</p>
+
+<div class="verdict crit">
+<strong>Critical:</strong> 83 of 129 old corpus entries do NOT exist in SigLA at all. Of the 46 that match by ID,
+42 have <strong>different content</strong> (different words/signs). The old corpus appears to use a non-standard
+numbering system derived from Younger's transcriptions, NOT the GORILA/SigLA standard.
+</div>
+
+<div class="summary-grid">
+<div class="count-box"><span class="num crit">83</span><span class="label">Not in SigLA</span></div>
+<div class="count-box"><span class="num warn">42</span><span class="label">Content Mismatch</span></div>
+<div class="count-box"><span class="num ok">4</span><span class="label">Match</span></div>
+</div>
+
+<h3>Content Mismatches: same document ID, different data</h3>
+<p>These documents exist in both the old corpus and SigLA, but contain different sign/word data.</p>
+<table>
+<thead><tr><th>Document</th><th>Old Corpus Words</th><th>SigLA Words</th></tr></thead>
+<tbody>
+<tr><td><code>HT 1</code></td><td>ka-u-de-ta, di-de-ru, ko-sa-i-ti, pa-ja-re, mi-ru</td><td>qe-ra-u-ki-ro-*79-su-di-di-za-ke-ku-*56-nu-a-ra-na-re, qe-ra-u, ki-ro, *79-su, di-di-za-ke</td></tr>
+<tr><td><code>HT 100</code></td><td>pa-ja-re, a-du, ku-ro</td><td>ku-ro-sa-ra, ku-ro, sa-ra</td></tr>
+<tr><td><code>HT 101</code></td><td>ta-na-su, wa-du-ni-mi, ku-ro</td><td>*79-*22-di-sa-ra-ku-*56, *79-*22-di, sa-ra, ku, *56</td></tr>
+<tr><td><code>HT 102</code></td><td>qa-qa-ru, a-mi-da-u, ku-ro</td><td>ka-pa-sa-ra-*56-ni-di-ri-na-ma-*79-i-ka-ku-ro, ka-pa, sa-ra, *56-ni, di-ri-na</td></tr>
+<tr><td><code>HT 103</code></td><td>su-ki-ri-ta, di-na-u, pa-ta-ne, ku-ro</td><td>u-ta-*56-da-ku-se-ne-da-ku-na-da-ku-se-ne-ki-ra, u-ta, *56-da-ku-se-ne, da-ku-na, da-ku-se-ne</td></tr>
+<tr><td><code>HT 104</code></td><td>da-i-pi-ta, ki-da-ro, ku-ro</td><td>ta-pa-da-ku-se-ne-ti-i-du-ti-pa-da-su-ti-ku-ro, ta-pa, da-ku-se-ne-ti, i-du-ti, pa-da-su-ti</td></tr>
+<tr><td><code>HT 13</code></td><td>a-ja-ku, wa-du-ni-mi, da-ri-da, ku-ro</td><td>ka-u-de-ta-re-za-te-tu-te-ki-ku-*79-ni-da-si-*118-i-du-ne-si-ku-ro, ka-u-de-ta, re-za, te-tu, te-ki</td></tr>
+<tr><td><code>HT 14</code></td><td>a-ra-na-re, pi-ta-ja, ku-ro</td><td>pu-*131-a-pu-na-du, pu-*131, a-pu-na-du</td></tr>
+<tr><td><code>HT 16</code></td><td>mi-nu-te, ku-ro</td><td>ka-ku-pa-di-na-u-sa-po, ka-ku-pa, di-na-u, sa-po</td></tr>
+<tr><td><code>HT 17</code></td><td>a-du, pa-ja-re, ku-ro</td><td>ra-*164-ti-sa-ro-si-da-re, ra-*164-ti, sa-ro, si-da-re</td></tr>
+<tr><td><code>HT 2</code></td><td>su-ki-ri-ta, ku-pa-nu, da-ta-re, ku-ro</td><td>a-ka-ru-ki-re-ta-na, a-ka-ru, ki-re-ta-na</td></tr>
+<tr><td><code>HT 21</code></td><td>ka-u-de-ta, pi-ta-ja, te-we, ku-ro</td><td>pi-ta-ka-se, pi-ta-ka-se</td></tr>
+<tr><td><code>HT 29</code></td><td>da-me, su-ki-ri-ta, ku-ro</td><td>ru-ma-ta-pa-ja-re-di-ja-i-sa-A323-mi-A340-ki-ta-a-re-da-i-ka-du-ma-ne, ru-ma-ta, pa-ja-re, di-ja-i, sa-A323-mi</td></tr>
+<tr><td><code>HT 30</code></td><td>a-du, pa-ta-ne, ku-ro</td><td>sa-ra-sa-ra-ra-ki-ro, sa-ra, sa-ra-ra, ki-ro</td></tr>
+<tr><td><code>HT 31</code></td><td>a, a-mi-da-u, pa-ja-re, su-ki-ri-ta, b</td><td>ti-sa-pu-ko-qa-*56-su-pu-ka-ro-*56-sa-ja-ma-ki-de-ma-A323-na-su-*56-ra-pa-ta-qe, ti-sa, pu-ko, qa-*56, su-pu</td></tr>
+<tr><td><code>HT 87</code></td><td>qa-qa-ru, ku-ro</td><td>qi-tu-ne-ma-ka-ri-te-pi-ta-ke-si-ja-re-mi-di-ki-se-qe-su-pu-ku-ru-ku-a-ra-a-tu, qi-tu-ne, ma-ka-ri-te, pi-ta-ke-si, ja-re-mi</td></tr>
+<tr><td><code>HT 88</code></td><td>ku-ni-su, da-me, ku-ro</td><td>a-du-re-za-ki-ki-na-ki-ro-ku-*56-*56-ka-ju-ku-*56-nu-pa-ja-re-sa-ma-ro-da-ta-re-ku-ro, a-du, re-za, ki-ki-na, ki-ro</td></tr>
+<tr><td><code>HT Wa 1001</code></td><td>ku-ni-su</td><td>da-ka, da-ka</td></tr>
+<tr><td><code>HT Wa 1002</code></td><td>da-ta-re</td><td>da-ka, da-ka</td></tr>
+<tr><td><code>HT Wa 1003</code></td><td>pa-ja-re</td><td>da-ka, da-ka</td></tr>
+</tbody></table>
+<p class="note">The old corpus used simplified line-based notation (e.g., "ku-ro . GRA 33") while SigLA has actual sign-by-sign data. In most cases these are the same tablets with different levels of detail, but some may be genuinely different documents sharing an ID.</p>
+
+<h3>Old corpus entries not found in SigLA (83)</h3>
+<table>
+<thead><tr><th>Document ID</th><th>Category</th></tr></thead>
+<tbody>
+<tr><td><code>AP Za 1</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>AP Za 2</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>AR 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>AR Zf 1</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>AR Zf 2</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>HT 10</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 11</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 114</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 115</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 116</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 117</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 23</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 24</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 25</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 26</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 27</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 28</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 6</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 7</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 8</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 85</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 86</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 9</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 93</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 94</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 95</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 96</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 97</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 98</code></td><td>Needs investigation</td></tr>
+<tr><td><code>HT 99</code></td><td>Needs investigation</td></tr>
+<tr><td><code>IO Za 1</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>IO Za 2</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>IO Za 3</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>IO Za 4</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>IO Za 5</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>IO Za 6</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>KEA 1</code></td><td>Kea — SigLA may use 'KE' prefix</td></tr>
+<tr><td><code>KH 7</code></td><td>Needs investigation</td></tr>
+<tr><td><code>KH Wc 2003</code></td><td>Khania nodule — may be under different ID in SigLA</td></tr>
+<tr><td><code>KN 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>KN Anetaki Scepter (Handle)</code></td><td>2024 discovery — added manually, not in SigLA</td></tr>
+<tr><td><code>KN Anetaki Scepter (Ring)</code></td><td>2024 discovery — added manually, not in SigLA</td></tr>
+<tr><td><code>KN Za 10</code></td><td>Different site ID conventions</td></tr>
+<tr><td><code>KO Za 1</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>MA 2</code></td><td>Different site ID conventions</td></tr>
+<tr><td><code>MA 3</code></td><td>Different site ID conventions</td></tr>
+<tr><td><code>MA Za 1</code></td><td>Different site ID conventions</td></tr>
+<tr><td><code>MI 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PE 1</code></td><td>Different site ID conventions</td></tr>
+<tr><td><code>PE 2</code></td><td>Different site ID conventions</td></tr>
+<tr><td><code>PH 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PH 14</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PH 16</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PH 3</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PH 31</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PH 4</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PH 5</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PH 7</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PK Za 11</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PK Za 12</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PL Zf 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PR Za 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>PS Za 1</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>PTS Za 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>SY Za 1</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>SY Za 2</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>SY Za 3</code></td><td>Libation formula — hand-entered from Younger, may not be in SigLA</td></tr>
+<tr><td><code>THE 6</code></td><td>Thera — may be under different site code</td></tr>
+<tr><td><code>TL 1</code></td><td>Different site ID conventions</td></tr>
+<tr><td><code>TL Za 1</code></td><td>Different site ID conventions</td></tr>
+<tr><td><code>TR Za 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>TR Za 2</code></td><td>Needs investigation</td></tr>
+<tr><td><code>VRY Za 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 1</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 10</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 11</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 15</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 2</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 4</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 5</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 6</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA 7</code></td><td>Needs investigation</td></tr>
+<tr><td><code>ZA Zb 3</code></td><td>Needs investigation</td></tr>
+</tbody></table>
+
+<h2>4. Sign Inventory Discrepancies</h2>
+<p>Our sign inventory (signs.py) has 106 syllabograms. The corpus contains 356 unique sign types. There is a large gap.</p>
+
+<div class="summary-grid">
+<div class="count-box"><span class="num">106</span><span class="label">In signs.py</span></div>
+<div class="count-box"><span class="num">356</span><span class="label">In Corpus</span></div>
+<div class="count-box"><span class="num crit">275</span><span class="label">In Corpus, NOT in Inventory</span></div>
+<div class="count-box"><span class="num warn">25</span><span class="label">In Inventory, NOT in Corpus</span></div>
+</div>
+
+<div class="verdict warn">
+<strong>Explanation:</strong> Our signs.py only covers syllabograms (106 entries). The corpus contains 356 sign types including
+logograms (A500-A662 series), fractions (A701-A717), complex signs, ligatures, and variant forms.
+The 275 "missing" signs are mostly logograms and complex signs that were never added to signs.py.
+The 25 inventory signs not in the corpus may be extremely rare or only attested in documents not yet in SigLA.
+</div>
+
+<h3>Sign types in corpus but not in inventory (sample of 275)</h3>
+<table>
+<thead><tr><th>Sign Type</th><th>Occurrences</th><th>Category</th></tr></thead>
+<tbody>
+<tr><td><code>A1000</code></td><td>—</td><td>Other</td></tr>
+<tr><td><code>A1001</code></td><td>—</td><td>Other</td></tr>
+<tr><td><code>A309a</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A309b</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A309c</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A310</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A319</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A320</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A321</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A322</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A323</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A324</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A325</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A326</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A327</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A328</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A329</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A331</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A332</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A333</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A334</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A335</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A336</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A338</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A339</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A340</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A342</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A343</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A344</code></td><td>—</td><td>Linear A unique sign</td></tr>
+<tr><td><code>A345</code></td><td>—</td><td>Linear A unique sign</td></tr>
+</tbody></table>
+
+<h3>Signs in inventory but not attested in corpus (25)</h3>
+<table>
+<thead><tr><th>Sign Type</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>A171</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>A180</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>A188</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>A191</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>A302</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>A309</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB12</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB14</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB15</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB25</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB32</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB33</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB35</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB36</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB42</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB52</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB62</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB63</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB64</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB68</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB71</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB75</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB83</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB84</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+<tr><td><code>AB91</code></td><td>In signs.py but zero attestations in SigLA corpus</td></tr>
+</tbody></table>
+
+<h2>5. Recommendations for Expert Review</h2>
+
+<div class="verdict">
+<strong>Action items:</strong>
+<ol style="margin:0.5rem 0 0 1.5rem;color:var(--text2)">
+<li>Verify the 7 documents with missing signs (Section 2) against GORILA originals</li>
+<li>Determine correct GORILA IDs for the 83 old corpus entries not in SigLA</li>
+<li>Confirm whether FileMaker and SigLA are derived from the same source or independent</li>
+<li>Add the 275 unregistered sign types to signs.py (at minimum the logograms and fractions)</li>
+<li>Review the 25 signs in the inventory that have zero corpus attestations</li>
+<li>Establish whether the old "HT 1" = SigLA "HT 13" mapping is correct for all documents</li>
+<li>Confirm the authoritative sign count: 4,942 (SigLA metadata) vs 5,714 (FileMaker)</li>
+</ol>
+</div>
+
+<h2>6. Data Source Summary</h2>
+<table>
+<thead><tr><th>Source</th><th>What it is</th><th>Authority</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>SigLA website</td><td>Palaeographic database by Salgarella & Castellan (2020-)</td><td>PRIMARY</td><td class="ok">Imported, 772 docs parsed</td></tr>
+<tr><td>FileMaker DB</td><td>Database export, derived from SigLA/GORILA</td><td>SECONDARY</td><td class="warn">Counts faces separately, 49 ID mismatches with SigLA</td></tr>
+<tr><td>Old Python corpus</td><td>Hand-curated from Younger's transcriptions</td><td>DEPRECATED</td><td class="crit">Wrong document IDs, content mismatches, only 129 entries</td></tr>
+<tr><td>signs.py</td><td>Reconciled sign inventory (106 syllabograms)</td><td>PARTIAL</td><td class="warn">Missing 275 sign types (logograms, fractions, complex)</td></tr>
+<tr><td>corpus_structured.json</td><td>Full SigLA import (4,935 signs, 1,025 words)</td><td>CANONICAL</td><td class="ok">Matches SigLA within 7 signs</td></tr>
+</tbody></table>
+
+<footer style="margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border)">
+<p style="font-size:0.8rem;color:var(--text2)">Generated 2026-04-02. This report should be reviewed by domain experts before any discrepancies are resolved.
+Contact: <a href="mailto:esalga@aias.au.dk" style="color:var(--accent)">Dr. Ester Salgarella</a> (SigLA author, Aarhus University).</p>
+<p style="font-size:0.8rem;color:var(--text2)"><a href="index.html" style="color:var(--accent)">Back to Dashboard</a></p>
+</footer>
+
+</div>
+</body>
+</html>

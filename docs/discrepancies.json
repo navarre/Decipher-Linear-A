@@ -1,0 +1,570 @@
+{
+  "document_counts": {
+    "sigla_website_dirs": 773,
+    "sigla_parsed": 772,
+    "filemaker_doc_ids": 741,
+    "filemaker_face_ids": 1050,
+    "old_python_corpus": 129
+  },
+  "sign_counts": {
+    "sigla_metadata": 4942,
+    "sigla_parsed": 4935,
+    "filemaker": 5714,
+    "per_doc_mismatches": [
+      {
+        "doc": "HT 22",
+        "metadata": 3,
+        "parsed": 2,
+        "diff": 1
+      },
+      {
+        "doc": "HT 33",
+        "metadata": 18,
+        "parsed": 17,
+        "diff": 1
+      },
+      {
+        "doc": "HT 89",
+        "metadata": 21,
+        "parsed": 20,
+        "diff": 1
+      },
+      {
+        "doc": "HT 94a",
+        "metadata": 27,
+        "parsed": 26,
+        "diff": 1
+      },
+      {
+        "doc": "KH Wc 2047",
+        "metadata": 2,
+        "parsed": 1,
+        "diff": 1
+      },
+      {
+        "doc": "KH Wc 2057",
+        "metadata": 2,
+        "parsed": 1,
+        "diff": 1
+      },
+      {
+        "doc": "KH Wc 2065",
+        "metadata": 2,
+        "parsed": 1,
+        "diff": 1
+      }
+    ]
+  },
+  "document_id_discrepancies": {
+    "in_fm_not_website": [
+      "GO Wc 1",
+      "HT Wa 1019",
+      "HT Wa 1020",
+      "HT Wa 1021",
+      "HT Wa 1025",
+      "HT Wa 1028",
+      "HT Wa 1029",
+      "HT Wc 3004",
+      "HT Wc 3005",
+      "HT Wc 3006",
+      "HT Wc 3008",
+      "HT Wc 3009",
+      "HT Wc 3012",
+      "HT Wc 3014",
+      "HT Wc 3015",
+      "HT Wc 3016",
+      "HT Wc 3017",
+      "HT Wc 3020",
+      "HT Zb 158",
+      "KH Wa 1001",
+      "KH Wa 1002",
+      "KH Wa 1013",
+      "KH Wa 1014",
+      "KH Wa 1015",
+      "KH Wa 1016",
+      "KH Wc 2070",
+      "KH Wc 2117",
+      "KN Wb 33",
+      "KN Wc 24",
+      "KN Wc 25",
+      "KN Wc 26",
+      "KN Zg 21",
+      "MA Wc 5",
+      "PH Wb 33",
+      "PH Wc 37",
+      "PH Wc 39",
+      "PH Wc 40",
+      "PH Wc 47",
+      "Wa",
+      "Wb",
+      "Wc",
+      "Za",
+      "Zb",
+      "Zc",
+      "Zd",
+      "Ze",
+      "Zf",
+      "Zg",
+      "`KE Wc 2"
+    ],
+    "on_website_not_fm": [
+      "GO Wc 1a",
+      "GO Wc 1b",
+      "HT 113 ter",
+      "HT Wa 1019\u03b1",
+      "HT Wa 1019\u03b3",
+      "HT Wa 1020\u03b1",
+      "HT Wa 1020\u03b2",
+      "HT Wa 1020\u03b3",
+      "HT Wa 1021\u03b1",
+      "HT Wa 1021\u03b2",
+      "HT Wa 1021\u03b3",
+      "HT Wa 1025\u03b1",
+      "HT Wa 1025\u03b3",
+      "HT Wa 1028\u03b1",
+      "HT Wa 1028\u03b3",
+      "HT Wa 1029\u03b1",
+      "HT Wa 1029\u03b3",
+      "HT Wa <1021bis>",
+      "HT Wc 3001-latus",
+      "HT Wc 3004a",
+      "HT Wc 3004b",
+      "HT Wc 3005a",
+      "HT Wc 3005b",
+      "HT Wc 3006a",
+      "HT Wc 3006b",
+      "HT Wc 3008a",
+      "HT Wc 3008b",
+      "HT Wc 3009a",
+      "HT Wc 3009b",
+      "HT Wc 3012a"
+    ],
+    "old_corpus_not_in_sigla": [
+      "AP Za 1",
+      "AP Za 2",
+      "AR 1",
+      "AR Zf 1",
+      "AR Zf 2",
+      "HT 10",
+      "HT 11",
+      "HT 114",
+      "HT 115",
+      "HT 116",
+      "HT 117",
+      "HT 23",
+      "HT 24",
+      "HT 25",
+      "HT 26",
+      "HT 27",
+      "HT 28",
+      "HT 6",
+      "HT 7",
+      "HT 8",
+      "HT 85",
+      "HT 86",
+      "HT 9",
+      "HT 93",
+      "HT 94",
+      "HT 95",
+      "HT 96",
+      "HT 97",
+      "HT 98",
+      "HT 99",
+      "IO Za 1",
+      "IO Za 2",
+      "IO Za 3",
+      "IO Za 4",
+      "IO Za 5",
+      "IO Za 6",
+      "KEA 1",
+      "KH 7",
+      "KH Wc 2003",
+      "KN 1",
+      "KN Anetaki Scepter (Handle)",
+      "KN Anetaki Scepter (Ring)",
+      "KN Za 10",
+      "KO Za 1",
+      "MA 2",
+      "MA 3",
+      "MA Za 1",
+      "MI 1",
+      "PE 1",
+      "PE 2",
+      "PH 1",
+      "PH 14",
+      "PH 16",
+      "PH 3",
+      "PH 31",
+      "PH 4",
+      "PH 5",
+      "PH 7",
+      "PK Za 11",
+      "PK Za 12",
+      "PL Zf 1",
+      "PR Za 1",
+      "PS Za 1",
+      "PTS Za 1",
+      "SY Za 1",
+      "SY Za 2",
+      "SY Za 3",
+      "THE 6",
+      "TL 1",
+      "TL Za 1",
+      "TR Za 1",
+      "TR Za 2",
+      "VRY Za 1",
+      "ZA 1",
+      "ZA 10",
+      "ZA 11",
+      "ZA 15",
+      "ZA 2",
+      "ZA 4",
+      "ZA 5",
+      "ZA 6",
+      "ZA 7",
+      "ZA Zb 3"
+    ],
+    "content_mismatches": [
+      {
+        "doc": "HT 1",
+        "old_words": [
+          "ka-u-de-ta",
+          "di-de-ru",
+          "ko-sa-i-ti",
+          "pa-ja-re",
+          "mi-ru"
+        ],
+        "new_words": [
+          "qe-ra-u-ki-ro-*79-su-di-di-za-ke-ku-*56-nu-a-ra-na-re",
+          "qe-ra-u",
+          "ki-ro",
+          "*79-su",
+          "di-di-za-ke"
+        ]
+      },
+      {
+        "doc": "HT 100",
+        "old_words": [
+          "pa-ja-re",
+          "a-du",
+          "ku-ro"
+        ],
+        "new_words": [
+          "ku-ro-sa-ra",
+          "ku-ro",
+          "sa-ra"
+        ]
+      },
+      {
+        "doc": "HT 101",
+        "old_words": [
+          "ta-na-su",
+          "wa-du-ni-mi",
+          "ku-ro"
+        ],
+        "new_words": [
+          "*79-*22-di-sa-ra-ku-*56",
+          "*79-*22-di",
+          "sa-ra",
+          "ku",
+          "*56"
+        ]
+      },
+      {
+        "doc": "HT 102",
+        "old_words": [
+          "qa-qa-ru",
+          "a-mi-da-u",
+          "ku-ro"
+        ],
+        "new_words": [
+          "ka-pa-sa-ra-*56-ni-di-ri-na-ma-*79-i-ka-ku-ro",
+          "ka-pa",
+          "sa-ra",
+          "*56-ni",
+          "di-ri-na"
+        ]
+      },
+      {
+        "doc": "HT 103",
+        "old_words": [
+          "su-ki-ri-ta",
+          "di-na-u",
+          "pa-ta-ne",
+          "ku-ro"
+        ],
+        "new_words": [
+          "u-ta-*56-da-ku-se-ne-da-ku-na-da-ku-se-ne-ki-ra",
+          "u-ta",
+          "*56-da-ku-se-ne",
+          "da-ku-na",
+          "da-ku-se-ne"
+        ]
+      },
+      {
+        "doc": "HT 104",
+        "old_words": [
+          "da-i-pi-ta",
+          "ki-da-ro",
+          "ku-ro"
+        ],
+        "new_words": [
+          "ta-pa-da-ku-se-ne-ti-i-du-ti-pa-da-su-ti-ku-ro",
+          "ta-pa",
+          "da-ku-se-ne-ti",
+          "i-du-ti",
+          "pa-da-su-ti"
+        ]
+      },
+      {
+        "doc": "HT 13",
+        "old_words": [
+          "a-ja-ku",
+          "wa-du-ni-mi",
+          "da-ri-da",
+          "ku-ro"
+        ],
+        "new_words": [
+          "ka-u-de-ta-re-za-te-tu-te-ki-ku-*79-ni-da-si-*118-i-du-ne-si-ku-ro",
+          "ka-u-de-ta",
+          "re-za",
+          "te-tu",
+          "te-ki"
+        ]
+      },
+      {
+        "doc": "HT 14",
+        "old_words": [
+          "a-ra-na-re",
+          "pi-ta-ja",
+          "ku-ro"
+        ],
+        "new_words": [
+          "pu-*131-a-pu-na-du",
+          "pu-*131",
+          "a-pu-na-du"
+        ]
+      },
+      {
+        "doc": "HT 16",
+        "old_words": [
+          "mi-nu-te",
+          "ku-ro"
+        ],
+        "new_words": [
+          "ka-ku-pa-di-na-u-sa-po",
+          "ka-ku-pa",
+          "di-na-u",
+          "sa-po"
+        ]
+      },
+      {
+        "doc": "HT 17",
+        "old_words": [
+          "a-du",
+          "pa-ja-re",
+          "ku-ro"
+        ],
+        "new_words": [
+          "ra-*164-ti-sa-ro-si-da-re",
+          "ra-*164-ti",
+          "sa-ro",
+          "si-da-re"
+        ]
+      },
+      {
+        "doc": "HT 2",
+        "old_words": [
+          "su-ki-ri-ta",
+          "ku-pa-nu",
+          "da-ta-re",
+          "ku-ro"
+        ],
+        "new_words": [
+          "a-ka-ru-ki-re-ta-na",
+          "a-ka-ru",
+          "ki-re-ta-na"
+        ]
+      },
+      {
+        "doc": "HT 21",
+        "old_words": [
+          "ka-u-de-ta",
+          "pi-ta-ja",
+          "te-we",
+          "ku-ro"
+        ],
+        "new_words": [
+          "pi-ta-ka-se",
+          "pi-ta-ka-se"
+        ]
+      },
+      {
+        "doc": "HT 29",
+        "old_words": [
+          "da-me",
+          "su-ki-ri-ta",
+          "ku-ro"
+        ],
+        "new_words": [
+          "ru-ma-ta-pa-ja-re-di-ja-i-sa-A323-mi-A340-ki-ta-a-re-da-i-ka-du-ma-ne",
+          "ru-ma-ta",
+          "pa-ja-re",
+          "di-ja-i",
+          "sa-A323-mi"
+        ]
+      },
+      {
+        "doc": "HT 30",
+        "old_words": [
+          "a-du",
+          "pa-ta-ne",
+          "ku-ro"
+        ],
+        "new_words": [
+          "sa-ra-sa-ra-ra-ki-ro",
+          "sa-ra",
+          "sa-ra-ra",
+          "ki-ro"
+        ]
+      },
+      {
+        "doc": "HT 31",
+        "old_words": [
+          "a",
+          "a-mi-da-u",
+          "pa-ja-re",
+          "su-ki-ri-ta",
+          "b"
+        ],
+        "new_words": [
+          "ti-sa-pu-ko-qa-*56-su-pu-ka-ro-*56-sa-ja-ma-ki-de-ma-A323-na-su-*56-ra-pa-ta-qe",
+          "ti-sa",
+          "pu-ko",
+          "qa-*56",
+          "su-pu"
+        ]
+      },
+      {
+        "doc": "HT 87",
+        "old_words": [
+          "qa-qa-ru",
+          "ku-ro"
+        ],
+        "new_words": [
+          "qi-tu-ne-ma-ka-ri-te-pi-ta-ke-si-ja-re-mi-di-ki-se-qe-su-pu-ku-ru-ku-a-ra-a-tu",
+          "qi-tu-ne",
+          "ma-ka-ri-te",
+          "pi-ta-ke-si",
+          "ja-re-mi"
+        ]
+      },
+      {
+        "doc": "HT 88",
+        "old_words": [
+          "ku-ni-su",
+          "da-me",
+          "ku-ro"
+        ],
+        "new_words": [
+          "a-du-re-za-ki-ki-na-ki-ro-ku-*56-*56-ka-ju-ku-*56-nu-pa-ja-re-sa-ma-ro-da-ta-re-ku-ro",
+          "a-du",
+          "re-za",
+          "ki-ki-na",
+          "ki-ro"
+        ]
+      },
+      {
+        "doc": "HT Wa 1001",
+        "old_words": [
+          "ku-ni-su"
+        ],
+        "new_words": [
+          "da-ka",
+          "da-ka"
+        ]
+      },
+      {
+        "doc": "HT Wa 1002",
+        "old_words": [
+          "da-ta-re"
+        ],
+        "new_words": [
+          "da-ka",
+          "da-ka"
+        ]
+      },
+      {
+        "doc": "HT Wa 1003",
+        "old_words": [
+          "pa-ja-re"
+        ],
+        "new_words": [
+          "da-ka",
+          "da-ka"
+        ]
+      }
+    ]
+  },
+  "sign_inventory_discrepancies": {
+    "in_corpus_not_inventory": [
+      "A1000",
+      "A1001",
+      "A309a",
+      "A309b",
+      "A309c",
+      "A310",
+      "A319",
+      "A320",
+      "A321",
+      "A322",
+      "A323",
+      "A324",
+      "A325",
+      "A326",
+      "A327",
+      "A328",
+      "A329",
+      "A331",
+      "A332",
+      "A333",
+      "A334",
+      "A335",
+      "A336",
+      "A338",
+      "A339",
+      "A340",
+      "A342",
+      "A343",
+      "A344",
+      "A345"
+    ],
+    "in_inventory_not_corpus": [
+      "A171",
+      "A180",
+      "A188",
+      "A191",
+      "A302",
+      "A309",
+      "AB12",
+      "AB14",
+      "AB15",
+      "AB25",
+      "AB32",
+      "AB33",
+      "AB35",
+      "AB36",
+      "AB42",
+      "AB52",
+      "AB62",
+      "AB63",
+      "AB64",
+      "AB68",
+      "AB71",
+      "AB75",
+      "AB83",
+      "AB84",
+      "AB91"
+    ]
+  }
+}
