@@ -6,7 +6,7 @@
     { id: 'home', label: 'Home', href: 'index.html', icon: '𐘇' },
     { id: 'browse', label: 'Browse Corpus', href: 'browse.html', icon: '📜' },
     { id: 'gallery', label: 'Document Gallery', href: 'gallery.html', icon: '🏛' },
-    { id: 'signs', label: 'Sign Catalog', href: 'signs.html', icon: '𐘀' },
+    { id: 'signs', label: 'Sign Explorer', href: 'sign-explorer.html', icon: '𐘀' },
     { id: 'terms', label: 'Terminology', href: 'terminology.html', icon: '📖' },
     { id: 'audit', label: 'Data Audit', href: 'discrepancies.html', icon: '🔍' }
   ];

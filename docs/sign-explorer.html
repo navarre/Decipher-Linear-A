@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear A Sign Explorer</title>
+<link rel="stylesheet" href="style.css">
+<script src="nav.js" defer></script>
+<style>
+.explorer { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; }
+.explorer-header { margin-bottom: 1.5rem; }
+.explorer-header h1 { display: none; } /* sidebar handles branding */
+.explorer-controls { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.2rem; }
+.sign-search { padding: 0.7rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 1rem; width: 280px; }
+.sign-search:focus { outline: none; border-color: var(--accent); }
+.cat-filters { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.cat-btn { padding: 0.35rem 0.8rem; border-radius: 4px; border: 1px solid var(--border); background: var(--surface); color: var(--text2); font-size: 0.8rem; cursor: pointer; transition: all 0.15s; }
+.cat-btn:hover { border-color: var(--accent); color: var(--text); }
+.cat-btn.active { background: var(--accent2); border-color: var(--accent); color: #fff; }
+.sign-count { color: var(--text2); font-size: 0.85rem; margin-bottom: 1rem; }
+
+/* Grid view */
+.sign-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.8rem; }
+.sign-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem; text-align: center; cursor: pointer; transition: all 0.2s; }
+.sign-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.sign-card img { width: 80px; height: 80px; object-fit: contain; display: block; margin: 0 auto 0.4rem; }
+.sign-card .sign-code { font-size: 0.75rem; color: var(--text2); font-family: monospace; }
+.sign-card .sign-reading { font-size: 1rem; color: var(--accent); font-weight: 700; min-height: 1.4em; }
+.sign-card .sign-cat { font-size: 0.6rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.7; }
+
+/* Detail overlay */
+.sign-detail-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 2000; justify-content: center; align-items: center; }
+.sign-detail-overlay.open { display: flex; }
+.sign-detail-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; max-width: 500px; width: 90vw; max-height: 90vh; overflow-y: auto; position: relative; }
+.sign-detail-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text2); font-size: 1.5rem; cursor: pointer; }
+.sign-detail-close:hover { color: var(--text); }
+.sign-detail-img { width: 160px; height: 160px; object-fit: contain; display: block; margin: 0 auto 1.5rem; }
+.sign-detail-code { text-align: center; font-family: monospace; color: var(--text2); font-size: 1rem; margin-bottom: 0.3rem; }
+.sign-detail-reading { text-align: center; color: var(--accent); font-size: 1.8rem; font-weight: 700; margin-bottom: 0.3rem; }
+.sign-detail-cat { text-align: center; color: var(--text2); font-size: 0.85rem; text-transform: capitalize; margin-bottom: 1.5rem; }
+.sign-detail-section { margin-top: 1.2rem; }
+.sign-detail-section h4 { color: var(--text2); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.sign-detail-section p { color: var(--text); font-size: 0.9rem; line-height: 1.6; }
+.similar-signs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.similar-sign { width: 50px; height: 50px; object-fit: contain; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2px; cursor: pointer; }
+.similar-sign:hover { border-color: var(--accent); }
+
+@media (max-width: 768px) {
+  .sign-search { width: 100%; }
+  .sign-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="title-block">
+      <h1>Sign Explorer</h1>
+      <p class="subtitle">315 Linear A sign types with representative drawings</p>
+    </div>
+  </div>
+</header>
+
+<div class="explorer">
+  <div class="explorer-controls">
+    <input type="text" class="sign-search" id="search" placeholder="Search signs (AB01, da, ku...)" />
+    <div class="cat-filters" id="catFilters"></div>
+  </div>
+  <div class="sign-count" id="signCount"></div>
+  <div class="sign-grid" id="signGrid"></div>
+</div>
+
+<div class="sign-detail-overlay" id="overlay">
+  <div class="sign-detail-card" id="detailCard">
+    <button class="sign-detail-close" id="closeBtn">&times;</button>
+    <img class="sign-detail-img" id="detailImg" alt="" />
+    <div class="sign-detail-code" id="detailCode"></div>
+    <div class="sign-detail-reading" id="detailReading"></div>
+    <div class="sign-detail-cat" id="detailCat"></div>
+    <div class="sign-detail-section">
+      <h4>Category</h4>
+      <p id="detailCatDesc"></p>
+    </div>
+    <div class="sign-detail-section">
+      <h4>Visually Similar Signs</h4>
+      <div class="similar-signs" id="similarSigns"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let signs = [];
+let filteredSigns = [];
+let selectedCat = null;
+
+const catLabels = {
+  'syllabogram': 'Syllabograms',
+  'logogram': 'Logograms',
+  'linear-a-only': 'Linear A Only',
+  'fraction': 'Fractions'
+};
+
+const catDescs = {
+  'syllabogram': 'Represents a syllable (consonant + vowel). Phonetic values hypothesized from Linear B parallels.',
+  'logogram': 'Represents a whole word or concept: commodities (grain, wine, oil), animals, people, or other categories.',
+  'linear-a-only': 'Signs unique to Linear A with no known Linear B equivalent. A300+ series in the GORILA catalog.',
+  'fraction': 'Represents fractional quantities. Unique to Linear A. A700+ series. Exact values debated.'
+};
+
+async function init() {
+  const res = await fetch('images/signs-manifest.json');
+  signs = await res.json();
+  buildCatFilters();
+  filterAndRender();
+}
+
+function buildCatFilters() {
+  const container = document.getElementById('catFilters');
+  const allBtn = document.createElement('button');
+  allBtn.className = 'cat-btn active';
+  allBtn.textContent = `All (${signs.length})`;
+  allBtn.onclick = () => { selectedCat = null; filterAndRender(); updateCatButtons(); };
+  container.appendChild(allBtn);
+
+  const counts = {};
+  for (const s of signs) counts[s.category] = (counts[s.category] || 0) + 1;
+
+  for (const [cat, label] of Object.entries(catLabels)) {
+    const btn = document.createElement('button');
+    btn.className = 'cat-btn';
+    btn.dataset.cat = cat;
+    btn.textContent = `${label} (${counts[cat] || 0})`;
+    btn.onclick = () => { selectedCat = cat; filterAndRender(); updateCatButtons(); };
+    container.appendChild(btn);
+  }
+}
+
+function updateCatButtons() {
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    if (selectedCat === null) {
+      btn.classList.toggle('active', !btn.dataset.cat);
+    } else {
+      btn.classList.toggle('active', btn.dataset.cat === selectedCat);
+    }
+  });
+}
+
+function filterAndRender() {
+  const query = document.getElementById('search').value.toLowerCase();
+  filteredSigns = signs.filter(s => {
+    if (selectedCat && s.category !== selectedCat) return false;
+    if (query) {
+      const haystack = (s.code + ' ' + (s.reading || '')).toLowerCase();
+      if (!haystack.includes(query)) return false;
+    }
+    return true;
+  });
+
+  document.getElementById('signCount').textContent = `${filteredSigns.length} signs`;
+
+  const grid = document.getElementById('signGrid');
+  grid.innerHTML = '';
+
+  for (const s of filteredSigns) {
+    const card = document.createElement('div');
+    card.className = 'sign-card';
+    card.innerHTML = `
+      <img src="images/signs/${s.file}" alt="${s.code}" loading="lazy" />
+      <div class="sign-reading">${s.reading || '—'}</div>
+      <div class="sign-code">${s.code}</div>
+      <div class="sign-cat">${s.category.replace('-', ' ')}</div>
+    `;
+    card.onclick = () => showDetail(s);
+    grid.appendChild(card);
+  }
+}
+
+function showDetail(s) {
+  document.getElementById('detailImg').src = `images/signs/${s.file}`;
+  document.getElementById('detailCode').textContent = s.code;
+  document.getElementById('detailReading').textContent = s.reading || 'Unknown';
+  document.getElementById('detailCat').textContent = s.category.replace('-', ' ');
+  document.getElementById('detailCatDesc').textContent = catDescs[s.category] || '';
+
+  // Find visually similar: same category, adjacent codes
+  const codeNum = parseInt(s.code.replace(/[^0-9]/g, '')) || 0;
+  const similar = signs.filter(other =>
+    other.code !== s.code &&
+    other.category === s.category &&
+    Math.abs((parseInt(other.code.replace(/[^0-9]/g, '')) || 0) - codeNum) <= 5
+  ).slice(0, 8);
+
+  const container = document.getElementById('similarSigns');
+  container.innerHTML = '';
+  if (similar.length === 0) {
+    container.innerHTML = '<p style="color:var(--text2);font-size:0.8rem;">AI-powered visual similarity coming soon</p>';
+  } else {
+    for (const sim of similar) {
+      const img = document.createElement('img');
+      img.className = 'similar-sign';
+      img.src = `images/signs/${sim.file}`;
+      img.alt = sim.code;
+      img.title = `${sim.code}${sim.reading ? ' (' + sim.reading + ')' : ''}`;
+      img.onclick = (e) => { e.stopPropagation(); showDetail(sim); };
+      container.appendChild(img);
+    }
+  }
+
+  document.getElementById('overlay').classList.add('open');
+}
+
+document.getElementById('closeBtn').onclick = () => {
+  document.getElementById('overlay').classList.remove('open');
+};
+document.getElementById('overlay').onclick = (e) => {
+  if (e.target === document.getElementById('overlay')) {
+    document.getElementById('overlay').classList.remove('open');
+  }
+};
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') document.getElementById('overlay').classList.remove('open');
+});
+
+document.getElementById('search').addEventListener('input', filterAndRender);
+
+init();
+</script>
+</body>
+</html>
