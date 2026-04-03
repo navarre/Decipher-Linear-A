@@ -28,25 +28,50 @@
 
 <main>
 
-<!-- OVERVIEW -->
-<section id="overview" class="section">
-  <h2>What is Linear A?</h2>
+<!-- HERO: THE PRAYER -->
+<section class="section" style="border-bottom:none;padding-bottom:1rem;">
+  <div style="text-align:center;max-width:800px;margin:0 auto;">
+    <p style="color:var(--text2);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1.5rem;">The oldest prayer in Europe &mdash; carved in stone, 3,500 years ago</p>
+
+    <div style="background:linear-gradient(135deg, #1a1510 0%, #2a1f10 50%, #1a1510 100%); border:1px solid var(--accent); border-radius:12px; padding:2.5rem 2rem; margin-bottom:2rem;">
+      <div style="font-size:1.6rem; color:var(--accent); font-family:monospace; letter-spacing:0.08em; line-height:2.2; margin-bottom:1.5rem;">
+        a-ta-i-<span style="color:#c45a5a;font-weight:700;">*301</span>-wa-ja<br>
+        ja-sa-sa-ra-me<br>
+        i-da-ma-te
+      </div>
+      <div style="font-size:1.1rem; color:var(--text); font-style:italic; line-height:1.8;">
+        &ldquo;[Sacred opening &mdash; one sign remains undeciphered]<br>
+        My Lady,<br>
+        Mother of Ida&rdquo;
+      </div>
+    </div>
+
+    <p style="color:var(--text2);font-size:0.95rem;line-height:1.8;text-align:left;">
+      This is the <strong style="color:var(--text)">libation formula</strong> &mdash; a prayer inscribed on stone offering tables at mountain-top sanctuaries across Bronze Age Crete. Priests poured wine, oil, and honey into carved depressions while reciting these words to the Minoan goddess. It appears on <strong style="color:var(--text)">86 documents from 16 sites</strong>, making it the most important text in Linear A.
+    </p>
+    <p style="color:var(--text2);font-size:0.95rem;line-height:1.8;text-align:left;margin-top:0.8rem;">
+      We can read most of it. <strong style="color:var(--accent)">ja-sa-sa-ra-me</strong> is almost certainly Luwian <em>ishassara</em> + possessive <em>-me</em> &mdash; &ldquo;My Lady.&rdquo; <strong style="color:var(--accent)">i-da-ma-te</strong> combines Mount Ida with <em>*mater</em> &mdash; &ldquo;Mother of Ida.&rdquo; But one sign &mdash; <strong style="color:#c45a5a;">*301</strong> &mdash; has no equivalent in any known script. It appears on <strong style="color:var(--text)">48 documents</strong>, more often than the sign for grain. It represents a sound that Greek doesn&rsquo;t have. Solve *301, and the prayer opens. Solve the prayer, and we&rsquo;re closer to reading Minoan than anyone has been in 3,500 years.
+    </p>
+  </div>
+</section>
+
+<!-- THE MYSTERY -->
+<section class="section" style="padding-top:1rem;">
   <div class="overview-grid">
-    <div class="overview-card">
-      <h3>The Script</h3>
-      <p>Linear A was the writing system of the <strong>Minoan civilization</strong> on Bronze Age Crete, used from approximately <strong>1700&ndash;1450 BCE</strong>. Despite over a century of scholarship since Arthur Evans&rsquo;s discoveries at Knossos, it remains <strong>undeciphered</strong>. The underlying language is unknown &mdash; it is not Greek, and its language family has never been conclusively identified.</p>
-      <p>The total known corpus comprises <strong>1,534 inscriptions</strong> bearing <strong>7,574 signs</strong> (per RILA 2025). This project has assembled <strong>1,880 document records</strong> from multiple sources into a unified, structured, searchable corpus.</p>
+    <div class="overview-card" style="border-color:var(--accent);">
+      <h3>The Undeciphered Script</h3>
+      <p>Linear A was the writing system of the <strong>Minoan civilization</strong> on Bronze Age Crete, used from approximately <strong>1800&ndash;1450 BCE</strong>. Despite over a century of scholarship, it remains <strong>undeciphered</strong>. The underlying language is unknown &mdash; our analysis shows it is <strong>not Greek, not Semitic</strong>, and most likely an <strong>agglutinative language isolate</strong> with religious borrowings from Luwian (Anatolian).</p>
+      <p>The total known corpus: <strong>1,534 inscriptions</strong> with <strong>7,574 signs</strong> (RILA 2025). This project has assembled <strong>1,880 document records</strong> into a unified, searchable corpus.</p>
     </div>
     <div class="overview-card">
-      <h3>This Project</h3>
-      <p>We are building the most complete computational resource for Linear A research. The corpus merges data from <a href="https://sigla.phis.me/" target="_blank" style="color:var(--accent)">SigLA</a> (772 documents with sign-level palaeographic data), <a href="https://lineara.xyz/" target="_blank" style="color:var(--accent)">lineara.xyz</a> (1,722 documents from GORILA), and hand-curated ritual inscriptions.</p>
-      <p>Every document is tagged by source, object type, linguistic value, site, and period. The canonical data lives in three files: <code>corpus.json</code>, <code>signs.json</code>, and <code>glossary.json</code>.</p>
-      <p><em>Reproducibility over revelation. Confidence scores on everything.</em></p>
+      <h3>What We Know</h3>
+      <p>We can read the <strong>numbers</strong> (identical to Linear B). We know <strong>ku-ro</strong> means &ldquo;total&rdquo; and <strong>ki-ro</strong> means &ldquo;deficit.&rdquo; We&rsquo;ve identified <strong>52 words</strong> with varying confidence. We can trace the <strong>grammar</strong>: 6&ndash;8 case suffixes, agglutinative morphology, reduplication for plural, a suffix that distinguishes <strong>people (-ja) from things (-ra)</strong>.</p>
+      <p>The libation formula gives us two Luwian loanwords, an agglutinative verb, and one devastating gap: <strong style="color:#c45a5a">sign *301</strong>.</p>
     </div>
     <div class="overview-card">
-      <h3>The Corpus</h3>
-      <p>Inscriptions survive on <strong>tablets</strong> (489), <strong>nodules</strong> (913), <strong>roundels</strong> (192), <strong>stone vessels</strong> (62), <strong>clay vessels</strong> (63), and other objects found across <strong>55 sites</strong> in Crete and the Aegean.</p>
-      <p>Of the 1,880 documents, <strong>554 have high linguistic value</strong> (tablets, stone vessels, lames) and drive most analysis. The remaining 1,037 are ethnographic &mdash; seal stamps and short marks that tell us about Minoan administrative practices but contribute little to linguistic analysis.</p>
+      <h3>3,500 Years of Silence</h3>
+      <p>Around <strong>1450 BCE</strong>, Linear A vanished. Every major site on Crete was destroyed. Only Knossos survived, and there the script was replaced by <strong>Linear B</strong> &mdash; the same signs, but writing Greek. The Minoan language may have survived for centuries as <strong>Eteocretan</strong> (&ldquo;true Cretan&rdquo;) in eastern Crete, written in the Greek alphabet but in an unknown tongue. The last traces fade by the 3rd century BCE.</p>
+      <p>The prayer on the stone tables is the closest we&rsquo;ve come to hearing their voice.</p>
     </div>
   </div>
 </section>
