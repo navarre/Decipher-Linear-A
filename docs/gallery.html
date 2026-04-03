@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear A Document Gallery</title>
+<link rel="stylesheet" href="style.css">
+<script src="nav.js" defer></script>
+<style>
+.gallery-layout { display: flex; gap: 1.5rem; padding: 1.5rem 2rem; min-height: 80vh; }
+.gallery-sidebar { width: 260px; flex-shrink: 0; }
+.gallery-main { flex: 1; min-width: 0; }
+
+/* Search & filters */
+.gallery-search { width: 100%; padding: 0.7rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 1rem; margin-bottom: 1rem; }
+.gallery-search:focus { outline: none; border-color: var(--accent); }
+.filter-section { margin-bottom: 1rem; }
+.filter-section h4 { color: var(--text2); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+.site-filters { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.site-btn { padding: 0.2rem 0.5rem; border-radius: 3px; border: 1px solid var(--border); background: var(--surface); color: var(--text2); font-size: 0.7rem; cursor: pointer; transition: all 0.15s; }
+.site-btn:hover { border-color: var(--accent); color: var(--text); }
+.site-btn.active { background: var(--accent2); border-color: var(--accent); color: #fff; }
+.doc-count { color: var(--text2); font-size: 0.8rem; margin-bottom: 0.8rem; }
+
+/* Document list */
+.doc-list { max-height: calc(100vh - 220px); overflow-y: auto; }
+.doc-card { display: flex; align-items: center; gap: 0.8rem; padding: 0.6rem 0.8rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 0.4rem; cursor: pointer; transition: border-color 0.15s; }
+.doc-card:hover { border-color: var(--accent); }
+.doc-card.selected { border-color: var(--accent); background: var(--surface2); }
+.doc-thumb { width: 40px; height: 40px; object-fit: contain; background: var(--surface2); border-radius: 3px; }
+.doc-info { flex: 1; min-width: 0; }
+.doc-name { font-weight: 600; color: var(--accent); font-size: 0.85rem; }
+.doc-meta { font-size: 0.7rem; color: var(--text2); }
+
+/* Detail panel */
+.detail-empty { color: var(--text2); text-align: center; padding: 4rem 2rem; font-size: 1.1rem; }
+.detail-panel { display: none; }
+.detail-panel.visible { display: block; }
+.detail-header { margin-bottom: 1.5rem; }
+.detail-header h2 { color: var(--accent); font-size: 1.5rem; margin-bottom: 0.3rem; }
+.detail-header .detail-site { color: var(--text2); font-size: 0.9rem; }
+.detail-doc-img { max-width: 100%; max-height: 500px; object-fit: contain; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; display: block; margin: 0 auto 1.5rem; }
+.signs-section h3 { color: var(--text2); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+.signs-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.sign-crop-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem; text-align: center; cursor: pointer; transition: border-color 0.15s; width: 80px; }
+.sign-crop-card:hover { border-color: var(--accent); }
+.sign-crop-card img { width: 64px; height: 64px; object-fit: contain; }
+.sign-crop-card .crop-label { font-size: 0.65rem; color: var(--text2); margin-top: 0.2rem; }
+
+/* Lightbox */
+.lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; cursor: pointer; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+
+@media (max-width: 900px) {
+  .gallery-layout { flex-direction: column; }
+  .gallery-sidebar { width: 100%; }
+  .doc-list { max-height: 300px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="title-block">
+      <h1>Document Gallery</h1>
+      <p class="subtitle">773 inscriptions with drawings and sign-level detail</p>
+    </div>
+  </div>
+</header>
+
+<div class="gallery-layout">
+  <div class="gallery-sidebar">
+    <input type="text" class="gallery-search" id="search" placeholder="Search documents..." />
+    <div class="filter-section">
+      <h4>Site</h4>
+      <div class="site-filters" id="siteFilters"></div>
+    </div>
+    <div class="doc-count" id="docCount"></div>
+    <div class="doc-list" id="docList"></div>
+  </div>
+  <div class="gallery-main">
+    <div class="detail-empty" id="emptyState">Select a document to view its inscription and signs</div>
+    <div class="detail-panel" id="detailPanel">
+      <div class="detail-header">
+        <h2 id="detailTitle"></h2>
+        <div class="detail-site" id="detailSite"></div>
+      </div>
+      <img class="detail-doc-img" id="detailImg" alt="" />
+      <div class="signs-section">
+        <h3 id="signsHeader"></h3>
+        <div class="signs-grid" id="signsGrid"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <img id="lightboxImg" alt="" />
+</div>
+
+<script>
+let docs = [];
+let filteredDocs = [];
+let selectedSite = null;
+let selectedDoc = null;
+
+async function init() {
+  const res = await fetch('images/documents-manifest.json');
+  docs = await res.json();
+
+  // Sort crops numerically
+  for (const d of docs) {
+    d.crops.sort((a, b) => {
+      const na = parseInt(a.match(/_(\d+)\.png$/)?.[1] || '0');
+      const nb = parseInt(b.match(/_(\d+)\.png$/)?.[1] || '0');
+      return na - nb;
+    });
+  }
+
+  buildSiteFilters();
+  filterAndRender();
+
+  // Check URL hash for direct link
+  if (window.location.hash) {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    const doc = docs.find(d => d.id === id);
+    if (doc) selectDoc(doc);
+  }
+}
+
+function buildSiteFilters() {
+  const sites = {};
+  for (const d of docs) {
+    const s = d.site || 'Unknown';
+    sites[s] = (sites[s] || 0) + 1;
+  }
+  const sorted = Object.entries(sites).sort((a, b) => b[1] - a[1]);
+  const container = document.getElementById('siteFilters');
+
+  const allBtn = document.createElement('button');
+  allBtn.className = 'site-btn active';
+  allBtn.textContent = `All (${docs.length})`;
+  allBtn.onclick = () => { selectedSite = null; filterAndRender(); updateSiteButtons(); };
+  container.appendChild(allBtn);
+
+  for (const [site, count] of sorted) {
+    const btn = document.createElement('button');
+    btn.className = 'site-btn';
+    btn.dataset.site = site;
+    btn.textContent = `${site} (${count})`;
+    btn.onclick = () => { selectedSite = site; filterAndRender(); updateSiteButtons(); };
+    container.appendChild(btn);
+  }
+}
+
+function updateSiteButtons() {
+  document.querySelectorAll('.site-btn').forEach(btn => {
+    if (selectedSite === null) {
+      btn.classList.toggle('active', !btn.dataset.site);
+    } else {
+      btn.classList.toggle('active', btn.dataset.site === selectedSite);
+    }
+  });
+}
+
+function filterAndRender() {
+  const query = document.getElementById('search').value.toLowerCase();
+  filteredDocs = docs.filter(d => {
+    if (selectedSite && d.site !== selectedSite) return false;
+    if (query && !d.label.toLowerCase().includes(query) && !d.id.toLowerCase().includes(query)) return false;
+    return true;
+  });
+
+  document.getElementById('docCount').textContent = `${filteredDocs.length} documents`;
+
+  const list = document.getElementById('docList');
+  list.innerHTML = '';
+
+  for (const d of filteredDocs) {
+    const card = document.createElement('div');
+    card.className = 'doc-card' + (selectedDoc && selectedDoc.id === d.id ? ' selected' : '');
+    card.innerHTML = `
+      <img class="doc-thumb" src="images/documents/${d.id}/${d.image}" alt="${d.label}" loading="lazy" />
+      <div class="doc-info">
+        <div class="doc-name">${d.label}</div>
+        <div class="doc-meta">${d.site || ''} &bull; ${d.signs} signs</div>
+      </div>
+    `;
+    card.onclick = () => selectDoc(d);
+    list.appendChild(card);
+  }
+}
+
+function selectDoc(d) {
+  selectedDoc = d;
+  window.location.hash = d.id;
+
+  document.getElementById('emptyState').style.display = 'none';
+  const panel = document.getElementById('detailPanel');
+  panel.classList.add('visible');
+
+  document.getElementById('detailTitle').textContent = d.label;
+  document.getElementById('detailSite').textContent = `Site: ${d.site || 'Unknown'} — ${d.signs} sign occurrences`;
+
+  const img = document.getElementById('detailImg');
+  img.src = `images/documents/${d.id}/${d.image}`;
+  img.alt = d.label;
+  img.onclick = () => openLightbox(img.src);
+
+  const header = document.getElementById('signsHeader');
+  header.textContent = `Sign Crops (${d.signs})`;
+
+  const grid = document.getElementById('signsGrid');
+  grid.innerHTML = '';
+  for (const crop of d.crops) {
+    const num = crop.match(/_(\d+)\.png$/)?.[1] || '?';
+    const card = document.createElement('div');
+    card.className = 'sign-crop-card';
+    card.innerHTML = `<img src="images/documents/${d.id}/${crop}" alt="Sign ${num}" loading="lazy" /><div class="crop-label">#${num}</div>`;
+    card.onclick = () => openLightbox(`images/documents/${d.id}/${crop}`);
+    grid.appendChild(card);
+  }
+
+  // Update list selection
+  document.querySelectorAll('.doc-card').forEach(c => c.classList.remove('selected'));
+  const cards = document.querySelectorAll('.doc-card');
+  const idx = filteredDocs.findIndex(fd => fd.id === d.id);
+  if (idx >= 0 && cards[idx]) cards[idx].classList.add('selected');
+}
+
+function openLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src = src;
+  lb.classList.add('open');
+}
+
+document.getElementById('lightbox').onclick = function() {
+  this.classList.remove('open');
+};
+
+document.getElementById('search').addEventListener('input', filterAndRender);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+});
+
+init();
+</script>
+</body>
+</html>
