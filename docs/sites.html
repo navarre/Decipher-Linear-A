@@ -62,150 +62,119 @@
     <!-- Sea -->
     <rect width="1000" height="470" fill="url(#sea)"/>
 
-    <!-- Subtle grid -->
-    <g stroke="#1a2535" stroke-width="0.3" opacity="0.3">
-      <line x1="0" y1="120" x2="1000" y2="120"/>
-      <line x1="0" y1="240" x2="1000" y2="240"/>
-      <line x1="0" y1="360" x2="1000" y2="360"/>
-      <line x1="250" y1="0" x2="250" y2="470"/>
-      <line x1="500" y1="0" x2="500" y2="470"/>
-      <line x1="750" y1="0" x2="750" y2="470"/>
-    </g>
+    <!-- Crete coastline from OpenStreetMap GeoJSON via greece-prefectures -->
+    <!-- Chania (western Crete) -->
+    <path d="M 308.3,318.8 L 312.4,328.2 L 311.3,334.3 L 300.4,337.8 L 293.9,342.8 L 303.5,346.3 L 299.1,359.9 L 281.8,358.4 L 273.0,354.2 L 256.7,356.1 L 252.5,353.7 L 237.8,353.6 L 227.5,355.6 L 218.5,354.5 L 212.1,349.0 L 205.5,347.0 L 190.0,349.2 L 176.0,345.2 L 159.8,343.0 L 140.4,347.5 L 138.7,345.4 L 120.4,345.2 L 114.7,347.6 L 109.9,345.3 L 95.8,347.0 L 85.9,346.4 L 84.6,340.4 L 71.2,336.8 L 65.8,333.9 L 67.0,328.7 L 74.3,326.6 L 69.6,322.2 L 69.6,312.2 L 75.7,309.0 L 74.2,305.2 L 80.8,302.3 L 81.6,297.8 L 76.6,292.9 L 84.3,288.0 L 80.7,282.5 L 85.3,267.5 L 91.4,263.7 L 94.4,269.8 L 94.5,280.2 L 107.3,285.1 L 118.4,284.6 L 127.8,281.8 L 129.9,274.1 L 128.2,267.8 L 123.6,260.1 L 126.1,257.3 L 122.8,252.4 L 123.8,247.9 L 133.9,240.8 L 142.9,245.3 L 139.8,250.6 L 144.4,261.5 L 144.7,273.9 L 164.1,278.5 L 209.7,282.1 L 226.4,279.4 L 227.7,272.8 L 238.0,272.4 L 233.3,265.1 L 245.3,261.5 L 252.1,261.5 L 265.0,264.6 L 273.1,275.8 L 267.0,284.0 L 259.7,285.9 L 235.7,282.8 L 230.5,286.3 L 249.3,291.7 L 257.2,291.1 L 265.0,295.8 L 273.6,296.3 L 285.3,290.8 L 290.0,295.1 L 291.9,306.3 L 290.1,313.3 L 292.3,317.0 L 308.3,318.8 Z"
+          fill="#1a1a25" stroke="#3a3a4a" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Chania small island -->
+    <path d="M 237.2,431.0 L 248.8,432.6 L 246.0,439.6 L 249.2,446.1 L 233.9,440.9 L 225.3,434.8 L 237.2,431.0 Z"
+          fill="#1a1a25" stroke="#3a3a4a" stroke-width="0.8"/>
 
-    <!-- Crete - real coastline from OpenStreetMap coordinates -->
-    <path d="M 188.6,336.3 L 203.9,352.5 L 215.8,349.3 L 251.3,349.3 L 275.0,350.9 L 291.6,349.3 L 298.7,350.9 L 310.5,355.8 L 315.3,352.5 L 346.1,372.0 L 369.7,373.6 L 398.2,375.2 L 417.1,373.6 L 440.8,375.2 L 464.5,376.8 L 488.2,378.4 L 504.7,378.4 L 523.7,380.1 L 547.4,378.4 L 554.5,380.1 L 566.3,380.1 L 594.7,381.7 L 618.4,384.9 L 642.1,388.2 L 665.8,393.0 L 689.5,394.7 L 694.2,402.8 L 713.2,401.1 L 736.8,402.8 L 760.5,402.8 L 784.2,404.4 L 807.9,401.1 L 824.5,399.5 L 833.9,402.8 L 824.5,407.6 L 807.9,410.9 L 784.2,415.7 L 760.5,419.0 L 736.8,431.9 L 713.2,435.2 L 689.5,433.6 L 665.8,431.9 L 642.1,427.1 L 618.4,428.7 L 594.7,431.9 L 571.1,438.4 L 547.4,441.7 L 523.7,441.7 L 500.0,443.3 L 476.3,441.7 L 452.6,438.4 L 428.9,435.2 L 405.3,430.3 L 381.6,425.4 L 357.9,419.0 L 334.2,407.6 L 310.5,401.1 L 286.8,397.9 L 263.2,394.7 L 239.5,386.6 L 215.8,375.2 L 203.9,365.5 L 192.1,354.1 L 188.6,336.3 Z"
-          fill="#1a1a25" stroke="#3a3a4a" stroke-width="1.5" stroke-linejoin="round"/>
+    <!-- Rethymno (central-west) -->
+    <path d="M 493.3,306.4 L 494.5,310.6 L 491.7,314.5 L 484.3,312.1 L 480.2,313.8 L 481.6,319.2 L 486.1,323.9 L 478.4,325.7 L 486.2,331.0 L 492.3,332.0 L 488.4,338.4 L 492.1,342.9 L 486.0,348.5 L 486.0,354.8 L 480.2,359.5 L 472.6,357.7 L 464.7,358.9 L 458.4,350.4 L 453.3,348.7 L 454.9,358.0 L 452.0,361.3 L 452.1,370.9 L 435.6,373.6 L 431.0,379.1 L 421.6,377.8 L 405.8,378.5 L 390.7,378.1 L 381.9,376.7 L 369.7,367.3 L 356.6,365.0 L 350.6,366.0 L 339.5,362.4 L 327.3,355.4 L 316.8,358.2 L 310.3,356.6 L 299.1,359.9 L 303.5,346.3 L 293.9,342.8 L 300.4,337.8 L 311.3,334.3 L 312.4,328.2 L 308.3,318.8 L 321.9,318.9 L 324.8,316.9 L 335.4,317.1 L 340.6,315.5 L 360.8,315.5 L 388.6,312.0 L 399.0,309.0 L 408.6,303.3 L 422.0,303.6 L 436.1,303.1 L 447.9,303.2 L 450.8,306.5 L 457.1,305.4 L 464.9,306.5 L 476.7,305.7 L 477.6,303.1 L 493.3,306.4 Z"
+          fill="#1a1a25" stroke="#3a3a4a" stroke-width="1" stroke-linejoin="round"/>
+
+    <!-- Heraklio (central-east) -->
+    <path d="M 664.0,331.5 L 668.6,337.1 L 662.3,347.8 L 657.0,351.8 L 648.8,353.8 L 640.5,353.0 L 641.0,358.5 L 636.5,361.1 L 642.7,373.8 L 650.1,374.7 L 658.8,380.4 L 667.5,382.1 L 671.5,385.1 L 666.4,391.2 L 674.9,392.0 L 681.0,396.0 L 682.1,402.6 L 674.8,402.5 L 667.5,404.7 L 652.5,402.5 L 641.6,403.6 L 628.7,400.8 L 615.4,404.6 L 602.1,403.9 L 593.6,408.2 L 573.4,413.0 L 570.7,411.0 L 556.9,411.3 L 544.5,415.9 L 528.6,413.8 L 520.5,416.8 L 508.6,415.8 L 491.7,417.0 L 481.7,416.5 L 465.9,414.2 L 457.8,415.1 L 452.4,418.2 L 445.1,416.9 L 436.8,417.7 L 439.9,410.6 L 438.4,399.8 L 442.3,398.5 L 439.8,386.9 L 436.8,382.0 L 431.0,379.1 L 435.6,373.6 L 452.1,370.9 L 452.0,361.3 L 454.9,358.0 L 453.3,348.7 L 458.4,350.4 L 464.7,358.9 L 472.6,357.7 L 480.2,359.5 L 486.0,354.8 L 486.0,348.5 L 492.1,342.9 L 488.4,338.4 L 492.3,332.0 L 486.2,331.0 L 478.4,325.7 L 486.1,323.9 L 481.6,319.2 L 480.2,313.8 L 484.3,312.1 L 491.7,314.5 L 494.5,310.6 L 493.3,306.4 L 503.0,307.0 L 505.9,302.3 L 528.7,309.1 L 526.4,312.7 L 529.3,320.7 L 540.7,322.3 L 571.6,320.7 L 575.8,323.6 L 586.2,324.0 L 627.7,321.9 L 634.1,326.9 L 648.8,332.9 L 664.0,331.5 Z"
+          fill="#1a1a25" stroke="#3a3a4a" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Dia island -->
+    <path d="M 581.0,292.4 L 588.5,296.2 L 584.0,301.2 L 573.4,296.4 L 581.0,292.4 Z"
+          fill="#1a1a25" stroke="#3a3a4a" stroke-width="0.8"/>
+
+    <!-- Lasithi (eastern Crete) -->
+    <path d="M 682.1,402.6 L 681.0,396.0 L 674.9,392.0 L 666.4,391.2 L 671.5,385.1 L 667.5,382.1 L 658.8,380.4 L 650.1,374.7 L 642.7,373.8 L 636.5,361.1 L 641.0,358.5 L 640.5,353.0 L 648.8,353.8 L 657.0,351.8 L 662.3,347.8 L 668.6,337.1 L 664.0,331.5 L 674.9,328.9 L 680.8,326.0 L 688.4,326.5 L 693.3,323.8 L 711.0,321.5 L 715.5,319.9 L 724.0,322.7 L 736.3,321.7 L 748.8,323.4 L 746.4,326.5 L 735.5,330.5 L 738.2,335.3 L 744.5,334.0 L 743.1,340.4 L 737.6,341.0 L 737.6,348.1 L 732.7,352.3 L 730.8,361.8 L 737.1,371.0 L 752.0,372.4 L 761.6,375.1 L 771.0,365.6 L 781.1,363.8 L 788.1,358.2 L 794.2,359.1 L 804.3,357.9 L 806.4,354.5 L 817.8,354.4 L 826.0,347.5 L 839.6,349.7 L 853.8,349.0 L 851.6,353.1 L 859.2,355.2 L 866.2,354.8 L 886.6,342.7 L 885.4,340.3 L 893.2,335.4 L 901.1,335.5 L 901.4,332.2 L 913.4,327.2 L 911.6,332.4 L 905.6,336.7 L 898.4,338.6 L 901.8,348.6 L 899.6,350.8 L 903.3,355.5 L 914.8,358.5 L 903.2,361.9 L 903.8,373.8 L 900.8,379.9 L 892.0,387.0 L 887.8,392.6 L 884.3,392.3 L 875.0,397.3 L 863.4,398.0 L 852.0,401.5 L 844.6,396.2 L 820.2,396.0 L 811.1,391.5 L 806.5,393.2 L 798.5,392.6 L 771.7,396.9 L 761.8,400.6 L 749.6,400.6 L 741.4,398.2 L 738.6,399.7 L 723.3,397.2 L 715.6,399.4 L 695.1,399.0 L 682.1,402.6 Z"
+          fill="#1a1a25" stroke="#3a3a4a" stroke-width="1" stroke-linejoin="round"/>
 
     <!-- Thera (Santorini) -->
-    <path d="M 606.6,203.4 L 613.7,200.2 L 623.2,201.8 L 630.3,205.0 L 635.0,209.9 L 632.6,214.8 L 625.5,218.0 L 618.4,216.4 L 611.3,213.1 L 606.6,208.3 L 606.6,203.4 Z"
-          fill="#1a1a25" stroke="#3a3a4a" stroke-width="1"/>
+    <path d="M 644.4,61.2 L 655.3,70.2 L 663.0,74.9 L 662.9,81.2 L 660.0,86.2 L 649.7,92.0 L 643.7,88.9 L 631.5,88.2 L 629.8,84.0 L 640.7,85.2 L 646.9,78.2 L 644.6,75.5 L 643.5,65.5 L 639.9,62.3 L 627.6,62.9 L 632.7,57.4 L 643.0,59.3 L 644.4,61.2 Z"
+          fill="#1a1a25" stroke="#3a3a4a" stroke-width="0.8"/>
+    <path d="M 620.8,64.8 L 623.6,67.7 L 621.4,72.6 L 614.0,72.0 L 613.6,69.1 L 620.8,64.8 Z"
+          fill="#1a1a25" stroke="#3a3a4a" stroke-width="0.8"/>
 
-    <!-- Kea island -->
-    <path d="M 355.5,8.9 L 367.4,4.1 L 376.8,7.3 L 374.5,15.4 L 365.0,18.7 L 355.5,15.4 L 355.5,8.9 Z"
-          fill="#1a1a25" stroke="#3a3a4a" stroke-width="1"/>
-
-    <!-- Miletos hint (east edge) -->
-    <path d="M 960,20 L 980,15 L 1000,12 L 1000,80 L 980,75 L 960,60 Z"
-          fill="#1a1a25" stroke="#3a3a4a" stroke-width="1"/>
-
-    <!-- Island labels -->
-    <text x="620" y="232" fill="#4a4a5a" font-size="10" text-anchor="middle" font-style="italic">Thera</text>
-    <text x="365" y="32" fill="#4a4a5a" font-size="9" text-anchor="middle" font-style="italic">Kea</text>
-    <text x="975" y="55" fill="#4a4a5a" font-size="9" text-anchor="middle" font-style="italic">Miletos</text>
-
-    <!-- CRETE label -->
+    <!-- Labels -->
     <text x="500" y="460" fill="#2a2a3a" font-size="13" text-anchor="middle" font-style="italic" letter-spacing="12">C R E T E</text>
+    <text x="645" y="105" fill="#4a4a5a" font-size="10" text-anchor="middle" font-style="italic">Thera</text>
+    <text x="450" y="250" fill="#1a2a3a" font-size="16" text-anchor="middle" font-style="italic" letter-spacing="4" opacity="0.4">Aegean Sea</text>
 
-    <!-- Aegean Sea label -->
-    <text x="450" y="160" fill="#1a2a3a" font-size="18" text-anchor="middle" font-style="italic" letter-spacing="6" opacity="0.5">Aegean Sea</text>
+    <!-- ===== SITE DOTS ===== -->
 
-    <!-- Libyan Sea label -->
-    <text x="500" y="465" fill="#1a2a3a" font-size="10" text-anchor="middle" font-style="italic" opacity="0.3">Libyan Sea</text>
-
-    <!-- ===== SITE DOTS (real coordinates) ===== -->
-
-    <!-- Haghia Triada: 373 docs -->
     <g class="site-dot" data-site="HT" data-name="Haghia Triada" data-count="373" data-desc="Palace administrative center in the Messara plain. Largest cache of Linear A tablets anywhere.">
-      <circle cx="397" cy="426" r="18" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="397" cy="426" r="10" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
-      <text x="397" y="430" fill="#fff" font-size="8" text-anchor="middle" font-weight="700">373</text>
+      <circle cx="353" cy="387" r="18" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="353" cy="387" r="10" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
+      <text x="353" y="391" fill="#fff" font-size="8" text-anchor="middle" font-weight="700">373</text>
     </g>
 
-    <!-- Khania: 213 docs -->
     <g class="site-dot" data-site="KH" data-name="Khania" data-count="213" data-desc="Ancient Kydonia. Second largest Linear A archive. Western Crete.">
-      <circle cx="291" cy="351" r="15" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="291" cy="351" r="9" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
-      <text x="291" y="355" fill="#fff" font-size="7" text-anchor="middle" font-weight="700">213</text>
+      <circle cx="217" cy="281" r="15" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="217" cy="281" r="9" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
+      <text x="217" y="285" fill="#fff" font-size="7" text-anchor="middle" font-weight="700">213</text>
     </g>
 
-    <!-- Phaistos: 63 docs -->
     <g class="site-dot" data-site="PH" data-name="Phaistos" data-count="63" data-desc="Major palace near Haghia Triada. Home of the Phaistos Disc.">
-      <circle cx="480" cy="427" r="12" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="480" cy="427" r="7" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
-      <text x="480" y="430" fill="#fff" font-size="7" text-anchor="middle" font-weight="700">63</text>
+      <circle cx="459" cy="389" r="12" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="459" cy="389" r="7" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
+      <text x="459" y="392" fill="#fff" font-size="7" text-anchor="middle" font-weight="700">63</text>
     </g>
 
-    <!-- Zakros: 44 docs -->
     <g class="site-dot" data-site="ZA" data-name="Zakros" data-count="44" data-desc="Easternmost Minoan palace. Complete archive sealed by destruction ~1450 BCE.">
-      <circle cx="822" cy="419" r="10" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="822" cy="419" r="6.5" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
-      <text x="822" y="423" fill="#fff" font-size="7" text-anchor="middle" font-weight="700">44</text>
+      <circle cx="898" cy="378" r="10" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="898" cy="378" r="6.5" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
+      <text x="898" y="382" fill="#fff" font-size="7" text-anchor="middle" font-weight="700">44</text>
     </g>
 
-    <!-- Knossos: 31 docs -->
     <g class="site-dot" data-site="KN" data-name="Knossos" data-count="31" data-desc="Largest Minoan palace. Mostly Linear B, but some Linear A survives from earlier period.">
-      <circle cx="562" cy="387" r="9" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="562" cy="387" r="6" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
-      <text x="562" y="390" fill="#fff" font-size="6" text-anchor="middle" font-weight="700">31</text>
+      <circle cx="564" cy="332" r="9" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="564" cy="332" r="6" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
+      <text x="564" y="335" fill="#fff" font-size="6" text-anchor="middle" font-weight="700">31</text>
     </g>
 
-    <!-- Mallia: 20 docs -->
     <g class="site-dot" data-site="MA" data-name="Mallia" data-count="20" data-desc="Palace on the north coast. Administrative tablets and a ceremonial sword.">
-      <circle cx="639" cy="388" r="8" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="639" cy="388" r="5.5" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
-      <text x="639" y="391" fill="#fff" font-size="6" text-anchor="middle" font-weight="700">20</text>
+      <circle cx="663" cy="333" r="8" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="663" cy="333" r="5.5" fill="#c49b5c" opacity="0.7" filter="url(#glow)"/>
+      <text x="663" y="336" fill="#fff" font-size="6" text-anchor="middle" font-weight="700">20</text>
     </g>
 
-    <!-- Arkhanes: 10 docs -->
     <g class="site-dot" data-site="ARKH" data-name="Arkhanes" data-count="10" data-desc="South of Knossos. Palatial and funerary contexts. Ivory scepter find.">
-      <circle cx="562" cy="397" r="6" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="562" cy="397" r="4.5" fill="#c49b5c" opacity="0.7"/>
+      <circle cx="564" cy="346" r="6" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="564" cy="346" r="4.5" fill="#c49b5c" opacity="0.7"/>
     </g>
 
-    <!-- Tylissos: 3 docs -->
     <g class="site-dot" data-site="TY" data-name="Tylissos" data-count="3" data-desc="Three Minoan villas west of Knossos.">
-      <circle cx="524" cy="386" r="4.5" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="524" cy="386" r="3" fill="#c49b5c" opacity="0.7"/>
+      <circle cx="516" cy="331" r="4.5" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="516" cy="331" r="3" fill="#c49b5c" opacity="0.7"/>
     </g>
 
-    <!-- Syme Viannou: 1 doc -->
     <g class="site-dot" data-site="SY" data-name="Syme Viannou" data-count="1" data-desc="Mountain peak sanctuary. Ritual inscriptions.">
-      <circle cx="675" cy="424" r="4.5" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="675" cy="424" r="3" fill="#c49b5c" opacity="0.7"/>
+      <circle cx="708" cy="384" r="4.5" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="708" cy="384" r="3" fill="#c49b5c" opacity="0.7"/>
     </g>
 
-    <!-- Gournia: 2 docs -->
     <g class="site-dot" data-site="GO" data-name="Gournia" data-count="2" data-desc="Small Minoan town. One of few non-palatial sites with inscriptions.">
-      <circle cx="698" cy="393" r="4.5" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="698" cy="393" r="3" fill="#c49b5c" opacity="0.7"/>
+      <circle cx="738" cy="340" r="4.5" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="738" cy="340" r="3" fill="#c49b5c" opacity="0.7"/>
     </g>
 
-    <!-- Pyrgos: 2 docs -->
     <g class="site-dot" data-site="PYR" data-name="Pyrgos" data-count="2" data-desc="South-central Crete.">
-      <circle cx="505" cy="432" r="4.5" fill="#c49b5c" opacity="0.25"/>
-      <circle cx="505" cy="432" r="3" fill="#c49b5c" opacity="0.7"/>
-    </g>
-
-    <!-- Off-Crete: Kea -->
-    <g class="site-dot" data-site="KE" data-name="Kea" data-count="5" data-desc="Aegean island. Ayia Irini excavations show Minoan cultural contact.">
-      <circle cx="365" cy="11" r="5" fill="#5a8fc4" opacity="0.25"/>
-      <circle cx="365" cy="11" r="3.5" fill="#5a8fc4" opacity="0.7"/>
-    </g>
-
-    <!-- Off-Crete: Miletos -->
-    <g class="site-dot" data-site="MI" data-name="Miletos" data-count="1" data-desc="Anatolian coast. Minoan trading colony. Easternmost Linear A find.">
-      <circle cx="975" cy="40" r="5" fill="#5a8fc4" opacity="0.25"/>
-      <circle cx="975" cy="40" r="3.5" fill="#5a8fc4" opacity="0.7"/>
+      <circle cx="491" cy="396" r="4.5" fill="#c49b5c" opacity="0.25"/>
+      <circle cx="491" cy="396" r="3" fill="#c49b5c" opacity="0.7"/>
     </g>
 
     <!-- Site labels -->
-    <text x="397" y="413" fill="#c49b5c" font-size="9" text-anchor="middle" font-weight="600">Haghia Triada</text>
-    <text x="291" y="340" fill="#9090a0" font-size="9" text-anchor="middle">Khania</text>
-    <text x="480" y="417" fill="#9090a0" font-size="8" text-anchor="middle">Phaistos</text>
-    <text x="562" y="378" fill="#9090a0" font-size="9" text-anchor="middle">Knossos</text>
-    <text x="639" y="380" fill="#9090a0" font-size="8" text-anchor="middle">Mallia</text>
-    <text x="822" y="409" fill="#9090a0" font-size="8" text-anchor="middle">Zakros</text>
-    <text x="580" y="404" fill="#6a6a7a" font-size="7" text-anchor="start">Arkhanes</text>
-    <text x="698" y="385" fill="#6a6a7a" font-size="7" text-anchor="middle">Gournia</text>
+    <text x="353" y="374" fill="#c49b5c" font-size="9" text-anchor="middle" font-weight="600">Haghia Triada</text>
+    <text x="217" y="270" fill="#9090a0" font-size="9" text-anchor="middle">Khania</text>
+    <text x="459" y="380" fill="#9090a0" font-size="8" text-anchor="middle">Phaistos</text>
+    <text x="564" y="323" fill="#9090a0" font-size="9" text-anchor="middle">Knossos</text>
+    <text x="663" y="325" fill="#9090a0" font-size="8" text-anchor="middle">Mallia</text>
+    <text x="898" y="368" fill="#9090a0" font-size="8" text-anchor="middle">Zakros</text>
+    <text x="580" y="353" fill="#6a6a7a" font-size="7" text-anchor="start">Arkhanes</text>
+    <text x="738" y="332" fill="#6a6a7a" font-size="7" text-anchor="middle">Gournia</text>
 
     <!-- Legend -->
     <g transform="translate(30,30)">
-      <rect x="0" y="0" width="185" height="75" rx="6" fill="#0a0a0f" opacity="0.85" stroke="#2a2a3a"/>
-      <circle cx="20" cy="22" r="6" fill="#c49b5c" opacity="0.7"/>
-      <text x="34" y="26" fill="#e0e0e8" font-size="10">Cretan sites</text>
-      <circle cx="20" cy="45" r="6" fill="#5a8fc4" opacity="0.7"/>
-      <text x="34" y="49" fill="#e0e0e8" font-size="10">Aegean / Anatolian</text>
-      <text x="20" y="65" fill="#9090a0" font-size="8">Dot size = inscription count</text>
+      <rect x="0" y="0" width="185" height="55" rx="6" fill="#0a0a0f" opacity="0.85" stroke="#2a2a3a"/>
+      <circle cx="18" cy="20" r="5" fill="#c49b5c" opacity="0.7"/>
+      <text x="30" y="24" fill="#e0e0e8" font-size="10">Inscription site</text>
+      <text x="18" y="44" fill="#9090a0" font-size="8">Dot size = number of documents</text>
     </g>
 
     <!-- Scale bar -->
