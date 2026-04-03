@@ -1,1 +1,0 @@
-Test write confirmed - session is working.
