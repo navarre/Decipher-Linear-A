@@ -2,16 +2,34 @@
 /* Load this on every page: <script src="nav.js"></script> */
 
 (function() {
-  const pages = [
+  const explore = [
     { id: 'home', label: 'Home', href: 'index.html', icon: '𐘇' },
     { id: 'sites', label: 'Inscription Sites', href: 'sites.html', icon: '🗺' },
     { id: 'gallery', label: 'Documents', href: 'gallery.html', icon: '🏛' },
     { id: 'signs', label: 'Signs', href: 'sign-explorer.html', icon: '𐘀' },
-    { id: 'divider1' },
+    { id: 'terms', label: 'Terminology', href: 'terminology.html', icon: '📖' }
+  ];
+
+  const research = [
+    { id: 'home', label: 'Home', href: 'index.html', icon: '𐘇' },
     { id: 'browse', label: 'Corpus Search', href: 'browse.html', icon: '📜' },
+    { id: 'gallery', label: 'Documents', href: 'gallery.html', icon: '🏛' },
+    { id: 'signs', label: 'Sign Catalog', href: 'sign-explorer.html', icon: '𐘀' },
+    { id: 'sites', label: 'Sites & Map', href: 'sites.html', icon: '🗺' },
     { id: 'terms', label: 'Terminology', href: 'terminology.html', icon: '📖' },
     { id: 'audit', label: 'Data Audit', href: 'discrepancies.html', icon: '🔍' }
   ];
+
+  // Mode management
+  const STORAGE_KEY = 'linearA_mode';
+  function getMode() { return localStorage.getItem(STORAGE_KEY) || 'explore'; }
+  function setMode(m) { localStorage.setItem(STORAGE_KEY, m); }
+
+  // Also check URL param so links can force a mode
+  const urlMode = new URLSearchParams(window.location.search).get('mode');
+  if (urlMode === 'explore' || urlMode === 'research') setMode(urlMode);
+
+  let currentMode = getMode();
 
   // Detect current page
   const path = window.location.pathname;
@@ -53,6 +71,36 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
+
+    /* Mode toggle */
+    .mode-toggle {
+      display: flex;
+      margin: 0.8rem 1rem 0;
+      background: var(--surface, #12121a);
+      border: 1px solid var(--border, #2a2a3a);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .mode-btn {
+      flex: 1;
+      padding: 0.45rem 0;
+      border: none;
+      background: transparent;
+      color: var(--text2, #9090a0);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .mode-btn:hover {
+      color: var(--text, #e0e0e8);
+    }
+    .mode-btn.active {
+      background: var(--accent2, #8b6914);
+      color: #fff;
+    }
+
     .sidebar-links {
       flex: 1;
       padding: 0.8rem 0;
@@ -132,30 +180,47 @@
   `;
   document.head.appendChild(style);
 
-  // Build sidebar HTML
+  function buildLinks(pages) {
+    let html = '';
+    for (const p of pages) {
+      const isActive = currentFile === p.href || (currentFile === '' && p.href === 'index.html');
+      html += `<a href="${p.href}"${isActive ? ' class="active"' : ''}><span class="nav-icon">${p.icon}</span>${p.label}</a>`;
+    }
+    return html;
+  }
+
+  // Build sidebar
   const sidebar = document.createElement('aside');
   sidebar.className = 'sidebar-nav';
 
-  let linksHtml = '';
-  for (const p of pages) {
-    if (p.id.startsWith('divider')) {
-      linksHtml += '<div style="border-top:1px solid var(--border,#2a2a3a);margin:0.5rem 1.2rem;"></div><div style="padding:0.2rem 1.2rem;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text2,#9090a0);opacity:0.6;">Research</div>';
-      continue;
-    }
-    const isActive = currentFile === p.href || (currentFile === '' && p.href === 'index.html');
-    linksHtml += `<a href="${p.href}"${isActive ? ' class="active"' : ''}><span class="nav-icon">${p.icon}</span>${p.label}</a>`;
+  function render() {
+    const pages = currentMode === 'explore' ? explore : research;
+    sidebar.innerHTML = `
+      <div class="sidebar-brand">
+        <a href="index.html">Linear A<br>Research Project</a>
+        <div class="brand-sub">Computational Corpus</div>
+        <div class="mode-toggle">
+          <button class="mode-btn${currentMode === 'explore' ? ' active' : ''}" data-mode="explore">Explore</button>
+          <button class="mode-btn${currentMode === 'research' ? ' active' : ''}" data-mode="research">Research</button>
+        </div>
+      </div>
+      <div class="sidebar-links">${buildLinks(pages)}</div>
+      <div class="sidebar-footer">
+        <a href="https://github.com/navarre/minoan-linear-a">GitHub</a>
+      </div>
+    `;
+
+    // Bind toggle buttons
+    sidebar.querySelectorAll('.mode-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        currentMode = this.dataset.mode;
+        setMode(currentMode);
+        render();
+      });
+    });
   }
 
-  sidebar.innerHTML = `
-    <div class="sidebar-brand">
-      <a href="index.html">Linear A<br>Research Project</a>
-      <div class="brand-sub">Computational Corpus</div>
-    </div>
-    <div class="sidebar-links">${linksHtml}</div>
-    <div class="sidebar-footer">
-      <a href="https://github.com/navarre/minoan-linear-a">GitHub</a>
-    </div>
-  `;
+  render();
 
   // Toggle button for mobile
   const toggle = document.createElement('button');
@@ -180,4 +245,10 @@
   document.body.prepend(sidebar);
   document.body.prepend(overlay);
   document.body.prepend(toggle);
+
+  // Expose mode for other scripts to use
+  window.linearAMode = {
+    get: getMode,
+    set: function(m) { setMode(m); currentMode = m; render(); }
+  };
 })();
