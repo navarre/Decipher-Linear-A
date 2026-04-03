@@ -797,3 +797,53 @@ Updating the checklist:
 - Scope: bibliographic confirmation, acquisition path search, source landscape expansion, repo note drafting
 - Notes: Matt explicitly prioritized RILA Supplement 2025 and broader source discovery; if a paywall, private login, or special access is required, report that back immediately
 
+## 2026-04-03 — Reference Library Intake Complete
+
+- Bot: Builder
+- Action: complete
+- Task: Ingest and classify 54 reference documents
+- Scope: references/inbox/ — read, summarized, triaged
+- Notes: 36 kept, 18 deleted (non-scholarly, irrelevant, duplicates). Full summary in references/inbox/INTAKE_SUMMARY.md. Key finds: 8 Salgarella papers, Younger's Lexicon + Updates, Melena's LB reference, 8 van Soesbergen Hurrian volumes, RILA index (107 new docs at new sites).
+
+## 2026-04-03 — Work Plan: Applying New References to Project
+
+### Order of operations (Builder)
+
+The analysis work has dependencies. This is the sequence:
+
+**Phase 1: Fix what we have (data quality)**
+1. Audit corpus against Younger's Updates — fix stale tablet readings
+2. Cross-reference Younger's Lexicon against our glossary — identify gaps
+3. Validate our sign catalog counts against Salgarella's OCD numbers
+
+**Phase 2: Enrich what we have (add depth)**
+4. Add Salgarella's typological categories to sign catalog (simple/complex/fractional/transaction)
+5. Add Manning's CHS ancestor field to sign catalog (which Hieroglyphic sign each LA sign evolved from)
+6. Add alternative readings column to glossary (van Soesbergen Hurrian, Mosenkis Greek)
+7. Add Schurr's ki.ki.ra.ja as derived form in glossary
+
+**Phase 3: Build new things**
+8. Build "What We Know" page for Explore mode (plain-language synthesis)
+9. Build bibliography/references page for Research mode
+10. Build decipherment hypotheses comparison page
+11. RILA gap analysis — which of 107 new documents are missing from corpus
+
+### Assignments for Verifier (Clawdia)
+
+**Verify Phase 1 outputs:**
+- V1: After Builder audits Younger's Updates, Verifier independently checks 10 random corrections to confirm they were applied correctly
+- V2: After Builder cross-references Younger's Lexicon, Verifier checks whether any words Younger lists are absent from both our glossary AND our corpus (would indicate missing documents)
+- V3: After Builder validates sign counts, Verifier compares Salgarella's OCD numbers against lineara.xyz numbers against our numbers — three-way comparison
+
+**Independent Verifier tasks:**
+- V4: Read Montecchi "Banqueting Lists" in detail and produce a functional classification scheme for HT tablets that we can use as document tags
+- V5: Read Schurr "KI.KI.RA.JA" and Younger's Lexicon entries for ki-ro derivatives — produce a complete morphological family tree for ki-ro
+- V6: Check whether Younger's Updates contain corrections for any of the 6 tablet translations we've already produced (if so, flag which translations need revision)
+- V7: Read Bennet "Now you see it" and produce a chronological framework: for each site, what period are the LA documents from? Cross-check against our corpus metadata.
+- V8: From the RILA index, extract every site name and document ID visible in the concordances. Produce a list of what the 107 new documents are, as far as can be determined from the index alone.
+
+### Mutual confirmation needed
+- Any change to glossary confidence scores → must be verified
+- Any change to sign catalog phonetic values → must be verified
+- The "What We Know" page → must be reviewed for overclaiming before publish
+
