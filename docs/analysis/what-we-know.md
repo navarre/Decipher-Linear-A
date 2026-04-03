@@ -197,6 +197,12 @@ This **progressive suffix stacking without stem modification** is the hallmark o
 - Luwian religious borrowings: explains ja-sa-sa-ra-me without requiring the whole language to be Luwian ✅
 - Substrate place names surviving into Greek: expected ✅
 
+### The Script-Language Disconnect
+
+A critical finding: **70% of Linear B signs have Linear A antecedents** (Steele), but **less than 1% of Linear A words have Linear B parallels** (11 out of ~1,463 word forms in Younger's Lexicon). The scripts are genetically related but the languages are not. This is exactly what we'd expect if Linear B was adapted from Linear A to write a completely different language (Greek), just as the Latin alphabet was adapted for Turkish, Finnish, Vietnamese, and other unrelated languages.
+
+The 11 words with LB parallels are mostly **personal names and place names** — exactly the category of words that survives across language changes (substrate vocabulary).
+
 ### The Emerging Picture
 
 The Minoan language is most likely an **unknown agglutinative language** — possibly related to Hurrian-Urartian at a deep level, possibly an isolate — with **Anatolian/Luwian loanwords in its religious register**. It has a suffix-based case system, no prefixes, reduplication for plural, and a person/thing distinction in derivational morphology. Its phonological system included sounds not present in Greek (evidenced by signs like *301 with no Linear B equivalent).
