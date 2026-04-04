@@ -5,15 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Linear A Research Project</title>
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
 <script src="nav.js" defer></script>
+<meta property="og:title" content="Linear A Research Project — Reading the Oldest Prayer in Europe">
+<meta property="og:description" content="Computational corpus and analysis platform for the undeciphered Minoan script. 1,880 documents, 36 references, open data.">
+<meta property="og:image" content="https://lineara.eu/favicon.png">
+<meta property="og:url" content="https://lineara.eu">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
 <header>
-  <div class="header-content">
+  <div class="header-content" style="display:flex;align-items:center;gap:1.5rem;">
+    <a href="index.html" title="Sign *301 — the undeciphered key" style="display:block;flex-shrink:0;">
+      <img src="images/signs/A301.png" alt="Linear A sign *301" style="width:72px; height:72px; background:#e8e0d0; border:2px solid var(--accent); border-radius:10px; padding:6px; display:block;" />
+    </a>
     <div class="title-block">
-      <h1>𐘇 Linear A Research Project</h1>
-      <p class="subtitle">A computational corpus and analysis platform for Minoan Linear A</p>
+      <h1>Linear A Research Project</h1>
+      <p class="subtitle">Reading the oldest prayer in Europe</p>
     </div>
   </div>
 </header>
@@ -30,28 +39,36 @@
 
 <!-- HERO: THE PRAYER -->
 <section class="section" style="border-bottom:none;padding-bottom:1rem;">
-  <div style="text-align:center;max-width:800px;margin:0 auto;">
-    <p style="color:var(--text2);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1.5rem;">The oldest prayer in Europe &mdash; carved in stone, 3,500 years ago</p>
+  <div style="max-width:1000px;margin:0 auto;">
+    <p style="color:var(--text2);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1.5rem;text-align:center;">The oldest prayer in Europe &mdash; carved in stone, 3,500 years ago</p>
 
-    <div style="background:linear-gradient(135deg, #1a1510 0%, #2a1f10 50%, #1a1510 100%); border:1px solid var(--accent); border-radius:12px; padding:2.5rem 2rem; margin-bottom:2rem;">
-      <div style="font-size:1.6rem; color:var(--accent); font-family:monospace; letter-spacing:0.08em; line-height:2.2; margin-bottom:1.5rem;">
-        a-ta-i-<span style="color:#c45a5a;font-weight:700;">*301</span>-wa-ja<br>
-        ja-sa-sa-ra-me<br>
-        i-da-ma-te
+    <div style="background:linear-gradient(135deg, #1a1510 0%, #2a1f10 50%, #1a1510 100%); border:1px solid var(--accent); border-radius:12px; padding:2.5rem 2rem; margin-bottom:2rem; display:grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items:center;">
+      <div style="text-align:center;">
+        <img src="images/documents/SY-Za-4/SY-Za-4.png" alt="Linear A libation table from Syme Viannou (SY Za 4)" style="max-width:100%; height:auto; background:#e8e0d0; border-radius:8px; padding:0.8rem;" />
+        <p style="color:var(--text2);font-size:0.75rem;margin-top:0.6rem;font-style:italic;">Stone libation table, Syme Viannou (SY Za 4)</p>
       </div>
-      <div style="font-size:1.1rem; color:var(--text); font-style:italic; line-height:1.8;">
-        &ldquo;[Sacred opening &mdash; one sign remains undeciphered]<br>
-        My Lady,<br>
-        Mother of Ida&rdquo;
+      <div style="text-align:center;">
+        <div style="font-size:1.4rem; color:var(--accent); font-family:monospace; letter-spacing:0.08em; line-height:2.2; margin-bottom:1.5rem;">
+          a-ta-i-<span style="color:#c45a5a;font-weight:700;">*301</span>-wa-ja<br>
+          ja-sa-sa-ra-me<br>
+          i-da-ma-te
+        </div>
+        <div style="font-size:1.05rem; color:var(--text); font-style:italic; line-height:1.8;">
+          &ldquo;[Sacred opening &mdash; one sign remains undeciphered]<br>
+          My Lady,<br>
+          Mother of Ida&rdquo;
+        </div>
       </div>
     </div>
 
-    <p style="color:var(--text2);font-size:0.95rem;line-height:1.8;text-align:left;">
-      This is the <strong style="color:var(--text)">libation formula</strong> &mdash; a prayer inscribed on stone offering tables at mountain-top sanctuaries across Bronze Age Crete. Priests poured wine, oil, and honey into carved depressions while reciting these words to the Minoan goddess. It appears on <strong style="color:var(--text)">86 documents from 16 sites</strong>, making it the most important text in Linear A.
-    </p>
-    <p style="color:var(--text2);font-size:0.95rem;line-height:1.8;text-align:left;margin-top:0.8rem;">
-      We can read most of it. <strong style="color:var(--accent)">ja-sa-sa-ra-me</strong> is almost certainly Luwian <em>ishassara</em> + possessive <em>-me</em> &mdash; &ldquo;My Lady.&rdquo; <strong style="color:var(--accent)">i-da-ma-te</strong> combines Mount Ida with <em>*mater</em> &mdash; &ldquo;Mother of Ida.&rdquo; But one sign &mdash; <strong style="color:#c45a5a;">*301</strong> &mdash; has no equivalent in any known script. It appears on <strong style="color:var(--text)">48 documents</strong>, more often than the sign for grain. It represents a sound that Greek doesn&rsquo;t have. Solve *301, and the prayer opens. Solve the prayer, and we&rsquo;re closer to reading Minoan than anyone has been in 3,500 years.
-    </p>
+    <div style="max-width:800px;margin:0 auto;">
+      <p style="color:var(--text2);font-size:0.95rem;line-height:1.8;">
+        This is the <strong style="color:var(--text)">libation formula</strong> &mdash; a prayer inscribed on stone offering tables at mountain-top sanctuaries across Bronze Age Crete. Priests poured wine, oil, and honey into carved depressions while reciting these words to the Minoan goddess. It appears on <strong style="color:var(--text)">86 documents from 16 sites</strong>, making it the most important text in Linear A.
+      </p>
+      <p style="color:var(--text2);font-size:0.95rem;line-height:1.8;margin-top:0.8rem;">
+        We can read most of it. <strong style="color:var(--accent)">ja-sa-sa-ra-me</strong> is almost certainly Luwian <em>ishassara</em> + possessive <em>-me</em> &mdash; &ldquo;My Lady.&rdquo; <strong style="color:var(--accent)">i-da-ma-te</strong> combines Mount Ida with <em>*mater</em> &mdash; &ldquo;Mother of Ida.&rdquo; But one sign &mdash; <strong style="color:#c45a5a;">*301</strong> &mdash; has no equivalent in any known script. It appears on <strong style="color:var(--text)">48 documents</strong>, more often than the sign for grain. It represents a sound that Greek doesn&rsquo;t have. Solve *301, and the prayer opens. Solve the prayer, and we&rsquo;re closer to reading Minoan than anyone has been in 3,500 years.
+      </p>
+    </div>
   </div>
 </section>
 
