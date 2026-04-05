@@ -16,6 +16,7 @@
     { id: 'browse', label: 'Corpus Search', href: 'browse.html', icon: '📜' },
     { id: 'gallery', label: 'Documents', href: 'gallery.html', icon: '🏛' },
     { id: 'signs', label: 'Sign Catalog', href: 'sign-explorer.html', icon: '𐘀' },
+    { id: 'concordance', label: 'Sign Concordance', href: 'sign-concordance.html', icon: '𐘁' },
     { id: 'sites', label: 'Sites & Map', href: 'sites.html', icon: '🗺' },
     { id: 'terms', label: 'Terminology', href: 'terminology.html', icon: '📖' },
     { id: 'audit', label: 'Data Audit', href: 'discrepancies.html', icon: '🔍' },

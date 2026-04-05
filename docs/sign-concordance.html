@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Concordance — Linear A Research Project</title>
+<link rel="stylesheet" href="style.css">
+<script src="nav.js" defer></script>
+<style>
+.concordance { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; }
+.concordance-intro { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+.concordance-intro p { color: var(--text2); line-height: 1.7; margin: 0.4rem 0; }
+.concordance-intro strong { color: var(--text); }
+.concordance-controls { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+.conc-search { padding: 0.6rem 0.9rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 0.95rem; min-width: 200px; }
+.conc-search:focus { outline: none; border-color: var(--accent); }
+.conc-select { padding: 0.6rem 0.9rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 0.9rem; }
+.conc-stats { color: var(--text2); font-size: 0.85rem; margin-bottom: 0.8rem; }
+.conc-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.conc-table th { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 1px solid var(--border); color: var(--text2); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; position: sticky; top: 0; background: var(--bg); }
+.conc-table td { padding: 0.5rem; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+.conc-table td.sign-id { font-family: monospace; color: var(--accent); white-space: nowrap; font-weight: 600; }
+.conc-table td.sign-name { color: var(--text2); font-size: 0.8rem; }
+.conc-table td.context { font-family: monospace; font-size: 0.85rem; }
+.conc-table td.ref { color: var(--text2); }
+.conc-table td.rubrique { text-align: center; }
+.rub-badge { display: inline-block; padding: 0.15rem 0.45rem; border-radius: 3px; font-size: 0.7rem; font-weight: 600; background: var(--surface); border: 1px solid var(--border); color: var(--text2); }
+.conc-table tr:hover td { background: var(--surface); }
+.pager { display: flex; gap: 0.5rem; align-items: center; justify-content: center; margin: 1rem 0; color: var(--text2); font-size: 0.85rem; }
+.pager button { padding: 0.4rem 0.8rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; color: var(--text); cursor: pointer; font-size: 0.85rem; }
+.pager button:disabled { opacity: 0.4; cursor: not-allowed; }
+.loading { text-align: center; padding: 3rem; color: var(--text2); }
+.rubrique-legend { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.8rem 1rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text2); }
+.rubrique-legend strong { color: var(--text); }
+.rubrique-legend code { font-family: monospace; color: var(--accent); }
+.target-marker { color: var(--accent); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="title-block">
+      <h1>Sign Concordance</h1>
+      <p class="subtitle">Every attested occurrence of every Linear A sign, indexed from GORILA Volume 5</p>
+    </div>
+  </div>
+</header>
+
+<div class="concordance">
+
+<div class="concordance-intro">
+  <p><strong>What this is.</strong> A complete transcription of the sign-by-sign attestation index from <em>GORILA Volume 5</em> (Godart &amp; Olivier, 1985, pp. 142&ndash;325). Every row below is one row from the printed index: one occurrence of one sign in one document, with its immediate sign-context and its source reference.</p>
+  <p><strong>What this is not.</strong> This is not a word list and not a lexicon. The unit here is the <em>sign attestation</em>, not the lexeme. Linear A has no agreed word count; any page claiming to list "every word in Minoan" is overclaiming. This concordance lets you see exactly where in the published corpus each sign appears, with what neighbours, and what surrounding context.</p>
+  <p><strong>Scope.</strong> <span id="stats-summary">Loading&hellip;</span> Covers Volume 5 printed pages 142&ndash;325. Fraction signs (A&nbsp;701&ndash;A&nbsp;713) and punctuation marks (page 325) are included.</p>
+</div>
+
+<div class="rubrique-legend">
+  <strong>Rubriques</strong> (the printed index's section codes): <code>A</code> alone · <code>B</code> bracketed · <code>C</code> broken · <code>D</code> as first sign · <code>E</code> as non-initial · <code>F</code> headers (PHAISTOS / Chania) · <code>G</code> as last sign · <code>H</code> composite catalog · <code>J</code> composite variants. Target-sign position is marked <span class="target-marker">*like this*</span> in the context column.
+</div>
+
+<div class="concordance-controls">
+  <input type="text" id="q" class="conc-search" placeholder="Search context or reference…">
+  <select id="sign-filter" class="conc-select"><option value="">All signs</option></select>
+  <select id="rub-filter" class="conc-select">
+    <option value="">All rubriques</option>
+    <option value="A">A — alone</option>
+    <option value="B">B — bracketed</option>
+    <option value="C">C — broken</option>
+    <option value="D">D — as first</option>
+    <option value="E">E — as non-initial</option>
+    <option value="F">F — headers</option>
+    <option value="G">G — as last</option>
+    <option value="H">H — composite catalog</option>
+    <option value="J">J — composite variants</option>
+  </select>
+</div>
+
+<div id="stats" class="conc-stats">&nbsp;</div>
+
+<div id="rows-container"><div class="loading">Loading sign concordance…</div></div>
+
+<div class="pager">
+  <button id="prev">&larr; Prev</button>
+  <span id="page-info">Page 1</span>
+  <button id="next">Next &rarr;</button>
+</div>
+
+</div>
+
+<script>
+const PAGE_SIZE = 100;
+let allRows = [];
+let filtered = [];
+let pageNum = 0;
+let meta = {};
+
+async function load() {
+  try {
+    const res = await fetch('../linear_a/data/gorila_sign_index_rows.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    allRows = data.rows || [];
+    meta = data.metadata || {};
+    document.getElementById('stats-summary').textContent =
+      `${allRows.length.toLocaleString()} attestation rows · ${meta.unique_sign_ids || '—'} unique sign identifiers · extracted from file pages ${meta.first_file_page || '?'}–${meta.last_file_page || '?'}.`;
+    populateSignFilter();
+    filtered = allRows.slice();
+    render();
+  } catch (e) {
+    document.getElementById('rows-container').innerHTML =
+      '<div class="loading">Unable to load <code>gorila_sign_index_rows.json</code> — this page expects the data layer to be served at <code>../linear_a/data/</code>. Details: ' + e.message + '</div>';
+  }
+}
+
+function populateSignFilter() {
+  const sel = document.getElementById('sign-filter');
+  const signs = Array.from(new Set(allRows.map(r => r.sign_id))).sort((a,b)=>{
+    const na = parseInt(a.replace(/\D/g,''))||0;
+    const nb = parseInt(b.replace(/\D/g,''))||0;
+    if (a.split(' ')[0] !== b.split(' ')[0]) return a.localeCompare(b);
+    return na - nb;
+  });
+  for (const s of signs) {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = s;
+    sel.appendChild(opt);
+  }
+}
+
+function markTarget(ctx) {
+  return (ctx || '').replace(/\*([^*]+)\*/g, '<span class="target-marker">$1</span>');
+}
+
+function render() {
+  const container = document.getElementById('rows-container');
+  const total = filtered.length;
+  const start = pageNum * PAGE_SIZE;
+  const end = Math.min(start + PAGE_SIZE, total);
+  const slice = filtered.slice(start, end);
+
+  document.getElementById('stats').textContent =
+    total.toLocaleString() + ' rows match · showing ' + (total ? (start+1) : 0) + '–' + end;
+
+  if (!slice.length) {
+    container.innerHTML = '<div class="loading">No rows match the current filter.</div>';
+  } else {
+    let html = '<table class="conc-table"><thead><tr>' +
+      '<th>Sign</th><th>Name (LB)</th><th>Context</th><th>Rubrique</th><th>Reference</th><th>Notes</th>' +
+      '</tr></thead><tbody>';
+    for (const r of slice) {
+      html += '<tr>' +
+        '<td class="sign-id">' + (r.sign_id||'') + '</td>' +
+        '<td class="sign-name">' + (r.sign_name_LB||'') + '</td>' +
+        '<td class="context">' + markTarget(r.context_numeric) + '</td>' +
+        '<td class="rubrique">' + (r.rubrique ? '<span class="rub-badge">' + r.rubrique + '</span>' : '') + '</td>' +
+        '<td class="ref">' + (r.ref||'') + '</td>' +
+        '<td class="sign-name">' + (r.notes||'') + '</td>' +
+      '</tr>';
+    }
+    html += '</tbody></table>';
+    container.innerHTML = html;
+  }
+
+  document.getElementById('page-info').textContent =
+    'Page ' + (pageNum+1) + ' of ' + Math.max(1, Math.ceil(total / PAGE_SIZE));
+  document.getElementById('prev').disabled = pageNum === 0;
+  document.getElementById('next').disabled = end >= total;
+}
+
+function applyFilters() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const sign = document.getElementById('sign-filter').value;
+  const rub = document.getElementById('rub-filter').value;
+  filtered = allRows.filter(r => {
+    if (sign && r.sign_id !== sign) return false;
+    if (rub && r.rubrique !== rub) return false;
+    if (q) {
+      const hay = [r.context_numeric, r.ref, r.notes, r.sign_name_LB].join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  pageNum = 0;
+  render();
+}
+
+document.getElementById('q').addEventListener('input', applyFilters);
+document.getElementById('sign-filter').addEventListener('change', applyFilters);
+document.getElementById('rub-filter').addEventListener('change', applyFilters);
+document.getElementById('prev').addEventListener('click', () => { if (pageNum>0) { pageNum--; render(); window.scrollTo(0,0); } });
+document.getElementById('next').addEventListener('click', () => { pageNum++; render(); window.scrollTo(0,0); });
+
+load();
+</script>
+
+</body>
+</html>
