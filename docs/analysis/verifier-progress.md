@@ -22,3 +22,19 @@
 - Remaining work:
   - targeted PDF/source verification for the highest-profile published claims
   - normalization of count provenance across analysis docs
+
+## Checkpoint 2026-04-05 06:xx EEST
+- Status: R11 CHECK ATTEMPTED / BLOCKED
+- State change:
+  - `references/gorila/vol5/` now exists, so the formerly missing source directory has appeared.
+- What I did:
+  - confirmed vol. 5 contains 524 JPG files
+  - sampled multiple tail-end pages where the sign plates should normally appear
+  - checked those pages with vision to see whether they were actual plate pages
+- Result:
+  - sampled late pages are placeholder/watermark images rather than readable GORILA sign plates
+  - R11 is therefore still blocked in practice even though the directory now exists
+- Output written:
+  - `docs/analysis/verifier-gorila-signs.md`
+- One-line finding:
+  - **Meaningful state change but still blocked:** vol. 5 arrived, yet the current JPG payload does not appear to contain usable sign-plate pages.
