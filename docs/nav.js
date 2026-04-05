@@ -154,17 +154,20 @@
     .sidebar-toggle {
       display: none;
       position: fixed;
-      top: 0.8rem;
-      left: 0.8rem;
+      top: 0.9rem;
+      left: 0.9rem;
       z-index: 1001;
       background: var(--surface, #12121a);
       border: 1px solid var(--border, #2a2a3a);
-      border-radius: 6px;
+      border-radius: 8px;
       color: var(--accent, #c49b5c);
-      font-size: 1.3rem;
-      padding: 0.4rem 0.6rem;
+      font-size: 1.8rem;
+      padding: 0.5rem 0.85rem;
+      min-width: 48px;
+      min-height: 48px;
       cursor: pointer;
       line-height: 1;
+      font-weight: 700;
     }
     @media (max-width: 768px) {
       .sidebar-nav { transform: translateX(-100%); }

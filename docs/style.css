@@ -1,5 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; color-scheme: dark; }
+
 :root {
   --bg: #0a0a0f;
   --surface: #12121a;
@@ -200,7 +202,7 @@ footer a { color: var(--accent); text-decoration: none; }
   align-items: center;
 }
 .hero-image { text-align: center; }
-.hero-image img { max-width: 100%; height: auto; background: #e8e0d0; border-radius: 8px; padding: 0.8rem; }
+.hero-image img { max-width: 100%; height: auto; background: #e8e0d0; border-radius: 8px; padding: 0.8rem; display: block; margin: 0 auto; }
 .hero-caption { color: var(--text2); font-size: 0.75rem; margin-top: 0.6rem; font-style: italic; }
 .hero-formula { text-align: center; }
 
@@ -235,8 +237,8 @@ footer a { color: var(--accent); text-decoration: none; }
   .hero-section { padding-top: 1rem; }
   .hero-wrap { padding: 0 0.5rem; }
   .hero-eyebrow { font-size: 0.7rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
-  .hero-box { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.2rem; }
-  .hero-image img { max-width: 240px; }
+  .hero-box { grid-template-columns: 1fr !important; gap: 1.2rem; padding: 1.2rem; }
+  .hero-image img { max-width: 240px !important; width: 240px !important; }
   .sign-row { gap: 0.3rem; }
   .sign-unit img { width: 34px; height: 34px; }
   .sign-unit .syl { font-size: 0.7rem; }
@@ -268,13 +270,13 @@ footer a { color: var(--accent); text-decoration: none; }
 
 @media (max-width: 480px) {
   .hero-box { padding: 0.9rem; }
+  .hero-image img { max-width: 200px !important; width: 200px !important; }
   .sign-unit img { width: 28px; height: 28px; }
   .sign-unit .syl { font-size: 0.6rem; }
+  .hero-text p { font-size: 0.85rem; }
   .formula-transliteration { font-size: 0.95rem; }
   .formula-gloss { font-size: 0.8rem; }
-  .hero-text p { font-size: 0.85rem; }
   .title-block h1 { font-size: 1.2rem; }
-  .hero-image img { max-width: 200px; }
 }
 
 /* ===== MOBILE FIXES FOR OTHER PAGES (global) ===== */
