@@ -1,5 +1,7 @@
 # The Linear A Libation Formula: Complete Analysis
 
+*Updated April 2026 with GORILA Vol 5 primary-source confirmation.*
+
 ## The Formula
 
 The best-attested multi-word phrase in Linear A, found on stone offering vessels across Crete.
@@ -17,6 +19,32 @@ Word 7: si-ru-te               [purpose/recipient in dative — meaning unclear]
 Word 8: i-da-ma-te             "Mother Ida" (i-da + PIE *mater)
 ```
 
+### Primary-source confirmation
+
+The canonical opening **a-ta-i-*301-wa-ja** has been confirmed at primary-source level against GORILA Vol 5 (Godart & Olivier 1985), the foundational print corpus. GORILA sign sequence: `08-59-28-301-54-57`.
+
+Confirmed attestations on stone offering tables (Za type):
+
+| Site | Documents |
+|------|-----------|
+| **Iouktas (IO)** | IO Za 1a.1, 2a, 3, 4, 7 — 5 attestations (major peak sanctuary) |
+| **Palaikastro (PK)** | PK Za 11a, 12a |
+| **Syme Viannou (SY)** | SY Za 1, 2a, 3 — 3 attestations |
+| **Kophinas (KO)** | KO Za 1a |
+| **Troullos (TL)** | TL Za 1a |
+| **Apodoulou (AP)** | AP Za 1 (with `ki-ki-` prefix variant) |
+
+**At least 13 independent stone-vessel attestations across 6 sanctuary sites.** This is primary-source validation of a reading that until now the project had inherited from Younger's Lexicon as a secondary source.
+
+### Documented variants
+
+Only two variants of word 1 are firmly documented in the GORILA sign index:
+
+1. **AP Za 1** adds a `ki-ki-` prefix: `ki-ki-ta-i-*301-u-ja` (GORILA sequence 67-67-59-28-301-10-57). Apodoulou's version is the clearest local adaptation.
+2. **IO Za 4** shows a partial variant with a different second syllable or a broken ending: `na-ta-i-*301-wa-[unk]` or similar.
+
+The rest of the 13+ attestations use the canonical form without deviation. The formula opening is remarkably stable across sites — the core sacred text stayed fixed while other elements of the inscription (dedicator names, local deity epithets) varied.
+
 ### Tiered Structure
 
 | Pattern | Documents |
@@ -27,6 +55,7 @@ Word 8: i-da-ma-te             "Mother Ida" (i-da + PIE *mater)
 | Full formula (5+ words) | 1 (KO Za 1) |
 
 No single inscription contains all eight words.
+
 
 ## Key Findings
 

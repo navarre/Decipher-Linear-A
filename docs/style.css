@@ -276,3 +276,77 @@ footer a { color: var(--accent); text-decoration: none; }
   .title-block h1 { font-size: 1.2rem; }
   .hero-image img { max-width: 200px; }
 }
+
+/* ===== MOBILE FIXES FOR OTHER PAGES (global) ===== */
+@media (max-width: 768px) {
+  /* Gallery page */
+  .gallery-layout { flex-direction: column !important; padding: 1rem !important; gap: 1rem !important; }
+  .gallery-sidebar { width: 100% !important; }
+  .doc-list { max-height: 350px !important; }
+  .gallery-main { width: 100% !important; }
+  .detail-doc-img { max-height: 300px !important; }
+  .signs-grid { gap: 0.4rem !important; }
+  .sign-crop-card { width: 64px !important; }
+  .sign-crop-card img { width: 50px !important; height: 50px !important; }
+
+  /* Browse page */
+  .browser { flex-direction: column !important; padding: 1rem !important; gap: 1rem !important; min-height: auto !important; }
+  .sidebar { width: 100% !important; }
+  .doc-list { max-height: 300px !important; }
+  .main-panel { width: 100% !important; }
+  .search-input { font-size: 0.9rem !important; padding: 0.55rem 0.8rem !important; }
+  .filter-btn { font-size: 0.7rem !important; padding: 0.2rem 0.5rem !important; }
+
+  /* Sign explorer */
+  .explorer { padding: 1rem !important; }
+  .explorer-controls { flex-direction: column !important; align-items: stretch !important; gap: 0.8rem !important; }
+  .sign-search { width: 100% !important; font-size: 0.9rem !important; }
+  .cat-filters { flex-wrap: wrap; }
+  .cat-btn { font-size: 0.7rem !important; padding: 0.3rem 0.6rem !important; }
+  .sign-grid { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important; gap: 0.5rem !important; }
+  .sign-card { padding: 0.4rem !important; }
+  .sign-card img { width: 56px !important; height: 56px !important; }
+  .sign-card .sign-reading { font-size: 0.85rem !important; }
+  .sign-card .sign-code { font-size: 0.65rem !important; }
+  .sign-card .sign-cat { font-size: 0.55rem !important; }
+  .sign-detail-card { padding: 1.2rem !important; max-height: 85vh !important; }
+  .sign-detail-img { width: 110px !important; height: 110px !important; }
+  .sign-detail-reading { font-size: 1.4rem !important; }
+
+  /* Sites / map page */
+  .map-page { padding: 1rem !important; }
+  .map-container svg { max-width: 100% !important; height: auto !important; }
+  .sites-grid { grid-template-columns: 1fr !important; gap: 0.8rem !important; }
+  .site-card { padding: 1rem !important; }
+  .map-tooltip { font-size: 0.75rem !important; max-width: 240px !important; }
+
+  /* Terminology */
+  .glossary { padding: 1rem !important; max-width: 100% !important; }
+  .def { padding: 0.8rem !important; }
+  .def dt { font-size: 1rem !important; }
+
+  /* Discrepancies / about / analysis pages */
+  .report, .about, .story { padding: 1rem !important; max-width: 100% !important; }
+  .report h1, .about h1 { font-size: 1.4rem !important; }
+  .report h2, .about h2, .story h2 { font-size: 1.15rem !important; }
+  .report table { font-size: 0.75rem !important; }
+  .report td, .report th { padding: 0.35rem 0.5rem !important; }
+  .count-box { padding: 0.6rem 0.8rem !important; }
+  .count-box .num { font-size: 1.2rem !important; }
+
+  /* All images break word for long URLs */
+  p { word-wrap: break-word; }
+
+  /* Main wrapper should never exceed viewport */
+  main, .main, .story, .about, .browser, .explorer, .gallery-layout { max-width: 100vw !important; box-sizing: border-box; }
+}
+
+@media (max-width: 480px) {
+  /* Ultra-small: sacrifice more space for readability */
+  .gallery-sidebar, .sidebar { padding: 0.5rem !important; }
+  .sign-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)) !important; }
+  .sign-card img { width: 46px !important; height: 46px !important; }
+  .filter-btn, .cat-btn, .site-btn { font-size: 0.65rem !important; }
+  .def dt { font-size: 0.9rem !important; }
+  .def dd { font-size: 0.85rem !important; line-height: 1.55 !important; }
+}
