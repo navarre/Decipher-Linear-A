@@ -1,119 +1,141 @@
-# GORILA Sign Index: Major Findings on *301
+# GORILA Sign Index: *301 Findings
 
 ## Source
 GORILA Vol. 5 (1985), pp. 142-325 — the complete sign index.
 Extracted by Claude Cowork, April 5, 2026.
 File: `linear_a/data/gorila_sign_index_rows.json`
 Total: 3,936 rows across 207 unique signs.
+This document: verifier-audited April 5, 2026.
 
-## A301 has 35 rows in the sign index
+## The headline finding
 
-The GORILA sign index shows 35 distinct contexts where *301 appears. This is substantially more than our previous count of 48 attestations (which counted documents, not sign contexts). We now have full context for every occurrence.
+The GORILA sign index gives us, for the first time in digital form, the complete contextual distribution of Linear A sign *301. Primary-source data that validates our canonical libation formula and broadens our picture of how *301 functioned across Minoan writing.
 
-## GORILA's designation
+**This is a primary-source distributional breakthrough. It is not a decipherment.**
 
-GORILA labels *301 as **"Linear A R"** — sign R in their sequential labeling of A-series signs that have no Linear B equivalent. This does NOT assign a phonetic value. It acknowledges *301 as a distinct sign with no known phoneme.
+## What GORILA confirms (strongly)
 
-## The sign's position
+### The canonical libation formula opening
 
-*301 appears in **7+ distinct word-forms**:
-
-### 1. The libation formula opening (most frequent)
 **a-ta-i-*301-wa-ja** (GORILA sequence: 08-59-28-301-54-57)
 
-Attested on:
-- **PK Za 11a** (Palaikastro)
-- **IO Za 1a, 3, 7** (Iouktas — 3 attestations)
-- **IO Za 2a, 3, 7** (Iouktas — formal variants)
-- **IO Za 4** (Iouktas — variant with different final element)
-- **KO Za 1a** (Kophinas)
-- **PK Za 12a** (Palaikastro)
-- **SY Za 1, 2a, 3** (Syme Viannou — 3 attestations)
-- **TL Za 1a** (Troullos)
-- **AP Za 1** (Apodoulou — variant with 67-67- prefix = ki-ki-)
+This phrase is confirmed as GORILA's canonical reading. It appears in the sign index under multiple signs (AB 08, AB 59, AB 28, AB 54, AB 57, and A 301 itself), and every extraction agrees on the sequence. Confirmed on stone offering tables (Za type) at:
 
-**At least 14 stone-vessel attestations across 6+ sanctuary sites.**
+- **IO Za 1a.1, 3, 7** — Iouktas peak sanctuary (3 inscriptions)
+- **IO Za 2a, 3, 7** — Iouktas (additional attestations via AB 57)
+- **IO Za 4** — Iouktas (variant: `06-59-28-301-54[-unk-]` = na-ta-i-*301-wa-... or similar)
+- **KO Za 1a** — Kophinas peak sanctuary
+- **PK Za 11a, 12a** — Palaikastro
+- **SY Za 1, 2a, 3** — Syme Viannou sanctuary (3 inscriptions, listed via AB 28 row)
+- **TL Za 1a** — Troullos
+- **AP Za 1** — Apodoulou (variant: `67-67-59-28-301-10-57` = ki-ki-ta-i-*301-u-ja, adds a ki-ki- prefix and alters the final syllables)
 
-### 2. A previously unrecognized word: **su-su-*301-...-ti**
-**a-su-su-*301-*64-ti** (08-58-58-301-64-37)
+**At least 14 stone-vessel attestations across 6 sanctuary sites.**
 
-Attested on:
-- **ZA Za 3.2** (variant: a-su-su-*301-i-ti)
-- **PK Za 11a** (variant with *64 instead of i)
-- **IO Za 1a.1, 3, 7** — wait, this contradicts the above
-- **PS Za 2.2** (as su-na-su-*301-ti)
+This is what we already believed from Younger's Lexicon and our glossary. GORILA confirms it at primary-source level. That is a real upgrade in scholarly weight.
 
-**This may actually be our formula read by a different word-break convention.** Where we see "a-ta-i-*301-wa-ja" as word 1 followed by a second word, GORILA may be parsing it differently, or it may be a second distinct word on some stones.
+### GORILA's designation of *301
 
-### 3. The AP Za 1 variant: **ki-su-ta-*301-u-ki**
-GORILA context: 67-58-59-301-10-67
+GORILA labels *301 as **"Linear A R"** — a sequential identifier in the series of A-only signs without Linear B equivalents. This is NOT a phonetic value. It reflects GORILA's editorial treatment of *301 as a distinct core sign.
 
-Only attested on AP Za 1 (Apodoulou). Appears to be a local variant of the opening formula.
+## What GORILA reveals that we didn't fully capture
 
-### 4. On tablets: **te-*301** and variants
-- **te-*301** on HT 8a.3 and HT 98a.3 (04-301)
-- **ku-*301-*82** on ZA 11b.1 (81-301-82)
-- **zu-*301-se-ke-*82-...-*118** on ARKH 2.3-4 (79-301-09-44-82-[..]-118)
+Most of what follows is *not* "the formula is different" — it is "sign *301 appears in more distinct words and registers than our earlier analysis centered." These are distinct lexical items, not formula variants.
 
-These are almost certainly personal names.
+### *301 appears in multiple distinct words
 
-### 5. On the Knossos gold ring (KN Zf 13)
-GORILA context: -07-301-59-44-
-Reads as: -di-*301-ta-ke-
+The 35 A 301 rows in the sign index show *301 appearing in at least the following distinct contexts. Each should be treated as a separate lexical item unless and until we prove otherwise.
 
-This is a subsequence of the 19-sign ring inscription: a-re-ne-si-**di-*301-ta-ke**-pa-ja-ta-ri-se-te-ri-mu-a-ja-ku
+**A. In the libation formula opening (word 1)**
+- Canonical: `a-ta-i-*301-wa-ja`
+- Apodoulou variant: `ki-ki-ta-i-*301-u-ja`
+- IO Za 4 partial variant (unknown ending)
 
-### 6. On the ivory scepter (KN Zf — different from Zf 13)
-The 19-sign sequence on the Mavrospelio gold ring shows *301 at position 6, confirming our earlier analysis.
+**B. In what appears to be a separate word on stone vessels**
 
-### 7. As a ligature on Khania roundels: ***301+311**
-Attested on 10+ KH Wc roundels (2046, 2047, 2048, 2049, 2050, 2051, 2052, 2053, 2113, and others).
+On many of the same stone vessels that carry the libation formula, GORILA's sign index shows additional *301 rows with contexts like:
 
-This compound sign treats *301 as a modifier of *311. The productive compounding suggests *301 had a defined meaning in administrative contexts — likely a commodity or transaction category at Khania.
+- `08-58-58-*301*-64-37` = `a-su-su-*301-*64-ti` (ZA Za 3.2, PK Za 11a, IO Za 1a.1, IO Za 3, IO Za 6, IO Za 7)
+- `58-06-58-*301*-37` = `su-na-su-*301-ti` (PS Za 2.2)
+- `53-06-58-*301*` = `ri-na-su-*301` (IO Za 6)
 
-### 8. As part of doubled ligatures
-- **'301''73'** on KH 74.2, KH Wc 2054, 2055 (= *301 followed by mi/AB 73)
-- **'73''301'** on KH Wc 2064, 2099 (= mi followed by *301)
-- **'301''351'** on KH Wc 2065
-- **28+*301*** on HT Wa 1022 (ligature of i + *301)
+**IMPORTANT CAVEAT:** Since many of these appear on the same stones that also carry the canonical formula opening (e.g., IO Za 1a.1 has *both* the `08-59-28-301-54-57` formula and the `08-58-58-301-64-37` sequence), these are almost certainly **distinct words appearing elsewhere in the same inscription**, not alternative readings of the formula opening. The libation formula is a multi-word sacred text; more than one of its words contains *301.
 
-## What GORILA tells us about *301 that we didn't know
+We do not yet know whether these constitute a single unified "word B" with variants or multiple distinct lexical items. This requires a document-level re-reading, not a sign-index extraction.
 
-1. **It appears in at least 7 distinct words**, not just the libation formula.
-2. **It has productive compounding behavior** — combines with *311, *351, and AB 73 as a ligature.
-3. **Khania uses *301 very differently from Haghia Triada.** At KH, *301 is primarily in ligatures on roundels (administrative). At HT, it's primarily standalone on nodules or in personal names on tablets.
-4. **The formula opening is variable across sites**:
-   - Most sites: `a-ta-i-*301-wa-ja`
-   - Apodoulou: `ki-ki-ta-i-*301-wa-ja` (adds a ki-ki- prefix)
-   - Some IO variants: `a-ta-i-*301-u-ti` (different ending)
-   - Some ZA/PS variants: `a-su-su-*301-*64-ti` (different word entirely, or different reading convention)
-5. **The consistent neighbor is AB 28 (I)** — the sign "i" appears immediately before *301 in the libation formula and in several other words. This confirms Clawdia's phonotactic finding that *301 is most often preceded by I.
+**C. On tablets, in what look like personal names or administrative terms**
+- `te-*301` on HT 8a.3 and HT 98a.3 (tablet contexts, possibly a name)
+- `ku-*301-*82` on ZA 11b.1
+- `zu-*301-se-ke-*82-...-*118` on ARKH 2.3-4 (ARKH 2 is a tablet, not a seal stone)
+- `79-*301*-09-44-82...` — the ARKH 2 sequence
 
-## What this doesn't tell us
+**D. On the Mavrospelio gold ring (KN Zf 13)**
+- GORILA context: `-07-301-59-44-` (fragment: -di-*301-ta-ke-)
+- Position 6 of the 19-sign spiral inscription
 
-- Still no phonetic value for *301
-- Still no known cognate in any language
-- Still no bilingual inscription
+**E. On a Knossos tablet (KN 2)**
+- Ligatured form: `'28''301'`
 
-But we now have the complete distributional picture. Every word containing *301 is documented, and every neighbor is known. This is the strongest foundation possible for future decipherment attempts.
+**F. On Haghia Triada nodules (Wa series)**
+- `[-6-]` rubrique context across HT Wa 1025, 1026, 1029, 1030, 1623, 1733, 1734, 1844, 1845, 1846, 1848
+- These are the standalone logogram uses documented in our earlier analysis
+- Also `28+*301*` (I + *301 ligature) on HT Wa 1022
 
-## Cross-reference to sign variant atlas
+**G. As a productive compound at Khania**
 
-Combined with `gorila_sign_variants.json` (which documents 11 variant graphic forms of *301), we now have:
-- **11 different written forms** of *301
-- **35 different contextual occurrences**
-- **7+ distinct words** containing *301
-- **Attestations at 13+ sites** across Crete
+*301 combines with other signs to form productive ligatures, especially at Khania:
 
-## Implications for the project
+- `*301*+*311`on 10+ KH Wc roundels (2046, 2047, 2048, 2049, 2050, 2051, 2052, 2053, 2113, and others)
+- `'301''73'` on KH 74.2, KH Wc 2054, 2055
+- `'73''301'` on KH Wc 2064, 2099
+- `'301''351'` on KH Wc 2065
+- `[307+ *301*[` on KH 42
 
-1. **Our glossary entry for the libation formula is incomplete.** We should add the SY, KO, TL, PK, IO, AP Za document IDs to the attestation list.
-2. **Our sign catalog should include the *301+311 compound** and other ligatures — these are distinct signs functionally even if not graphically.
-3. **The *301 phonotactic analysis should be re-run** with the full 35-row dataset instead of the smaller sample we had before.
-4. **The Khania use pattern** (ligatures on roundels) is a distinct sub-tradition worth dedicated analysis.
+This compounding behavior at Khania deserves attention. On roundels — administrative receipts — *301 is combining productively with other signs to mark transaction or commodity categories. This is qualitatively different from its ritual use on stone offering tables.
 
-## What to tell the museum on Monday
+## What this means
 
-The GORILA sign index extraction gives us, for the first time in any open-access digital resource, the complete contextual distribution of Linear A sign *301. Every word it appears in, every document, every neighbor sign. This data has existed in print for 40 years but has never been digitized or analyzed systematically.
+1. **The canonical libation formula is primary-source confirmed.** Scholarly weight is now substantially stronger.
 
-**Finding worth highlighting:** The libation formula opening has at least 4 regional variants across the 6+ sanctuary sites. The core `a-ta-i-*301-wa-ja` is consistent at most sites, but Apodoulou adds a `ki-ki-` prefix, and Iouktas/Zakros/Pseira have their own endings. This suggests local priests adapted the formula — the core sacred words stayed, but each sanctuary had its own version.
+2. **Sign *301 is not exclusively ritual.** It appears in ritual formulae, in personal names on tablets, and in productive administrative ligatures at Khania. A sign with this range is more likely to be a structurally integrated phonetic sign with multiple domain uses than a one-off ceremonial marker.
+
+3. **Khania uses *301 differently from Haghia Triada.** At HT, *301 is standalone on nodules or embedded in personal names. At KH, it is a productive compound actor on administrative roundels. This is site-level evidence for distinct sub-traditions in Minoan administration.
+
+4. **The distributional picture is now rich enough to support serious phonotactic work.** Our earlier verifier phonotactic pass (verifier-301-phonotactics.md) used a smaller surfaced sample and should be treated as superseded in breadth by this GORILA-derived dataset.
+
+## What this does NOT mean
+
+- **The canonical libation formula is not overturned.** It is confirmed.
+- **Sign *301 is not deciphered.** No phonetic value is assigned.
+- **No bilingual has been found.** No secure semantic value.
+- **The "multiple distinct words" claim is partly preliminary.** Some of what looks like separate words may be segmentation differences or adjacent-word ambiguities that require document-level re-reading to settle. We should not publish a confident count like "*301 appears in N distinct words" until we have read the actual inscriptions rather than just the sign index rows.
+
+## Open audit items
+
+Before using any of this material publicly beyond the basic confirmation of the canonical formula, the following should be resolved:
+
+1. **Document-level verification**: For each stone vessel that shows multiple *301 rows in the sign index, confirm whether these are truly distinct words in the inscription or artifacts of how the sign index lists neighbor contexts.
+
+2. **Formula word 2 question**: The sequences like `a-su-su-*301-*64-ti` need to be checked against Younger's reading of formula word 2 and following. These may correspond to words we already have under different transcription conventions.
+
+3. **Khania ligature interpretation**: Is `*301+*311` a single compound logogram or a sequence of two signs? Our sign catalog should be updated once this is clear.
+
+4. **Cross-reference with gorila_sign_variants.json**: That file lists 11 graphic variant forms of *301. Those should be cross-referenced with the 35 contextual rows to see whether specific graphic variants correlate with specific word contexts.
+
+## What to say publicly (safe version)
+
+**Safe to claim:**
+- GORILA Vol 5 sign index extraction completed
+- Canonical libation formula opening `a-ta-i-*301-wa-ja` confirmed at primary-source level across multiple sanctuary sites
+- Sign *301 appears in a broader range of contexts than our earlier smaller-sample analyses centered
+- Khania roundels show productive compounding with *301 that warrants dedicated study
+
+**Not yet safe to claim:**
+- A specific count of distinct words containing *301
+- That *301 has "regional variants" in the sense of a single word mutating across sites (as opposed to multiple distinct words each attested at certain sites)
+- Any phonetic value
+- Any semantic interpretation beyond what was already in the glossary
+
+## Credit
+
+This audit responds to Clawdia's critique that the initial draft of this document overclaimed. She was correct on every point. The verifier role working properly.
